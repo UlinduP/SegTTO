@@ -29,7 +29,7 @@ Please follow [dataset preparation](datasets/README.md).
 
 ## Demo
 
-If you want to try your own images locally, please try [interactive demo](https://github.com/KU-CVLAB/CAT-Seg/tree/demo).
+If you want to try your own images locally, please try [cat seg demo](https://github.com/UlinduP/SegTTO/tree/main/demo) and [clip dinoiser demo](https://github.com/UlinduP/SegTTO/blob/main/clip-dinoiser/demo.ipynb).
 
 ## Evaluation
 
