@@ -1,0 +1,46 @@
+{
+    "background": [
+        "textures such as rough, smooth, or grainy",
+        "natural or man-made materials",
+        "varying colors and patterns such as brown, gray, or brown-gray",
+        "shapes and forms that are irregular or geometric",
+        "presence of shadows, cracks, or other signs of wear",
+        "integration with the surrounding environment"
+    ],
+    "fire extinguisher": [
+        "a cylindrical or rectangular-shaped device",
+        "typically red, but sometimes yellow or silver",
+        "a label or signage indicating its purpose",
+        "a handle or grip for carrying",
+        "a hose or nozzle for dispensing extinguishing agent",
+        "a gauge or indicator for pressure or agent level"
+    ],
+    "backpack": [
+        "a bag with two straps",
+        "typically made of fabric, nylon, or polyester",
+        "multiple compartments and pockets",
+        "zippers, buckles, or other closure systems",
+        "a padded back and straps for comfort",
+        "often features logos, labels, or other branding",
+        "varies in color, shape, and size"
+    ],
+    "drill": [
+        "handheld power tool",
+        "typically grey, silver, or black",
+        "cylindrical or rectangular body",
+        "rotating drill bit or chuck",
+        "grips or handles for holding",
+        "power cord or battery pack",
+        "trigger or switch for operation"
+    ],
+    "human": [
+        "two-legged upright posture",
+        "varying skin tones",
+        "facial features (eyes, nose, mouth, facial expressions)",
+        "hair (color, style, length)",
+        "clothing and accessories (shirts, pants, dresses, hats, etc.)",
+        "arms and hands with fingers",
+        "legs and feet with toes",
+        "varied facial expressions and body language"
+    ]
+}

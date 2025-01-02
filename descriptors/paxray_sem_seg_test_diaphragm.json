@@ -1,0 +1,18 @@
+{
+    "others": [
+        "bones or skeletal structures",
+        "organs such as heart, lungs, or liver",
+        "medical devices like pacemakers or artificial joints",
+        "prosthetic limbs",
+        "surgical clips or staples",
+        "any other anatomical features that are not dome-shaped or located under the lungs."
+    ],
+    "diaphragm": [
+        "dome-shaped structure",
+        "located under the lungs",
+        "separates the chest cavity from the abdominal cavity",
+        "appears as a curved line",
+        "may show some degree of curvature or flattening depending on breathing stage",
+        "can be differentiated from surrounding tissues by its density and shape"
+    ]
+}

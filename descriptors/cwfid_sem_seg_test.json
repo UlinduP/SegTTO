@@ -1,0 +1,32 @@
+{
+  "ground": [
+    "evenly textured soil with minimal large debris",
+    "dark brown or grey color without significant plant coverage",
+    "mostly flat surface with small cracks or bumps",
+    "low contrast with minor shadowing from plants",
+    "contains small rocks or pebbles sparsely",
+    "no visible vegetation or only minimal sprouting plants"
+  ],
+  "crop_seedling": [
+    "uniformly spaced, symmetrical leaf structure with smooth edges",
+    "light to medium green color with minimal variation in hue",
+    "simple, round or elongated leaf shapes, typically smooth and flat",
+    "predictable growth pattern (e.g., linear or grid-like) with consistent spacing",
+    "leaves tend to grow in pairs or small clusters from a central stem",
+    "smaller, more delicate appearance compared to weeds",
+    "leaves have a smooth texture with no visible hairs or irregularities",
+    "tends to grow vertically with minimal lateral spreading",
+    "regular size and shape of leaves across all seedlings"
+  ],
+  "weed": [
+    "irregular, asymmetrical leaf shapes with complex structures (e.g., serrated, lobed, or deeply divided)",
+    "darker or inconsistent green color with potential patches of different hues",
+    "dense, disorganized growth patterns, often overlapping or clumping",
+    "wider variation in leaf size and shape, with some larger and more robust than crop seedlings",
+    "leaves may have rough textures, visible veins, or hairs on the surface",
+    "more chaotic and scattered appearance, with no clear pattern or regularity",
+    "tends to grow laterally (spreading outward) in addition to vertical growth",
+    "rapid growth, often outcompeting crop seedlings by covering more ground area",
+    "multiple growth points and branches per plant, unlike crops which tend to grow from a central stem"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "background": [
+    "dark rocky texture",
+    "uneven surfaces",
+    "low light",
+    "rough stone material",
+    "damp appearance"
+  ],
+  "fire extinguisher": [
+    "cylindrical shape",
+    "bright red color",
+    "small size",
+    "metallic and plastic material",
+    "smooth surface"
+  ],
+  "backpack": [
+    "rectangular shape",
+    "vivid red color",
+    "fabric material",
+    "zipper details",
+    "upright orientation"
+  ],
+  "drill": [
+    "compact handheld shape",
+    "orange and black color",
+    "plastic material",
+    "trigger and handle",
+    "corded or cordless"
+  ],
+  "human": [
+    "upright shape",
+    "reflective safety gear",
+    "distinct limbs and torso",
+    "yellow hard hat",
+    "visible reflective strips"
+  ]
+}

@@ -1,0 +1,94 @@
+{
+    "others": [
+        "large structure with walls and windows",
+        "various shapes and sizes",
+        "flat or sloping roof",
+        "doors and entrance points",
+        "may have architectural features like columns or arches",
+        "long, narrow path made of asphalt, concrete, or dirt",
+        "may have markings like lanes or dividers",
+        "vehicles may be visible on it",
+        "may be bordered by trees, buildings, or other infrastructure",
+        "tall, perennial plant with a single stem (trunk)",
+        "branches and leaves",
+        "variety of shapes and sizes",
+        "may have visible roots or bark",
+        "green, lush, and dense area of vegetation",
+        "varies in texture, length, and color",
+        "often found in lawns, parks, or fields",
+        "may be surrounded by other vegetation or objects",
+        "vehicle in motion on a road",
+        "blur or motion blur around wheels or body",
+        "visible headlights or taillights",
+        "may cast a shadow or reflection",
+        "vehicle stationary on a road or parking area",
+        "clear view of entire vehicle body",
+        "may be parked at an angle or parallel to the road",
+        "may have visible windows, doors, or wheels",
+        "two-legged, upright posture",
+        "various skin tones and facial features",
+        "diverse hairstyles, clothing, and accessories",
+        "may be engaged in various activities like walking or sitting"
+    ],
+    "building": [
+        "stationary structure with walls and a roof",
+        "straight edges and right angles",
+        "windows, doors, and other architectural features",
+        "various shapes, sizes, and colors",
+        "may have chimneys, vents, or other exterior features",
+        "can be made of various materials like brick, wood, or concrete",
+        "may have nearby pavement, sidewalks, or landscaping"
+    ],
+    "road": [
+        "a long, wide path made of asphalt, concrete, or dirt",
+        "multiple lanes with lines or markings",
+        "presence of vehicles, either moving or parked",
+        "a boundary or edge separating the road from surrounding environment",
+        "lack of vegetation, trees, or obstacles on the path",
+        "possible presence of road signs, traffic lights, or markings"
+    ],
+    "tree": [
+        "tall and stationary object",
+        "green leaves or branches",
+        "trunk and roots",
+        "varying shapes and sizes",
+        "bark texture and patterns",
+        "shadows and foliage"
+    ],
+    "grass": [
+        "green color",
+        "thin, elongated blades",
+        "scattered or uniform growth",
+        "varying lengths and densities",
+        "often found in lawns, fields, or outdoor areas",
+        "can be bent or leaning due to wind or environment"
+    ],
+    "moving car": [
+        "a rectangular shape with wheels",
+        "headlights, taillights, and brake lights",
+        "a hood, trunk, and roof",
+        "windshield wipers",
+        "mirrors on the sides",
+        "motion blur around the car, especially around the wheels",
+        "a sense of speed and movement in the surrounding environment"
+    ],
+    "parked car": [
+        "a vehicle with wheels",
+        "metallic body (various colors)",
+        "windshield, side windows, and a rear window",
+        "headlights, taillights, and a license plate",
+        "a horizontal or sloping roof",
+        "a bumper, grille, and doors",
+        "parked on a surface such as a road, parking lot, or driveway",
+        "often with a visible tire, wheel well, and wheel hub"
+    ],
+    "humans": [
+        "two legs, two arms, and an upright posture",
+        "various skin tones (e.g., white, black, brown, etc.)",
+        "a face with a mouth, nose, eyes, and eyebrows",
+        "hair on the head, possibly other parts of the body",
+        "wearing clothes and accessories (e.g., hats, glasses, etc.)",
+        "varied facial expressions and body language",
+        "presence of hands with fingers and possible objects held"
+    ]
+}

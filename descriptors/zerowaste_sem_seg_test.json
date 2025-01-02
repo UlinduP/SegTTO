@@ -1,0 +1,45 @@
+{
+  "background or trash": [
+    "diverse, unrelated objects or textures",
+    "unclear or out-of-focus shapes",
+    "random patterns or colors",
+    "blurred or soft edges",
+    "clutter or scattered objects",
+    "lack of distinct features or shapes",
+    "objects that are partially hidden or overlapped"
+  ],
+  "rigid plastic": [
+    "transparent or colored",
+    "smooth and glossy appearance",
+    "uniform texture",
+    "sharp edges and straight lines",
+    "reflective surface",
+    "may have labels or markings",
+    "may have a distinct shape or mold"
+  ],
+  "cardboard": [
+    "brown or brownish color",
+    "rectangular shape",
+    "corrugated or folded texture",
+    "creases or folds",
+    "may have printed labels or markings",
+    "can be flat or bent/cut into various shapes"
+  ],
+  "metal": [
+    "shiny or reflective surface",
+    "metallic colors such as silver, gold, copper, or bronze",
+    "smooth or textured surface",
+    "angular or curved shapes",
+    "bolts, rivets, or other mechanical fasteners",
+    "wires or cables attached to it",
+    "machinery or industrial-like components"
+  ],
+  "soft plastic": [
+    "often translucent, transparent, or brightly colored",
+    "flexible and bendable",
+    "smooth texture",
+    "may be molded into various shapes and forms",
+    "often has a glossy appearance",
+    "may have a distinct edge or seam where parts are joined together."
+  ]
+}

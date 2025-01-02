@@ -1,0 +1,1274 @@
+{
+    "wall": [
+        "a vertical, flat, and upright structure",
+        "connected to the floor and/or ceiling",
+        "may have windows, doors, or other openings",
+        "may have a decorative finish such as paint, wallpaper, or tiles",
+        "may have visible joints or seams between sections",
+        "often appears as a continuous, unbroken surface"
+    ],
+    "building": [
+        "structural foundation (e.g. walls, windows, doors)",
+        "roof or ceiling",
+        "vertical and horizontal lines",
+        "different materials or textures (e.g. bricks, wood, glass, concrete)",
+        "varying shapes and sizes",
+        "architectural features (e.g. columns, arches, towers)",
+        "surrounding environment (e.g. land, vegetation, other buildings)"
+    ],
+    "sky": [
+        "occupies the top portion of the image",
+        "varies in color from blue to grey to black depending on time of day and weather",
+        "may have clouds, which can be white, grey, or dark",
+        "may display a sun or moon",
+        "often has a subtle gradient of color from top to bottom",
+        "may be partially obscured by trees, buildings, or other objects"
+    ],
+    "floor": [
+        "a flat, horizontal surface",
+        "typically made of wood, tile, carpet, or other materials",
+        "may have patterns, textures, or designs",
+        "often has boundaries with walls or other vertical surfaces",
+        "may have furniture, objects, or people standing on it",
+        "can be partially or fully visible in the photo"
+    ],
+    "tree": [
+        "a tall, vertical trunk",
+        "branches extending from the trunk",
+        "leaves or needles that are green or changing color",
+        "a single main stem",
+        "a root system that may be visible above ground",
+        "bark that can be rough or smooth",
+        "a canopy or crown of leaves or branches"
+    ],
+    "ceiling": [
+        "a flat, horizontal surface",
+        "above the furniture and occupants in the room",
+        "often white, beige, or off-white in color",
+        "may have lighting fixtures, vents, or pipes attached",
+        "may have a textured or patterned design"
+    ],
+    "road": [
+        "a paved or unpaved path",
+        "a stretch of land that is free from vegetation or obstacles",
+        "a prominent feature that divides the landscape",
+        "defined edges or boundaries",
+        "markings or lines that run along its length",
+        "vehicles or signs that indicate its purpose"
+    ],
+    "bed ": [
+        "a piece of furniture for sleeping or resting",
+        "typically rectangular or square in shape",
+        "usually has a mattress and/or bed frame",
+        "may have pillows, blankets, or a headboard",
+        "often has a flat, horizontal surface"
+    ],
+    "windowpane": [
+        "a translucent or transparent glass or plastic panel",
+        "rectangular or square shape",
+        "divided into multiple panes or a single pane",
+        "mounted in a frame or sash",
+        "surrounded by walls, doors, or other building structures",
+        "may have reflections, glare, or view of the outside environment"
+    ],
+    "grass": [
+        "green in color",
+        "narrow, elongated blades",
+        "growing from the ground",
+        "often has a similar height and texture to surrounding blades",
+        "may have seed heads or flowers",
+        "can be found in lawns, fields, or other outdoor environments"
+    ],
+    "cabinet": [
+        "a piece of furniture ",
+        "typically tall and rectangular in shape ",
+        "consists of shelves or compartments enclosed by a door or doors ",
+        "may have handles or knobs on the doors ",
+        "may have a flat top surface ",
+        "typically made of wood or another material such as metal or glass"
+    ],
+    "sidewalk": [
+        "flat, hard surface",
+        "typically grey or black in color",
+        "separate from the road or street",
+        "often bordered by a curb or edge",
+        "may have cracks or lines dividing it into sections",
+        "may have obstacles such as lampposts, signs, or benches",
+        "often has people walking on it"
+    ],
+    "person": [
+        "two legs and two arms",
+        "upright posture",
+        "oval-shaped head",
+        "facial features (eyes, nose, mouth)",
+        "hair or hairstyle",
+        "clothing or accessories (shirts, pants, hats, shoes, etc.)",
+        "hands with fingers",
+        "varied skin tones"
+    ],
+    "earth": [
+        "a blue and green color",
+        "a spherical shape",
+        "clouds and atmosphere visible",
+        "landscapes such as oceans, continents, mountains, and forests",
+        "a horizon line where the earth's surface meets the sky",
+        "possible presence of human infrastructure or natural features such as buildings, roads, or rivers"
+    ],
+    "door": [
+        "typically rectangular in shape",
+        "attached to a wall or frame",
+        "usually has a handle or knob",
+        "often has hinges",
+        "can be opened or closed",
+        "may have a door frame or archway around it",
+        "possibly has a window or mail slot"
+    ],
+    "table": [
+        "flat surface",
+        "legs or a base that provide support",
+        "typically rectangular or circular in shape",
+        "varying sizes and heights",
+        "may have objects placed on it such as dishes, laptops, or books",
+        "may have chairs or stools nearby"
+    ],
+    "mountain": [
+        "rugged terrain",
+        "elevated ground with peaks or summits",
+        "vast landscape",
+        "varying shades of green, brown, or grey",
+        "snow-capped peaks (optional)",
+        "trees, rocks, or other natural features",
+        "mist, fog, or clouds surrounding the mountain"
+    ],
+    "plant": [
+        "green or colored leaves",
+        "stems or branches",
+        "roots or a pot",
+        "flowers, fruits, or seeds",
+        "varying textures and shapes",
+        "natural surroundings or a potting container"
+    ],
+    "curtain": [
+        "fabric material",
+        "suspended from a rod or track",
+        "hanging from ceiling or wall",
+        "often with a pattern or design",
+        "folds or pleats in the fabric",
+        "sometimes partially open or drawn back",
+        "attached to a window, door, or room divider"
+    ],
+    "chair": [
+        "raised surface for sitting",
+        "backrest",
+        "legs or a base",
+        "cushioning or upholstery",
+        "armrests (optional)",
+        "a distinct design or style"
+    ],
+    "car": [
+        "four wheels",
+        "a body with a distinct shape (sedan, SUV, truck, etc.)",
+        "windshield and windows",
+        "headlights and taillights",
+        "a license plate",
+        "tires and rims",
+        "doors and a trunk",
+        "a steering wheel and seats inside (if the doors/windows are visible)"
+    ],
+    "water": [
+        "transparency or reflection",
+        "smooth, glassy, or wavy surface",
+        "blue or clear color",
+        "ripples, waves, or splashes",
+        "surrounding environment such as a beach, pool, or container",
+        "presence of boats, ships, or other watercraft"
+    ],
+    "painting": [
+        "a flat, two-dimensional artwork",
+        "created using various materials like oil, acrylic, or watercolor",
+        "mounted on a wall or displayed on an easel",
+        "framed, often with a decorative border",
+        "depicts a scene, object, or abstract composition",
+        "may have a signature or title plaque",
+        "can have different textures, colors, and brushstrokes"
+    ],
+    "sofa": [
+        "upholstered furniture",
+        "typically rectangular or L-shaped",
+        "cushions or pillows",
+        "arms or armrests on the sides",
+        "legs or a base that elevate it from the floor",
+        "often placed in a living room or indoor setting"
+    ],
+    "shelf": [
+        "a flat, horizontal surface",
+        "elevated from the floor or wall",
+        "often made of wood, metal, or plastic",
+        "typically rectangular in shape",
+        "may have multiple levels or tiers",
+        "may have a back panel or sides",
+        "often holds or displays objects, such as books, decorations, or storage containers."
+    ],
+    "house": [
+        "a building with walls, windows, and a roof",
+        "various shapes and sizes, but typically rectangular or square",
+        "doors and windows of various sizes and arrangements",
+        "a foundation or base that separates the house from the ground",
+        "a chimney, ventilation outlets, or other features on the roof",
+        "outdoor features such as gardens, yards, or porches",
+        "surrounding environment like trees, sidewalks, or neighboring houses"
+    ],
+    "sea": [
+        "vast expanse of blue or turquoise water",
+        "horizon line where the sea meets the sky",
+        "waves or ripples on the surface of the water",
+        "shoreline or beach in the foreground",
+        "boats, ships, or other watercraft",
+        "sea foam or spray along the shoreline",
+        "sun glare or reflections on the water"
+    ],
+    "mirror": [
+        "a flat, reflective surface, often made of glass",
+        "a frame or border surrounding the reflective surface",
+        "a lack of distortion or curvature in the reflection",
+        "a clear, unobstructed view of the surrounding environment",
+        "a sense of symmetry or self-similarity in the reflection",
+        "possibly, human or object reflections"
+    ],
+    "rug": [
+        "a rectangular or square-shaped floor covering",
+        "made of fabric or woven material",
+        "usually has a distinct pattern, design, or color",
+        "lies flat on the floor",
+        "has a distinct edge or border",
+        "may have a fringe or tassels at the edges",
+        "is often surrounded by other furniture or objects."
+    ],
+    "field": [
+        "green or brown grass or crops",
+        "open space without obstacles",
+        "possibly bordered by trees, fences, or roads",
+        "may have visible rows or patterns of plant growth",
+        "may include objects such as farm equipment, animals, or people",
+        "can be varying shades of green, yellow, or brown depending on season and type of vegetation"
+    ],
+    "armchair": [
+        "upholstered furniture with a back and arms",
+        "single seat for one person",
+        "typically rectangular or oval shape",
+        "four legs or rollers for support",
+        "cushioned seat and backrest",
+        "often accompanied by other living room furniture"
+    ],
+    "seat": [
+        "a raised platform or cushion",
+        "designed to support a person",
+        "typically has a backrest and may or may not have armrests",
+        "can be made of various materials such as wood, metal, or plastic",
+        "may have upholstery or cushions",
+        "often found in settings such as homes, offices, theaters, or vehicles"
+    ],
+    "fence": [
+        "a barrier or enclosure",
+        "vertical posts or poles",
+        "horizontal rails or beams",
+        "a series of connected sections",
+        "made of materials such as wood, metal, or vinyl",
+        "various heights and styles",
+        "may feature gates or openings"
+    ],
+    "desk": [
+        "a piece of furniture with a flat, horizontal surface",
+        "typically rectangular in shape",
+        "usually has legs or a base to support the surface",
+        "may have drawers, shelves, or cabinets for storage",
+        "a chair or stool may be nearby",
+        "office supplies, papers, or a computer may be on the surface"
+    ],
+    "rock": [
+        "natural, inorganic object",
+        "varying colors, textures, and patterns",
+        "irregular shape",
+        "no distinct features or markings",
+        "may be surrounded by dirt, sand, or other natural elements",
+        "different sizes and shapes, from small pebbles to large boulders"
+    ],
+    "wardrobe": [
+        "a tall, upright, enclosed structure",
+        "typically made of wood, metal, or a combination of materials",
+        "doors, often two, that can be opened to reveal storage space",
+        "shelves, rods, and other compartments for organizing clothing and accessories",
+        "handles or knobs on the doors",
+        "may have a mirror attached or integrated into the design"
+    ],
+    "lamp": [
+        "a freestanding or mounted fixture",
+        "a light source (bulb, LED, etc.)",
+        "a shade or cover to soften/direct light",
+        "a base or stand to support the lamp",
+        "a switch or button to turn the light on/off",
+        "a power cord",
+        "a harp and finial (in some lamps)"
+    ],
+    "bathtub": [
+        "a large, rectangular or oval-shaped container",
+        "typically white or off-white in color",
+        "made of ceramic, acrylic, or fiberglass",
+        "located in a bathroom",
+        "has a faucet and drain",
+        "usually has a surrounding area or walls",
+        "possibly has a shower curtain or door"
+    ],
+    "railing": [
+        "a barrier or guard",
+        "typically along a staircase, balcony, or walkway",
+        "vertical posts or balusters",
+        "a horizontal top rail",
+        "metal, wood, or plastic material",
+        "connections or attachments to walls or floors"
+    ],
+    "cushion": [
+        "soft, padded, and often rectangular or square in shape",
+        "various colors and patterns, such as solid, striped, or floral",
+        "typically made of fabric, such as cotton, velvet, or polyester",
+        "may have a zipper or other closure",
+        "often has a filling, such as down or foam, to provide comfort and support",
+        "may have a decorative trim or piping around the edges",
+        "can be found on a chair, sofa, or other piece of furniture"
+    ],
+    "base": [
+        "typically located at the bottom of an object",
+        "provides support or stability",
+        "can be circular, square, rectangular, or other shapes",
+        "may be small or large depending on the object it supports",
+        "can be made of various materials such as wood, metal, or plastic",
+        "may have a distinct color or texture that contrasts with the object it supports"
+    ],
+    "box": [
+        "rectangular shape",
+        "flat top and bottom",
+        "straight edges",
+        "often brown, white, or kraft paper color",
+        "may have labels or markings on the sides",
+        "may have a lid or opening",
+        "varying sizes, from small to large."
+    ],
+    "column": [
+        "tall, vertical structure",
+        "cylindrical or rectangular shape",
+        "typically made of stone, concrete, or metal",
+        "often decorated with carvings, moldings, or other ornaments",
+        "can be freestanding or part of a building",
+        "may have a capital or pedestal at the top",
+        "may be fluted or have other patterns on its surface"
+    ],
+    "signboard": [
+        "rectangular or square shape",
+        "text or graphics on the board",
+        "mounted on a pole, wall, or stand",
+        "bright colors to attract attention",
+        "informative content such as directions, instructions, or advertising",
+        "a clear message or logo",
+        "a flat surface, often made of metal, wood, or plastic"
+    ],
+    "chest of drawers": [
+        "a tall, rectangular piece of furniture",
+        "multiple drawers of varying sizes",
+        "handles or knobs on each drawer",
+        "typically made of wood, metal, or a combination of materials",
+        "often found in a bedroom or closet",
+        "may have a mirror or other decorations on top"
+    ],
+    "counter": [
+        "typically located in a kitchen or retail space",
+        "flat, horizontal surface",
+        "often made of materials like wood, granite, or laminate",
+        "may have edges or borders",
+        "sometimes has cabinets or shelves below",
+        "can have various objects on top such as appliances, utensils, or products",
+        "can be a distinct section or area within a larger space"
+    ],
+    "sand": [
+        "small individual grains",
+        "varying shades of beige, yellow, brown, or white",
+        "often found in outdoor settings, such as beaches, deserts, or playgrounds",
+        "may be scattered, piled, or formed into dunes",
+        "may be accompanied by other natural elements, such as rocks, shells, or water"
+    ],
+    "sink": [
+        "a fixture with a bowl-shaped basin",
+        "usually made of ceramic, metal, or stone",
+        "faucets or taps for water control",
+        "a drain hole at the bottom",
+        "possibly mounted on a wall or on a countertop",
+        "may have a mirror above it"
+    ],
+    "skyscraper": [
+        "tall, multi-story building",
+        "steel and glass exterior",
+        "rectangular or square shape",
+        "vertical lines and columns",
+        "rows of windows",
+        "a prominent entrance or lobby",
+        "may have an antenna or spire on top",
+        "often located in an urban area"
+    ],
+    "fireplace": [
+        "a hearth or raised platform",
+        "a chimney or vent above the fireplace",
+        "a firebox or opening where the fire would be",
+        "a mantel or decorative surround",
+        "a grate or andirons to hold the firewood",
+        "a damper or flue to control airflow",
+        "a screen or guard to contain sparks"
+    ],
+    "refrigerator": [
+        "a large, rectangular appliance",
+        "typically white, black, or stainless steel",
+        "two or three doors with handles",
+        "a flat top surface",
+        "a vertical or horizontal orientation",
+        "visible shelving or compartments through the door windows",
+        "a plug or power cord"
+    ],
+    "grandstand": [
+        "elevated seating structure",
+        "rows of benches or seats",
+        "typically located in outdoor settings such as sports stadiums or race tracks",
+        "may have a roof or canopy to provide shade or protection",
+        "may have railings or guardrails along the edges of the seating area",
+        "often has stairs or ramps leading up to the seating area"
+    ],
+    "path": [
+        "a continuous, man-made or natural, narrow area of ground",
+        "often parallel sides or edges",
+        "differing color, texture, or material from surrounding environment",
+        "leading to a visible destination or vanishing point",
+        "sometimes marked by lines, stones, or other defining features",
+        "often clear of obstacles or vegetation"
+    ],
+    "stairs": [
+        "a series of steps",
+        "horizontal platforms (landings) between flights of stairs",
+        "railing or banister along one or both sides",
+        "vertical supports (stringers) under the steps",
+        "a distinct change in elevation between two floors or levels",
+        "often made of wood, metal, or concrete"
+    ],
+    "runway": [
+        "a long, rectangular, and flat strip of land or surface",
+        "markings or lines on the surface, such as centerline, threshold, and touchdown zone",
+        "bright lights or lamps along the edges or centerline",
+        "absence of obstacles or trees in the immediate surrounding area",
+        "possibly an airport or airfield in the background",
+        "a defined start and end point, with a clear direction of alignment"
+    ],
+    "case": [
+        "rectangular or square shape",
+        "made of materials such as leather, fabric, or hard plastic",
+        "often has a closure mechanism like a zipper or latch",
+        "may have handles or straps for carrying",
+        "can have padding or compartments for protecting or organizing contents",
+        "may display logos or branding associated with the item being carried"
+    ],
+    "pool table": [
+        "rectangular-shaped table with six pockets (one at each corner and one at the middle of each long side)",
+        "green or blue felt surface",
+        "long, wooden or metal cues lying on the table or against the walls",
+        "balls of various colors scattered on the table",
+        "overhead lighting, often with hanging lamps or a single overhead light fixture",
+        "table legs or a cabinet base that supports the table"
+    ],
+    "pillow": [
+        "cushioned shape",
+        "fabric or textile cover",
+        "typically rectangular or square in shape",
+        "soft and puffy appearance",
+        "often accompanied by a bed or furniture",
+        "various colors, patterns, and textures"
+    ],
+    "screen door": [
+        "a mesh or grid pattern",
+        "a door frame that is typically white, black, or brown",
+        "a hinge attached to a fixed door or wall",
+        "a door handle or knob",
+        "often installed on an exterior door",
+        "may have a spring or closer to keep it shut"
+    ],
+    "stairway": [
+        "a set of steps leading upwards",
+        "handrails or banisters on either side",
+        "a landing or platform at the top or bottom",
+        "a consistent rhythm of treads and risers",
+        "staircase shape or spiral design",
+        "presence of walls or barriers alongside the stairs"
+    ],
+    "river": [
+        "a natural flowing body of water",
+        "winding or curving path",
+        "varying shades of blue or green",
+        "reflective surface",
+        "ripples, waves, or whitewater",
+        "surrounding landscape such as trees, hills, or banks",
+        "possible presence of boats, bridges, or other watercraft"
+    ],
+    "bridge": [
+        "a structure that spans a physical obstacle (water, valley, road)",
+        "connects two or more land areas",
+        "supported by pillars, towers, or abutments",
+        "a pathway or road for pedestrians, vehicles, or trains",
+        "varying shapes and designs (arch, beam, suspension, cable-stayed)",
+        "often has railings or guardrails"
+    ],
+    "bookcase": [
+        "tall, vertical structure",
+        "multiple shelves",
+        "rectangular or square shape",
+        "often made of wood, metal, or a combination of materials",
+        "books or other objects arranged on the shelves",
+        "sometimes has doors or drawers"
+    ],
+    "blind": [
+        "horizontal or vertical slats",
+        "made of fabric, wood, or metal material",
+        "attached to a wall or window frame",
+        "open or closed slats",
+        "cords or chains for opening and closing",
+        "decorative elements such as valances or cornices"
+    ],
+    "coffee table": [
+        "a low-to-the-ground, horizontal surface",
+        "typically rectangular or oval shape",
+        "four legs or a pedestal base",
+        "wooden, glass, or metal material",
+        "presence of cups, magazines, or other living room items on its surface",
+        "often accompanied by a sofa or chairs"
+    ],
+    "toilet": [
+        "ceramic or porcelain bowl",
+        "seat and lid on top of the bowl",
+        "water tank attached to the back or side",
+        "toilet handle or button for flushing",
+        "typically white or off-white in color",
+        "connected to a floor or wall",
+        "may have a toilet paper holder nearby"
+    ],
+    "flower": [
+        "petals of varying colors, shapes, and sizes",
+        "a center typically containing the stamens and pistils",
+        "stems or leaves attached to the base of the flower",
+        "varying shapes, such as bell-shaped, cup-shaped, or daisy-like",
+        "often surrounded by foliage or other flowers",
+        "may have visible features like sepals, stigmas, or anthers"
+    ],
+    "book": [
+        "rectangular shape with a spine",
+        "bound pages",
+        "a front and back cover",
+        "title and author written on the spine or cover",
+        "pages with text or illustrations",
+        "a flat surface"
+    ],
+    "hill": [
+        "natural elevation of land",
+        "typically rounded or sloping shape",
+        "may have trees, grass, or other vegetation",
+        "may have a defined peak or summit",
+        "often appears as a gradual rise in the terrain",
+        "may have a changing landscape or scenery at the top"
+    ],
+    "bench": [
+        "a piece of furniture",
+        "typically rectangular or square in shape",
+        "designed for sitting",
+        "can be made of various materials such as wood, metal, or plastic",
+        "has a flat surface and sometimes backrest",
+        "usually has legs or a base",
+        "can be found in various settings, including outdoors or indoors"
+    ],
+    "countertop": [
+        "a flat, horizontal surface",
+        "often made of materials such as granite, marble, wood, or laminate",
+        "located in a kitchen or bathroom",
+        "may have edges or borders",
+        "may have appliances, fixtures, or items such as sinks, faucets, or utensils on it",
+        "can have a backsplash or surrounding cabinetry"
+    ],
+    "stove": [
+        "large kitchen appliance",
+        "typically made of metal or stainless steel",
+        "multiple burners or heating elements",
+        "oven door or compartment",
+        "knobs or digital controls for adjusting heat",
+        "often has a flat cooking surface or grates"
+    ],
+    "palm": [
+        "tall, slender tree or shrub",
+        "large, fan-shaped or feathery leaves",
+        "long, slender stems or trunks",
+        "clusters of fruit or flowers",
+        "a prominent crown or canopy",
+        "often found in tropical or coastal environments"
+    ],
+    "kitchen island": [
+        "typically rectangular in shape",
+        "usually waist-high",
+        "often made of wood, metal, or composite materials",
+        "may have drawers, cabinets, or shelves for storage",
+        "often includes a countertop",
+        "may have a sink, stove, or other kitchen appliances installed",
+        "sometimes has wheels or casters for easy movement."
+    ],
+    "computer": [
+        "electronic device",
+        "rectangular or tower-shaped case",
+        "keyboard and/or mouse",
+        "monitor or screen",
+        "cables and wires",
+        "ports for connecting peripherals",
+        "a CD/DVD drive or other disk slot"
+    ],
+    "swivel chair": [
+        "a chair with a rotating axis that allows it to spin",
+        "typically has wheels or a base that enables rotation",
+        "upholstered or padded seat and backrest",
+        "often has armrests",
+        "may have a tall or adjustable back",
+        "may have a footrest or base that has wheels or casters"
+    ],
+    "boat": [
+        "a vessel designed to float on water",
+        "various shapes and sizes",
+        "usually white, blue, or other bright colours",
+        "has a hull, deck, and superstructure",
+        "may have masts, sails, or engines",
+        "has a cockpit or cabin",
+        "may have anchors, railings, or other deck features"
+    ],
+    "bar": [
+        "counter or long table",
+        "stools or chairs",
+        "shelves or cabinets for storing drinks and glasses",
+        "a cash register or point-of-sale system",
+        "bottles, kegs, or other containers for beverages",
+        "glasses, mugs, or other drinking vessels",
+        "decorations such as signage, posters, or neon lights"
+    ],
+    "arcade machine": [
+        "a prominent rectangular display positioned near the top of the machine",
+        "an interactive area below the screen with buttons and joysticks",
+        "tall, rectangular, boxy frame extending to the floor",
+        "a lighted sign or logo panel often above the screen, displaying the game title",
+        "typically vibrant, often red, blue, or green, standing out on the control panel",
+        "game-themed decals and artwork on the sides and front of the cabinet"
+    ],
+    "hovel": [
+        "small, simple, and crudely built structure",
+        "made of natural materials such as mud, straw, or wood",
+        "often has a thatched or corrugated iron roof",
+        "may have a single door and few or no windows",
+        "appearance of disrepair or deterioration",
+        "may be surrounded by poverty or squalor",
+        "may be in a rural or neglected setting"
+    ],
+    "bus": [
+        "large, rectangular vehicle",
+        "wheels and axles",
+        "doors for entry and exit",
+        "windows for passengers",
+        "a distinctive front grille and headlights",
+        "a long body with multiple rows of seats",
+        "a large windshield at the front",
+        "destination or route signs on the front and side"
+    ],
+    "towel": [
+        "rectangular or square shape",
+        "soft, absorbent material",
+        "bright colors or patterns",
+        "folds or creases",
+        "hanging on a rack or lying flat",
+        "often near a bathroom or pool",
+        "varying sizes and thickness"
+    ],
+    "light": [
+        "a glowing or illuminated area",
+        "a fixture, bulb, or lamp",
+        "a power cord or wire",
+        "a switch or dimmer",
+        "a distinct shape, such as a pendant or sconce",
+        "a mount or base that holds the light source"
+    ],
+    "truck": [
+        "large, wheeled vehicle",
+        "rectangular-shaped body",
+        "open cargo area or bed",
+        "cabin or driver's compartment",
+        "two or four doors",
+        "headlights and grille at the front",
+        "bumpers and wheels",
+        "possible towing equipment or trailer"
+    ],
+    "tower": [
+        "tall, vertical structure",
+        "typically narrow and tapering",
+        "can be freestanding or attached to a building",
+        "often has a distinct architectural style",
+        "may have windows, doors, or other features",
+        "can be made of various materials such as stone, metal, or concrete",
+        "may have antennas, spires, or other protrusions on top"
+    ],
+    "chandelier": [
+        "suspended from the ceiling",
+        "multiple lights or candles",
+        "ornate or decorative frame or body",
+        "crystals or other reflective components",
+        "hanging or dangling elements",
+        "electrical wires or chains for support."
+    ],
+    "awning": [
+        "a fabric or metal covering attached to a wall",
+        "above a window, door, or patio",
+        "angled or sloping shape",
+        "often brightly colored or striped",
+        "may have a support structure such as poles or frames",
+        "may have a valance or scalloped edge"
+    ],
+    "streetlight": [
+        "tall, slender pole",
+        "a light source or fixture at the top",
+        "often mounted on a sidewalk, road, or pavement",
+        "may have a reflective surface or prismatic lens",
+        "can be single or multiple headed",
+        "often has a base or anchoring system",
+        "wires or utilities connected to it"
+    ],
+    "booth": [
+        "a partially enclosed structure",
+        "tables and chairs or stools",
+        "a counter or desk",
+        "possibly a canopy or overhead cover",
+        "may have sides or partitions",
+        "often used for serving food, displaying products, or providing services"
+    ],
+    "television receiver": [
+        "electronic device",
+        "typically small and box-like in shape",
+        "usually black or grey",
+        "multiple input ports (e.g., HDMI, coaxial, USB)",
+        "output ports for connecting to a TV",
+        "LED lights or display indicating channel or menu information",
+        "buttons or a control panel for navigation",
+        "may have an antenna or cable connection"
+    ],
+    "airplane": [
+        "wings",
+        "fuselage",
+        "engines",
+        "tail section",
+        "propellers (on some models)",
+        "landing gear",
+        "windows and doors"
+    ],
+    "dirt track": [
+        "an oval or circular path",
+        "brown or reddish-brown color",
+        "lack of pavement or asphalt",
+        "ruts, grooves, or tire tracks on the surface",
+        "surrounding landscape that may include racecars, grandstands, or other racing equipment",
+        "may have markings or lines on the track, such as a starting line or lap counters"
+    ],
+    "apparel": [
+        "garments or fabric items worn on the body",
+        "variety of colors, patterns, and textures",
+        "different styles, such as dresses, shirts, pants, or skirts",
+        "may have sleeves, collar, or other features",
+        "may have zippers, buttons, or other fasteners",
+        "may have embroidery, logos, or other decorative elements",
+        "may be worn by a person or displayed on a mannequin or hanger"
+    ],
+    "pole": [
+        "long and thin",
+        "vertically oriented",
+        "cylindrical shape",
+        "often made of wood, metal, or plastic",
+        "may have a rounded or pointed top",
+        "may have a base or anchor that keeps it upright",
+        "may have ropes, wires, or other features attached to it"
+    ],
+    "land": [
+        "terrain features (hills, valleys, mountains)",
+        "natural elements (trees, grass, rocks, water)",
+        "man-made structures (buildings, roads, bridges)",
+        "varying shades of green, brown, and other earth tones",
+        "possibly visible boundaries (fences, borders)",
+        "diverse textures (soil, sand, pavement)"
+    ],
+    "bannister": [
+        "a long, vertical or inclined rail",
+        "attached to a wall or stairs",
+        "typically made of wood, metal, or glass",
+        "ornate or simple in design",
+        "often topped with a handrail",
+        "can be decorated with balusters or spindles"
+    ],
+    "escalator": [
+        "a moving staircase with flat steps",
+        "handrails on both sides",
+        "a support structure or sides",
+        "a top and bottom landing",
+        "a motorized or electrical component",
+        "people standing or stepping on the moving steps"
+    ],
+    "ottoman": [
+        "upholstered furniture",
+        "cushioned top and sides",
+        "typically rectangular or round in shape",
+        "short legs or a base",
+        "may have storage compartment underneath",
+        "often found in living rooms or dens"
+    ],
+    "bottle": [
+        "cylindrical or container-like shape",
+        "transparent or translucent material (glass or plastic)",
+        "narrow neck",
+        "rounded or flat body",
+        "label or markings on the body",
+        "cap or lid on top",
+        "varying sizes"
+    ],
+    "buffet": [
+        "a long table or multiple tables",
+        "various types of food, such as dishes, plates, and serving utensils",
+        "decorated or themed backdrop",
+        "people serving or standing around the table",
+        "chairs or stools for seating",
+        "tablecloths, runners, or other decorative elements"
+    ],
+    "poster": [
+        "a two-dimensional print or image",
+        "typically rectangular in shape",
+        "mounted on a wall or displayed on an easel",
+        "colorful and visually appealing",
+        "may have text or graphics",
+        "can be large or small in size"
+    ],
+    "stage": [
+        "raised platform",
+        "steps or stairs leading up to it",
+        "open space or floor area",
+        "curtains, backdrop, or scenery",
+        "microphones or speakers",
+        "lighting equipment",
+        "seating for performers or audience members"
+    ],
+    "van": [
+        "rectangular or box-like body shape",
+        "typically larger than a car",
+        "often has a flat front end",
+        "may have a sliding side door",
+        "windows on the sides and rear",
+        "wheels are usually covered",
+        "may have a cargo area or seats inside"
+    ],
+    "ship": [
+        "large vessel with a hull",
+        "floating on water",
+        "masts or chimneys",
+        "anchors, propellers, or other nautical features",
+        "horizontal or vertical lines and structures on deck",
+        "portholes or windows",
+        "rudder or steering system at the back",
+        "possibly cargo or passengers on board"
+    ],
+    "fountain": [
+        "water flowing or splashing",
+        "a basin or pool of water",
+        "a decorative structure or sculpture",
+        "a Jet or spray of water from the top",
+        "surrounding landscaping or architecture"
+    ],
+    "conveyer belt": [
+        "a continuous moving band of fabric, rubber, or metal",
+        "rollers or pulleys on either side to support and move the belt",
+        "a flat surface with a series of parallel ridges or grooves",
+        "possibly carrying objects, packages, or goods",
+        "often found in industrial, manufacturing, or warehouse settings",
+        "may have a motor or other mechanical components to power its movement"
+    ],
+    "canopy": [
+        "a fabric or material top",
+        "supported by poles or a frame",
+        "often attached to a vehicle, building, or stand",
+        "providing shade or protection from the elements",
+        "various shapes and sizes",
+        "sometimes decorated with trim, fringe, or other embellishments"
+    ],
+    "washer": [
+        "large, white or silver appliance",
+        "cylindrical or rectangular shape",
+        "lid or door on top for loading and unloading",
+        "control panel with buttons and dials",
+        "water hoses and drainage pipes attached",
+        "often stacked with a dryer or standalone"
+    ],
+    "plaything": [
+        "bright colors",
+        "varied shapes and sizes",
+        "made of plastic, wood, or fabric",
+        "may have moving parts or accessories",
+        "may have a brand name or logo",
+        "can be held or operated by a child or adult",
+        "may have a distinct design or character"
+    ],
+    "swimming pool": [
+        "a large, rectangular or oval, man-made body of water",
+        "clear blue water",
+        "a surrounding deck or patio",
+        "pool sides or edges",
+        "ladders, stairs, or handrails",
+        "pool floats, toys, or loungers",
+        "a filtration system or equipment"
+    ],
+    "stool": [
+        "a low seat for one person",
+        "three or four legs",
+        "a backless design",
+        "a flat or curved surface",
+        "made of wood, metal, or plastic",
+        "often without arms or cushions"
+    ],
+    "barrel": [
+        "cylindrical shape",
+        "rounded edges",
+        "metal or wooden material",
+        "horizontal bands or hoops around the body",
+        "a flat or curved top and bottom",
+        "a open top or a lid",
+        "rust, labels, or other markings on the surface"
+    ],
+    "basket": [
+        "woven or mesh material",
+        "container shape with open top",
+        "handles on the sides or top",
+        "varied colors and patterns",
+        "often made of natural materials like wicker or rattan",
+        "can be rectangular, circular, or oval in shape",
+        "may have a lid or be open topped"
+    ],
+    "waterfall": [
+        "water flowing downwards from a height",
+        "rocky or cliff-like formations in the background",
+        "mist or spray surrounding the falling water",
+        "lush green surroundings, such as trees or vegetation",
+        "a pool or stream at the base of the falls",
+        "white or foamy water due to turbulence"
+    ],
+    "tent": [
+        "a portable, collapsible shelter",
+        "typically made of waterproof fabric",
+        "various colors such as green, blue, or beige",
+        "poles or frames that provide structure",
+        "ropes or strings to secure it to the ground",
+        "doors or entrances with zippers or flaps",
+        "potentially with camping gear or equipment nearby"
+    ],
+    "bag": [
+        "fabric or leather material",
+        "container with an opening to hold objects",
+        "straps or handles for carrying",
+        "zippers, buttons, or other closures",
+        "pockets or compartments for organization",
+        "various shapes and sizes"
+    ],
+    "minibike": [
+        "small-sized motorcycle or bike",
+        "one or two seats",
+        "small wheels",
+        "low-to-the-ground stance",
+        "often brightly colored or decorated",
+        "gasoline-powered engine or electric motor",
+        "handlebars for steering",
+        "small platform or footpegs for the rider's feet."
+    ],
+    "cradle": [
+        "a small, enclosed or partially enclosed bed for a baby",
+        "typically has a rocking or swinging motion",
+        "often decorated with soft toys, blankets, or other baby items",
+        "has a flat, padded surface for the baby to lie on",
+        "may have a canopy or hood to protect the baby",
+        "often has a gentle, curved shape"
+    ],
+    "oven": [
+        "large, box-shaped appliance",
+        "typically made of metal or stainless steel",
+        "has a door that opens to reveal a cooking compartment",
+        "may have a window on the door for visibility",
+        "knobs or buttons for controlling temperature and settings",
+        "a rack or shelves for holding cookware",
+        "may have additional features like a range or cooktop above it"
+    ],
+    "ball": [
+        "spherical or rounded shape",
+        "uniform color or pattern",
+        "reflective surface",
+        "varying sizes",
+        "textures such as smooth, bumpy, or dimpled",
+        "possible presence of logos, markings, or panels"
+    ],
+    "food": [
+        "varying colors, shapes, and sizes",
+        "edible appearance",
+        "presence of a plate, bowl, or container",
+        "utensils such as forks, knives, and spoons",
+        "garnishes or toppings like herbs, spices, or sauces",
+        "steam or mist indicating heat or freshness",
+        "background setting such as a table, restaurant, or kitchen"
+    ],
+    "step": [
+        "a flat, elevated surface",
+        "a riser or vertical portion connecting to another flat surface",
+        "a horizontal surface, often made of wood, metal, or concrete",
+        "a distinct edge or lip at the front",
+        "sometimes accompanied by handrails or banisters"
+    ],
+    "tank": [
+        "large, armored vehicle",
+        "tracked wheels or treads",
+        "cannon or gun barrel",
+        "sloping or angled armor plating",
+        "crew compartment or hatch",
+        "camouflage paint or markings",
+        "distinctive shape, such as a turret or gun mantlet"
+    ],
+    "trade name": [
+        "written text (words or letters)",
+        "logos or symbols",
+        "brand colors",
+        "unusual font styles or arrangements",
+        "typically appears on signage, labels, or packaging"
+    ],
+    "microwave": [
+        "electronic appliance",
+        "typically white, black, or stainless steel",
+        "rectangular or square shape with a flat top",
+        "a door or transparent window on the front",
+        "a turntable or rotating plate inside",
+        "a control panel with buttons and/or a display",
+        "a power cord"
+    ],
+    "pot": [
+        "a container made of ceramic, metal, or other materials",
+        "typically has a rounded or oval body",
+        "has a single handle or two handles",
+        "often has a lid",
+        "can be various sizes and shapes",
+        "may have decorations, patterns, or textures on its surface"
+    ],
+    "animal": [
+        "fur, feathers, or scales",
+        "eyes",
+        "nose or snout",
+        "mouth or beak",
+        "ears or ear-like features",
+        "limbs or wings",
+        "body shape or silhouette",
+        "tail or fins"
+    ],
+    "bicycle": [
+        "two wheels of equal size",
+        "a frame that connects the wheels",
+        "a seat or saddle",
+        "handlebars for steering",
+        "pedals for propulsion",
+        "a chain or gears for transmission",
+        "brakes for slowing or stopping"
+    ],
+    "lake": [
+        "a large, calm body of water",
+        "reflective surface",
+        "surrounding landscape such as trees, hills, or mountains",
+        "possible presence of boats, docks, or piers",
+        "varying colors of blue, green, or brown depending on depth and clarity",
+        "ripples or waves on the surface",
+        "shores or banks"
+    ],
+    "dishwasher": [
+        "large, box-like appliance",
+        "typically white, stainless steel, or black in color",
+        "horizontal rows of racks or tines for holding dishes",
+        "door or latch that opens to load and unload dishes",
+        "electronic control panel with buttons or dials",
+        "water hoses or connections in the back",
+        "mounted to a wall or floor in a kitchen"
+    ],
+    "screen": [
+        "a rectangular or square shape",
+        "a flat, glowing surface",
+        "a frame or border around the surface",
+        "a reflective or matte finish",
+        "may show an image, video, or text on the surface",
+        "may have a keyboard, mouse, or other input devices nearby ",
+        "can be mounted on a wall, placed on a desk, or held in hand."
+    ],
+    "blanket": [
+        "rectangular or square shape",
+        "soft, folded, or draped fabric",
+        "various colors, patterns, or textures",
+        "edges that are bound or hemmed",
+        "thickness or layering indicating warmness or insulation",
+        "possibly thrown over a piece of furniture or a person"
+    ],
+    "sculpture": [
+        "a three-dimensional artwork",
+        "made of materials such as stone, metal, wood, or clay",
+        "varied shapes, sizes, and colors",
+        "often displayed on a pedestal or base",
+        "may have intricate details or textures",
+        "can be figurative or abstract in design"
+    ],
+    "hood": [
+        "typically attached to a jacket or sweatshirt",
+        "covers the top and back of the head",
+        "usually made of fabric",
+        "can be up or down",
+        "sometimes has a drawstring or adjustable cord to tighten or loosen",
+        "can have a peak or visor to shield the face from the sun"
+    ],
+    "sconce": [
+        "a decorative wall-mounted lighting fixture",
+        "typically consists of a backplate, arm, and shade",
+        "light source (e.g. candle, electric light, or LED)",
+        "often made of metal, glass, or ceramic materials",
+        "may feature ornate or decorative designs",
+        "usually mounted on a wall, rather than standing on a table or floor"
+    ],
+    "vase": [
+        "container-shaped object",
+        "typically made of glass, ceramic, or porcelain",
+        "often has a narrow neck and a wider body",
+        "may have handles or ornate decorations",
+        "can be plain or have intricate designs",
+        "usually has an open top"
+    ],
+    "traffic light": [
+        "vertical or horizontal structure",
+        "three circular or rectangular lights of different colors (red, yellow, and green)",
+        "mounted on a pole or hung from a gantry",
+        "often located at an intersection or pedestrian crossing",
+        "may have additional signs or displays showing arrows or text"
+    ],
+    "tray": [
+        "a flat, rectangular or oval-shaped container",
+        "made of materials like wood, metal, glass, or plastic",
+        "often has raised edges or lips to prevent items from sliding off",
+        "can have handles or grips for carrying",
+        "may have decorative designs or patterns",
+        "often used to carry or serve food and drinks"
+    ],
+    "ashcan": [
+        "metal or plastic container",
+        "typically small to medium in size",
+        "rectangular or oval in shape",
+        "lid on top for opening and closing",
+        "often has a handle for carrying",
+        "frequently has a pedal or step for hands-free opening",
+        "may have wheels or a base for stability",
+        "usually placed in a corner or against a wall"
+    ],
+    "fan": [
+        "spinning blades",
+        "a circular or oval shape",
+        "a base or stand to support the fan",
+        "a power cord or battery",
+        "a control panel or buttons to adjust speed",
+        "a grill or mesh cover to protect the blades",
+        "a sleek and modern design"
+    ],
+    "pier": [
+        "a structure extending over water",
+        "made of wood, concrete, or metal",
+        "supports for beams or pillars",
+        "railings or guardrails",
+        "a walkway or deck",
+        "moored boats or ships",
+        "scenic views of surrounding waters"
+    ],
+    "crt screen": [
+        "bulky and heavy",
+        "a curved or box-like shape",
+        "a glass or plastic front with a rounded edge",
+        "a thick bezel or frame around the screen",
+        "prominent ventilation slits or holes on the back or sides",
+        "a larger backside compared to modern flat screens",
+        "a visible deflection coil or magnetic shield at the back or bottom"
+    ],
+    "plate": [
+        "circular or oval shape",
+        "flat and horizontal surface",
+        "made of ceramic, glass, or plastic",
+        "often has a rim or border",
+        "may have a design or pattern",
+        "may have food or objects on it",
+        "often placed on a table or surface"
+    ],
+    "monitor": [
+        "electronic device",
+        "rectangular screen with a flat-panel display",
+        "thin frame or bezel around the screen",
+        "a stand or mount to support the screen",
+        "one or more cables connected to a computer",
+        "possibly a keyboard or mouse nearby",
+        "often placed on a desk or table"
+    ],
+    "bulletin board": [
+        "a rectangular or square board with a smooth surface",
+        "often made of cork, wood, or plastic",
+        "pins, tacks, or clips holding papers or notes",
+        "papers, notes, or documents attached to the board",
+        "may have a heading or title written at the top",
+        "can be mounted on a wall or standing on an easel"
+    ],
+    "shower": [
+        "a stall or enclosure",
+        "water showerhead",
+        "tiled or wet walls",
+        "floor drain",
+        "shower curtain or door",
+        "handles or knobs for water control",
+        "possible soap, shampoo, or other bathroom accessories nearby"
+    ],
+    "radiator": [
+        "typically rectangular or oval in shape",
+        "made of metal with a series of parallel tubes or panels",
+        "often vertical or wall-mounted",
+        "may have a valve or control at the bottom",
+        "may have a vent or grille for air release",
+        "often found in homes or offices"
+    ],
+    "glass": [
+        "transparent or translucent",
+        "cup-shaped or cylindrical",
+        "open top and a circular or rounded rim",
+        "a base or stem to support the glass",
+        "reflective surface",
+        "possible liquid or contents inside"
+    ],
+    "clock": [
+        "circular or rectangular face",
+        "numbers or digits marking the hours",
+        "two or three hands (hour, minute, and sometimes second)",
+        "a circular or square border around the face",
+        "Roman or Arabic numerals",
+        "ticking mechanism or digital display",
+        "mounted on a wall or placed on a table/stool"
+    ],
+    "flag": [
+        "rectangular shape",
+        "colorful",
+        "often attached to a pole or stick",
+        "waving or fluttering in the wind",
+        "may feature symbols, logos, or text",
+        "can be made of fabric or other materials",
+        "often displayed vertically or horizontally"
+    ]
+}

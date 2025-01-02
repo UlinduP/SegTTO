@@ -1,0 +1,37 @@
+{
+    "background": [
+        "uniform dark gray tones",
+        "no distinct shapes or edges",
+        "consistent low intensity",
+        "smooth, low contrast areas",
+        "covers large portions of the image"
+    ],
+    "fire extinguisher": [
+        "elongated cylindrical shape",
+        "moderate brightness",
+        "distinct edges",
+        "higher intensity spots near handle",
+        "visible contrast with background"
+    ],
+    "backpack": [
+        "rounded rectangular shape",
+        "moderate grayscale intensity",
+        "small size compared to human",
+        "soft, less defined edges",
+        "located near human if worn"
+    ],
+    "drill": [
+        "compact and irregular shape",
+        "high-intensity hot spots at motor",
+        "small compared to other objects",
+        "distinct edges",
+        "contrasting temperature zones"
+    ],
+    "human": [
+        "largest bright object in the scene",
+        "recognizable head, torso, and limbs",
+        "consistent high-intensity regions",
+        "dynamic posture",
+        "clear separation from background"
+    ]
+}

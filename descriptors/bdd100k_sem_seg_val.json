@@ -1,0 +1,175 @@
+{
+    "road": [
+        "a paved or unpaved path",
+        "parallel lines or edges that define its boundaries",
+        "connecting or crossing other roads",
+        "having lanes or markings",
+        "being a travel route for vehicles",
+        "having a contrasting color or texture compared to surrounding environment",
+        "having a horizon or vanishing point"
+    ],
+    "sidewalk": [
+        "a paved or concrete path",
+        "usually parallel to a road",
+        "designated for pedestrian use",
+        "often raised above the surrounding terrain",
+        "may have a curb or barrier separating it from the road",
+        "may have a smooth or textured surface",
+        "may have a specific pattern or design"
+    ],
+    "building": [
+        "structure with walls, windows, and doors",
+        "various shapes and sizes",
+        "multiple stories or floors",
+        "roof, chimney, or other architectural features",
+        "exterior materials such as brick, concrete, wood, or metal",
+        "presence of doors, windows, and other openings",
+        "may have a foundation or base",
+        "can be attached to other buildings or standalone"
+    ],
+    "wall": [
+        "vertical structure",
+        "connected to a building or a fence",
+        "made of materials such as brick, concrete, wood, or metal",
+        "may have windows or doors",
+        "may have visible joints or seams",
+        "can be plain or have decorations such as paint, wallpaper, or tiles"
+    ],
+    "fence": [
+        "long, narrow, and vertical structure",
+        "horizontal or diagonal beams or wires",
+        "vertical posts or columns",
+        "connects to walls, buildings, or other structures",
+        "made of wood, metal, or other materials",
+        "may have gates or openings"
+    ],
+    "pole": [
+        "long and thin",
+        "vertical or nearly vertical orientation",
+        "typically cylindrical or tapered shape",
+        "uniform color and texture",
+        "may have attachments such as lights, signs, or wires",
+        "often standing alone or connected to a structure"
+    ],
+    "traffic light": [
+        "vertical or horizontal mount on a pole or mast",
+        "three colored lights: red, yellow, and green",
+        "a pedestal or base",
+        "wires or cables connecting the light to a power source",
+        "reflective or illuminated surfaces",
+        "a standardized shape and size"
+    ],
+    "traffic sign": [
+        "typically rectangular or diamond-shaped ",
+        "mounted on a pole or hung from a gantry",
+        "colorful and reflective material ",
+        "text, symbols, or images providing information or instruction ",
+        "often has a distinctive border or frame ",
+        "may be illuminated at night"
+    ],
+    "vegetation": [
+        "green or brown in color",
+        "various shapes and sizes of leaves or branches",
+        "growth on or near the ground",
+        "varying textures, from smooth to rough or prickly",
+        "can be grouped together in clusters or patterns",
+        "may have visible stems, trunks, or roots"
+    ],
+    "terrain": [
+        "natural landscape feature",
+        "varying elevations and depressions",
+        "uneven or rough surfaces",
+        "presence of rocks, soil, sand, or other geological materials",
+        "sometimes covered with vegetation, water, or other natural elements",
+        "often without man-made structures or objects"
+    ],
+    "sky": [
+        "blue or gray color",
+        "often appears as the top portion of the image",
+        "may contain clouds, sun, or moon",
+        "may have a gradient of colors, from light to dark",
+        "has a natural, smooth texture",
+        "does not have defined edges or boundaries"
+    ],
+    "person": [
+        "upright posture",
+        "two legs and two arms",
+        "head with facial features such as eyes, nose, and mouth",
+        "skin tone varying from pale to dark",
+        "hair on the head, which can be various colors and styles",
+        "clothing that can be diverse in style, color, and texture",
+        "shoes or other footwear on the feet",
+        "hands that can hold objects or make gestures"
+    ],
+    "rider": [
+        "associated with a vehicle (motorcycle, bicycle)",
+        "sitting or straddling the vehicle",
+        "holding handlebars",
+        "wearing a helmet and protective gear (optional)",
+        "focusing on the road or path ahead",
+        "interacting with the vehicle's controls"
+    ],
+    "car": [
+        "a four-wheeled, self-powered vehicle",
+        "a rectangular or curved body with a horizontal hood and trunk",
+        "a windshield and windows",
+        "a roof and doors",
+        "headlights and taillights",
+        "a grille and bumpers",
+        "wheels with tires",
+        "a license plate",
+        "a shine or reflection indicating metal or glass surfaces"
+    ],
+    "truck": [
+        "a large, wheeled vehicle",
+        "bigger than a car",
+        "often with an open cargo bed",
+        "may have a separate cabin or cab for the driver",
+        "may have a trailer attached",
+        "typically has a flat front end with a grille and headlights",
+        "often has larger wheels and a higher ground clearance than a car",
+        "may display a company logo or branding"
+    ],
+    "bus": [
+        "large, elongated vehicle",
+        "multiple wheels",
+        "rectangular or box-like shape",
+        "windows along the sides",
+        "seats visible through the windows",
+        "a front grille with a logo or design",
+        "headlights and taillights",
+        "a distinct separation between the driver's cabin and the passenger area",
+        "a door for passengers to enter and exit"
+    ],
+    "train": [
+        "long, connected cars",
+        "wheels and tracks",
+        "metallic body",
+        "doors and windows on the cars",
+        "a locomotive with a control cabin",
+        "a distinctive shape and size compared to other vehicles",
+        "often appears on railroad tracks"
+    ],
+    "motorcycle": [
+        "two-wheeled vehicle",
+        "a seat for the rider",
+        "handlebars",
+        "wheels with circular rims",
+        "headlights and taillights",
+        "a fuel tank",
+        "an engine",
+        "a license plate",
+        "a chain or belt drive connecting the engine to the rear wheel",
+        "a kickstand or center stand ",
+        "a exhaust pipe"
+    ],
+    "bicycle": [
+        "two wheels connected by a frame",
+        "a seat and handlebars for the rider",
+        "pedals for propulsion",
+        "a chain or gear system connecting the pedals to the wheels",
+        "metal or carbon fiber frame",
+        "wheels with spokes and tires",
+        "brakes and gear shifters on the handlebars"
+    ]
+}

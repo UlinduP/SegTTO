@@ -1,0 +1,42 @@
+{
+    "others": [
+        "background or surrounding environment",
+        "non-medical objects such as furniture, clothing, or medical equipment",
+        "shapes or structures that are not biological in nature",
+        "text or labels overlaid on the image",
+        "varying shades of gray or black that do not correspond to anatomical features",
+        "unusual textures or patterns not typically seen in x-ray images."
+    ],
+    "lung": [
+        "Whitish or grayish clouds in the chest cavity",
+        "Soft, feathery, or branch-like patterns",
+        "Air-filled spaces with distinct borders",
+        "Ribs or rib cage surrounding the lungs",
+        "Heart in the middle, between the lungs",
+        "Diaphragm below the lungs, separating them from the abdominal cavity",
+        "Vessels and airways visible within the lungs"
+    ],
+    "mediastinum": [
+        "located in the chest, between the lungs",
+        "appears as a whitish or grayish area on the x-ray",
+        "roughly triangular or oval in shape",
+        "bounded by the lungs and the spine",
+        "may contain visible outlines of trachea, esophagus, and major blood vessels"
+    ],
+    "bones": [
+        "high-density, white, or light-colored structures",
+        "varying shapes and sizes depending on the type of bone",
+        "distinctive joint structures and connections",
+        "may show cracks, breaks, or other skeletal injuries",
+        "may have metal implants or surgical hardware visible",
+        "will be visible beneath soft tissue and organs on an X-ray image"
+    ],
+    "diaphragm": [
+        "curved, dome-shaped appearance",
+        "located between the chest cavity and abdominal cavity",
+        "separates the lungs from the stomach and intestines",
+        "appears as a thin, white or light-colored line or curve",
+        "may show a slight indentation in the middle, forming a slight \"U\" shape ",
+        "typically located near the base of the lungs"
+    ]
+}

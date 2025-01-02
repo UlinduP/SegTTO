@@ -1,0 +1,186 @@
+{
+  "background": [
+    "Elements that are outside the primary focus of the image",
+    "Different colors, textures, or patterns than the foreground",
+    "Depth perception, with closer objects appearing sharper than distant ones",
+    "Contextual information, such as architecture or natural surroundings, that can provide clues about the scene or location."
+  ],
+  "aeroplane": [
+    "large machine with wings and a tail",
+    "typically silver or white, sometimes with colorful markings",
+    "has engines and wheels",
+    "has a cockpit with windows",
+    "often has a distinct shape with a horizontal stabilizer and vertical tail",
+    "may have a visible propeller or jet engines"
+  ],
+  "bicycle": [
+    "two wheels connected by a frame",
+    "pedals and a seat for the rider",
+    "handlebars for steering",
+    "metal or carbon fiber frame",
+    "chain or gear system",
+    "brakes and gears"
+  ],
+  "bird": [
+    "feathered body",
+    "beak or bill",
+    "wings",
+    "two legs",
+    "tail",
+    "varied plumage colors and patterns",
+    "head shape and size",
+    "eyes and eye shape",
+    "claws on feet"
+  ],
+  "boat": [
+    "vessel designed to float on water",
+    "various shapes and sizes, but often elongated and symmetrical",
+    "hull made of materials like wood, metal, or fiberglass",
+    "presence of propeller or sails for propulsion",
+    "navigation equipment like steering wheel or rudder",
+    "seats or cabins for passengers",
+    "anchors, ropes, or other equipment for mooring or docking"
+  ],
+  "bottle": [
+    "a transparent or translucent container",
+    "cylindrical or rounded shape",
+    "made of glass or plastic",
+    "has a neck and/or cap",
+    "often has a label or markings",
+    "can have various sizes and capacities",
+    "may be empty or filled with a liquid or substance"
+  ],
+  "bus": [
+    "large, rectangular vehicle",
+    "multiple wheels (usually six)",
+    "horizontal rows of windows",
+    "doors on the side for passengers",
+    "a rectangular or curved body",
+    "seating for many people inside",
+    "destination signs or route numbers on the front and side"
+  ],
+  "car": [
+    "four wheels",
+    "body made of metal or plastic",
+    "windows and windshield",
+    "doors and a trunk",
+    "headlights and taillights",
+    "a steering wheel and seats inside",
+    "wheels attached to axles",
+    "tires with treads"
+  ],
+  "cat": [
+    "four-legged mammal",
+    "typically furry, short or long hair",
+    "pointed ears",
+    "whiskers around the mouth",
+    "curved tail",
+    "eyes with vertical pupils",
+    "varying shades of fur color - solid, tabby, tortoiseshell, calico, etc."
+  ],
+  "chair": [
+    "typically has four legs",
+    "has a backrest and a seat",
+    "may have armrests",
+    "can be made of various materials such as wood, metal, or plastic",
+    "can be cushioned or non-cushioned",
+    "can be a single entity or part of a set"
+  ],
+  "cow": [
+    "large, four-legged, hooved, herbivorous mammal",
+    "typically brown or black in color, sometimes with white patches",
+    "distinctive horns or ears",
+    "a large body with a prominent belly",
+    "a long tail with a bushy end",
+    "a distinctive muzzle or snout shape",
+    "often seen in a field or rural setting"
+  ],
+  "dining table": [
+    "piece of furniture",
+    "typically rectangular or oval in shape",
+    "has legs or a pedestal to support the top",
+    "a flat surface, often made of wood, metal, or glass",
+    "may have chairs or other objects placed around it"
+  ],
+  "dog": [
+    "four-legged mammal",
+    "typically brown, black, white, or grey",
+    "furry body",
+    "pointy ears",
+    "snout-shaped nose",
+    "different breeds have distinct shapes and sizes",
+    "tail often wagging"
+  ],
+  "horse": [
+    "four-legged, hoofed, large mammal",
+    "brown, black, white, grey, or a combination of these colors",
+    "long neck and head with a muzzle and ears",
+    "prominent eyes and nostrils",
+    "flowing mane and tail",
+    "muscular body with a distinctive gait ",
+    "may be saddled or have a rider"
+  ],
+  "motorbike": [
+    "two wheels",
+    "powered by an engine",
+    "a seat for the rider",
+    "handlebars for steering",
+    "often has mirrors, headlights, and a license plate",
+    "can have a fairing, windshield, or other aerodynamic features",
+    "has a distinctive shape, with the engine and wheels exposed"
+  ],
+  "person": [
+    "upright, two-legged posture",
+    "human facial features (eyes, nose, mouth)",
+    "skin tone (varies across individuals, but typically ranges from pale to dark)",
+    "hair on the head (color, style, and length vary across individuals)",
+    "clothing or accessories (styles, colors, and types vary across individuals and cultures)",
+    "hands and fingers",
+    "fingers with nails",
+    "feet and toes"
+  ],
+  "potted plant": [
+    "a plant growing in a container",
+    "a pot or planter with soil",
+    "green or colorful leaves",
+    "stems and branches",
+    "visible roots",
+    "different shapes and sizes of pots and plants"
+  ],
+  "sheep": [
+    "four-legged, hoofed mammal",
+    "typically white, but can be black, brown, or other colors",
+    "thick, fluffy coat",
+    "long ears",
+    "curved horns",
+    "distinctive facial features, including a black nose and mouth",
+    "often seen in a grazing or herding context."
+  ],
+  "sofa": [
+    "furniture for seating",
+    "upholstered with fabric or leather",
+    "typically rectangular in shape",
+    "padded cushions for comfort",
+    "armrests on either side",
+    "legs or a base for support",
+    "often found indoors"
+  ],
+  "train": [
+    "large, wheeled vehicle",
+    "consists of multiple connected cars",
+    "rails or tracks underneath",
+    "coupling system connecting the cars",
+    "pantograph or antenna on the roof",
+    "distinctive front and rear ends",
+    "often decorated with logos, signs, or advertisements",
+    "presence of wheels, axles, and bogies"
+  ],
+  "tvmonitor": [
+    "electronic device",
+    "typically black or grey",
+    "a flat, rectangular screen with a display",
+    "a stand or mount to support the screen",
+    "a power cord",
+    "input ports for connecting to other devices"
+  ]
+}

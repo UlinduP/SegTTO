@@ -1,0 +1,83 @@
+{
+    "background": [
+        "it's everything else in the scene",
+        "often blurry or out of focus",
+        "provides context for the main subjects",
+        "can be colorful or neutral",
+        "lacks distinct features or objects"
+    ],
+    "building-flooded": [
+        "a structure with walls and a roof",
+        "surrounded by water, which reaches up to the walls or doors",
+        "reflections of the building in the water",
+        "waterline or flood marks on the walls",
+        "debris or furniture floating near the building",
+        "broken or open doors and windows"
+    ],
+    "building-non-flooded": [
+        "a large, man-made structure",
+        "walls, windows, and a roof",
+        "doors and possibly a entrance",
+        "can be made of various materials like brick, concrete, wood, etc.",
+        "can have multiple floors and levels",
+        "may have features like balconies, stairs, or columns"
+    ],
+    "road-flooded": [
+        "a road or street",
+        "water covering the road",
+        "perhaps some standing water or waves",
+        "vehicles partially or fully submerged",
+        "traffic lanes or lines under water",
+        "a sense of disorder or chaos"
+    ],
+    "road-non-flooded": [
+        "flat, wide, and straight path",
+        "made of concrete, asphalt, or stone",
+        "has lanes and dividers",
+        "vehicles are on it",
+        "no water covering it",
+        "may have painted lines, arrows, and traffic signs"
+    ],
+    "water": [
+        "transparent or blue color",
+        "reflection of surroundings",
+        "movement or ripples",
+        "waves or splashes",
+        "edges that are irregular or curved",
+        "presence near a pool, lake, or ocean"
+    ],
+    "tree": [
+        "tall and upright",
+        "trunk, branches, and leaves",
+        "green or brown color",
+        "varying shapes and sizes",
+        "roots underground",
+        "may have fruits, flowers, or nuts"
+    ],
+    "vehicle": [
+        "it has wheels",
+        "it has a body with a distinct shape",
+        "it has windows and a windshield",
+        "it has a door or doors",
+        "it has a hood and a trunk",
+        "it is typically made of metal or fiberglass",
+        "it often has headlights and a bumper",
+        "it can be various colors such as red, blue, black, white, or silver"
+    ],
+    "pool": [
+        "large container filled with water",
+        "usually blue or clear water",
+        "rectangular or oval shape",
+        "surrounding deck or patio",
+        "ladders or stairs to enter/exit",
+        "lounging chairs or tables nearby",
+        "pool equipment such as pumps or filters"
+    ],
+    "grass": [
+        "green in color",
+        "thin, long blades",
+        "grows in clusters or lawns",
+        "often has shadows or texture",
+        "can be lush, trimmed, or wild-looking"
+    ]
+}

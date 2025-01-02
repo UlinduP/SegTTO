@@ -1,0 +1,154 @@
+{
+    "others": [
+        "man-made objects (e.g., furniture, appliances, vehicles)",
+        "natural objects (e.g., plants, animals, food)",
+        "inanimate objects (e.g., books, tools, decorations)",
+        "structures (e.g., buildings, bridges, roads)",
+        "scenes (e.g., landscapes, cityscapes, kitchens)",
+        "textures (e.g., wood, metal, fabric)",
+        "patterns (e.g., stripes, polka dots, florals)",
+        "shapes and forms (e.g., squares, circles, triangles)",
+        "colors and hues (e.g., primary colors, pastels, neon)"
+    ],
+    "hat": [
+        "a wearable object on top of the head",
+        "various shapes, sizes, and colors",
+        "a brim or visor",
+        "a crown or top portion",
+        "a band or ribbon around the crown",
+        "decorative elements such as feathers, flowers, or badges"
+    ],
+    "hair": [
+        "long, thin, and thread-like structure",
+        "typically black, brown, blonde, or other natural colors",
+        "may be curly, straight, or wavy in texture",
+        "often attached to the scalp or falls freely",
+        "may be styled in various ways (e.g., tied up, loose, braided)"
+    ],
+    "sunglasses": [
+        "a frame that covers the eyes and surrounding area",
+        "lenses that are transparent or tinted",
+        "a bridge that connects the two lenses",
+        "arms or temples that hold the sunglasses in place",
+        "a nose pad or grip",
+        "a distinctive shape or style"
+    ],
+    "upper clothes": [
+        "covering the upper body",
+        "various colors and patterns",
+        "sleeves or sleeveless",
+        "collars or necklines",
+        "buttons, zippers, or other fasteners",
+        "may have a hood or pockets"
+    ],
+    "skirt": [
+        "a garment that hangs from the waist",
+        "circular or curved in shape",
+        "often pleated or gathered",
+        "can be short or long in length",
+        "typically worn by females",
+        "may be made of various fabrics or textures",
+        "may have designs, patterns, or embellishments"
+    ],
+    "pants": [
+        "a garment that covers the lower body",
+        "divided into two legs",
+        "has a waistband",
+        "may have pockets",
+        "may have a zipper, buttons, or other fasteners",
+        "various colors, patterns, and textures",
+        "may have cuffs or hem at the bottom"
+    ],
+    "dress": [
+        "garment extending from shoulder to hem",
+        "one-piece design",
+        "various colors, patterns, and fabrics",
+        "may have sleeves or be sleeveless",
+        "may have a collar, neckline, or a waistline",
+        "may have embellishments such as buttons, zippers, or lace",
+        "may have a specific style or design, such as a ball gown or sundress"
+    ],
+    "belt": [
+        "a flexible band or strap",
+        "typically made of leather, synthetic materials, or fabric",
+        "often has a buckle or other fastening mechanism",
+        "may have decorative elements or patterns",
+        "worn around the waist"
+    ],
+    "left shoe": [
+        "footwear",
+        "at the bottom of a leg",
+        "typically made of leather, synthetic, or fabric materials",
+        "has laces or straps",
+        "a sole and a heel",
+        "may have a brand logo or design"
+    ],
+    "right shoe": [
+        "made of materials like leather, rubber, or synthetic",
+        "has a sole, laces, and a tongue",
+        "designed for covering and protecting the right foot",
+        "can have a heel, instep, and toe cap",
+        "often has a brand logo or visual design elements",
+        "may have buckles, straps, or other decorative features"
+    ],
+    "face": [
+        "oval or round shape",
+        "eyes with eyelids and eyelashes",
+        "nose with nostrils",
+        "mouth with lips",
+        "facial expressions (e.g. smiling, frowning)",
+        "facial features (e.g. eyebrows, cheekbones)"
+    ],
+    "left leg": [
+        "lower limb located on the left side of the body",
+        "typically connected to the left foot",
+        "often covered with fabric from pants or a skirt",
+        "has a knee joint and an ankle joint",
+        "may have visible muscle or bone structure"
+    ],
+    "right leg": [
+        "connected to the right hip or pelvis",
+        "typically straight and cylindrical in shape",
+        "may have muscle definition",
+        "may have a knee joint",
+        "usually ends in a foot or ankle"
+    ],
+    "left arm": [
+        "connected to the left shoulder",
+        "has an elbow",
+        "has a forearm",
+        "has a wrist ",
+        "has a hand"
+    ],
+    "right arm": [
+        "connected to the right shoulder",
+        "has an elbow joint",
+        "has a wrist joint",
+        "has a hand at the end",
+        "has a forearm and an upper arm",
+        "same skin tone as the rest of the body"
+    ],
+    "bag": [
+        "made of fabric, leather, or synthetic materials",
+        "has zipper, buckle, or drawstring closures",
+        "varying shapes and sizes",
+        "straps or handles for carrying",
+        "pockets or compartments for storing items",
+        "May have logo, branding, or design patterns"
+    ],
+    "scarf": [
+        "long, thin, rectangular piece of fabric",
+        "often folded or draped",
+        "various colors and patterns",
+        "may be made of silk, wool, or other materials",
+        "may have fringe or tassels at the ends"
+    ],
+    "torso skin": [
+        "Smooth and slightly curved surface",
+        "Natural skin tones such as peach, brown, or pale",
+        "Wrinkles, folds, or creases",
+        "Hair growth or absence of hair",
+        "Scars, moles, or other skin markings",
+        "Shadows or contours that indicate muscle definition"
+    ]
+}

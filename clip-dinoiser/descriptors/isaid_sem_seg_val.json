@@ -1,0 +1,138 @@
+{
+    "others": [
+        "natural landscapes (e.g. mountains, forests, rivers, oceans)",
+        "urban structures (e.g. buildings, roads, parks)",
+        "varying textures and patterns of different terrain (e.g. fields, deserts, cities)",
+        "lack of distinct objects or subjects in the foreground",
+        "often has a bird's-eye view perspective",
+        "can have a mixture of natural and man-made features"
+    ],
+    "boat": [
+        "vessel floating on water",
+        "various shapes and sizes, but typically elongated",
+        "distinctive hull shape and wake pattern",
+        "presence of sails or engines",
+        "anchor or mooring lines",
+        "reflection off the water's surface",
+        "dock or buoy nearby"
+    ],
+    "storage tank": [
+        "large, cylindrical or rectangular shape",
+        "typically white, grey, or silver in color",
+        "vertical or horizontal orientation",
+        "may have pipes or valves attached",
+        "often located near industrial or commercial areas",
+        "can be surrounded by fences or other security features"
+    ],
+    "baseball diamond": [
+        "a diamond-shaped outline with grass or dirt infield",
+        "white or light-colored bases at each corner",
+        "a pitcher's mound at the center",
+        "a home plate at one corner",
+        "a fence or wall surrounding the playing field",
+        "potentially, players or spectators in the surrounding area"
+    ],
+    "tennis court": [
+        "rectangular shape",
+        "divided into two halves by a net",
+        "surfaces made of grass, clay, or hard courts",
+        "white lines marking the boundaries of the court",
+        "a net in the center of the court, held up by posts",
+        "usually surrounded by fences or stands"
+    ],
+    "basketball court": [
+        "rectangular shape",
+        "divided into two halves by a mid-court line",
+        "a free throw line at each end",
+        "a three-point line that surrounds the court",
+        "a hoop (basket) at each end",
+        "a distinctive court surface, often made of wood or synthetic material",
+        "benches and technical areas along the sides"
+    ],
+    "running track field": [
+        "an oval or circular shape",
+        "marked lanes with distinct lines and numbers",
+        "a grass or synthetic surface",
+        "a central infield area, often with a grass or dirt surface",
+        "jumps and throws areas, such as high jump and long jump pits",
+        "starting lines and finishing lines marked on the track",
+        "possibly, bleachers or stands for spectators"
+    ],
+    "bridge": [
+        "a structure that spans a physical obstacle or body of water",
+        "connecting two land masses or roads",
+        "a distinct, elevated path or roadway",
+        "supports or pillars that hold up the structure",
+        "a clear, defined shape or outline",
+        "may have multiple lanes or pathways",
+        "may have a distinct color or texture compared to surrounding environment"
+    ],
+    "truck or bus": [
+        "large, rectangular or box-like shape",
+        "typically white, silver, or colored",
+        "wheels and tires visible from above",
+        "windows and doors visible from above",
+        "a longer length and width compared to a car",
+        "possible presence of trailer or attachments"
+    ],
+    "car": [
+        "four wheels",
+        "rectangular or oval shape",
+        "shiny or reflective surface",
+        "windshield and windows",
+        "distinct headlights",
+        "license plate",
+        "distinct color or pattern",
+        "proportions relative to surrounding objects"
+    ],
+    "helicopter": [
+        "rotor blades",
+        "central fuselage or body",
+        "tail section",
+        "landing gear",
+        "cockpit or pilot area",
+        "skids or wheels",
+        "distinct shape and size compared to an airplane"
+    ],
+    "swimming pool": [
+        "typically rectangular shape with clear blue water",
+        "surrounded by a concrete or tile deck",
+        "may have a pool house or changing rooms nearby",
+        "may have swimming lanes, diving boards, or other pool features",
+        "may have a fence or barrier surrounding the pool area",
+        "often located in a backyard or recreation area"
+    ],
+    "traffic circle": [
+        "circular or oval shape",
+        "surrounded by roads or highways",
+        "often has a central island or median",
+        "has a consistent flow of traffic in a circular motion",
+        "may have landscaping or other features in the center",
+        "may have arrows or other markings on the road to indicate circular traffic flow."
+    ],
+    "soccer field": [
+        "rectangular or oval shape",
+        "green or grassy color",
+        "goalposts at each end (usually white or bright colors)",
+        "lines and markings on the field, including a midfield line, penalty boxes, and goals",
+        "often surrounded by bleachers, fences, or stands"
+    ],
+    "air plane": [
+        "fixed-wing aircraft",
+        "metal or shiny surface",
+        "wings that are fixed in place",
+        "tail section with horizontal stabilizer",
+        "engines, often visible under the wings",
+        "wheels or landing gear",
+        "distinct shape and silhouette",
+        "shadow underneath the plane, indicating its presence"
+    ],
+    "pier": [
+        "a structure extending over water",
+        "wooden or metal beams or pilings",
+        "a flat surface or deck",
+        "railings or guardrails",
+        "boat slips or docking areas",
+        "buildings or sheds at the pier's entrance"
+    ]
+}

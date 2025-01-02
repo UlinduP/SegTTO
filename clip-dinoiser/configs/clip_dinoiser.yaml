@@ -1,0 +1,134 @@
+_base_: "default.yml"
+defaults:
+  - _self_
+
+seed: 0
+model_name: CLIP_DINOiser
+model:
+  type: CLIP_DINOiser
+  clip_backbone: maskclip
+  vit_arch: vit_base
+  vit_patch_size: 16
+  enc_type_feats: "v"
+  gamma: 0.2
+  in_dim: 256
+  delta: 0.99
+  feats_idx: -3
+  json_path: "/home/ulindu/kavindu/descriptors/chase_db1_sem_seg_test.json"
+
+train:
+  batch_size: 16
+  corr_lr: 0.00005
+  found_lr: 0.01
+  num_workers: 4
+  epochs: 100
+  milestones:
+    - 5000
+  step_lr_gamma: 0.1
+  data: "/home/data/imagenet" # CHANGE to your ImageNet data folder
+  loss: CE
+  ds_size: 1000
+  im_size: 448
+output: "" # CHANGE to your results folder
+
+evaluate:
+  eval_only: true
+  task:
+    # - paxray_bones
+    # - paxray_lungs
+    # - paxray_media
+    # - paxray_diaphragm
+    # - isaid
+    # - foodseg
+    # - cub
+    # - floodnet
+    # - dram
+    # - bdd100k
+    # - uavid
+    # - zerowaste
+    # - atlantis
+    # - mhp
+    # - pst900
+    # - deepcrack
+    # - worldfloods
+    # - suim
+    # - kvasir
+    - corrosion
+    - cwfid
+    - dark
+    - cryo
+    - chase
+    # - potsdam
+    # - voc
+    # - context
+    # - coco_object
+    # - context59
+    # - voc20
+    # - coco_stuff
+    # - cityscapes
+    # - ade20k
+
+  # evaluation
+  paxray_bones: segmentation/configs/_base_/datasets/paxray_bones.py
+  paxray_lungs: segmentation/configs/_base_/datasets/paxray_lungs.py
+  paxray_media: segmentation/configs/_base_/datasets/paxray_media.py
+  paxray_diaphragm: segmentation/configs/_base_/datasets/paxray_diaphragm.py
+  isaid: segmentation/configs/_base_/datasets/isaid.py
+  foodseg: segmentation/configs/_base_/datasets/foodseg.py
+  cub: segmentation/configs/_base_/datasets/cub.py
+  floodnet: segmentation/configs/_base_/datasets/floodnet.py
+  dram: segmentation/configs/_base_/datasets/dram.py
+  bdd100k: segmentation/configs/_base_/datasets/bdd100k.py
+  uavid: segmentation/configs/_base_/datasets/uavid.py
+  zerowaste: segmentation/configs/_base_/datasets/zerowaste.py
+  atlantis: segmentation/configs/_base_/datasets/atlantis.py
+  mhp: segmentation/configs/_base_/datasets/mhpv1.py
+  pst900: segmentation/configs/_base_/datasets/pst900.py
+  deepcrack: segmentation/configs/_base_/datasets/deepcrack.py
+  worldfloods: segmentation/configs/_base_/datasets/worldfloods.py
+  suim: segmentation/configs/_base_/datasets/suim.py
+  kvasir: segmentation/configs/_base_/datasets/kvasir.py
+  corrosion: segmentation/configs/_base_/datasets/corrosion_cs.py
+  cwfid: segmentation/configs/_base_/datasets/cwfid.py
+  dark: segmentation/configs/_base_/datasets/dark_zurich.py
+  cryo: segmentation/configs/_base_/datasets/cryonuseg.py
+  chase: segmentation/configs/_base_/datasets/chase_db1.py
+  potsdam: segmentation/configs/_base_/datasets/potsdam.py
+  voc: segmentation/configs/_base_/datasets/pascal_voc12.py
+  voc20: segmentation/configs/_base_/datasets/pascal_voc12_20.py
+  context: segmentation/configs/_base_/datasets/pascal_context.py
+  context59: segmentation/configs/_base_/datasets/pascal_context59.py
+  coco_stuff: segmentation/configs/_base_/datasets/stuff.py
+  coco_object: segmentation/configs/_base_/datasets/coco.py
+  cityscapes: segmentation/configs/_base_/datasets/cityscapes.py
+  ade20k: segmentation/configs/_base_/datasets/ade20k.py
+
+task_json_paths:
+  bdd100k: "descriptors/bdd100k_sem_seg_val.json"
+  dark: "descriptors/dark_zurich_sem_seg_val.json"
+  mhp_v1: "descriptors/mhp_v1_sem_seg_test.json"
+  foodseg: "descriptors/foodseg103_sem_seg_test.json"
+  atlantis: "descriptors/atlantis_sem_seg_test.json"
+  dram: "descriptors/dram_sem_seg_test.json"
+  isaid: "descriptors/isaid_sem_seg_val.json"
+  isprs_: "descriptors/isprs_potsdam_sem_seg_test_irrg.json"
+  worldfloods: "descriptors/worldfloods_sem_seg_test_irrg.json"
+  floodnet: "descriptors/floodnet_sem_seg_test.json"
+  uavid: "descriptors/uavid_sem_seg_val.json"
+  kvasir: "descriptors/kvasir_instrument_sem_seg_test.json"
+  chase: "descriptors/chase_db1_sem_seg_test.json"
+  cryo: "descriptors/cryonuseg_sem_seg_test.json"
+  paxray_bones: "descriptors/paxray_sem_seg_test_bones.json"
+  paxray_diaphragm: "descriptors/paxray_sem_seg_test_diaphragm.json"
+  paxray_media: "descriptors/paxray_sem_seg_test_mediastinum.json"
+  paxray_lungs: "descriptors/paxray_sem_seg_test_lungs.json"
+  corrosion: "descriptors/corrosion_cs_sem_seg_test.json"
+  deepcrack: "descriptors/deepcrack_sem_seg_test.json"
+  pst900: "descriptors/pst900_sem_seg_test.json"
+  zerowaste: "descriptors/zerowaste_sem_seg_test.json"
+  suim: "descriptors/suim_sem_seg_test.json"
+  cub: "descriptors/cub_200_sem_seg_test.json"
+  cwfid: "descriptors/cwfid_sem_seg_test.json"
+  voc_2012: "descriptors/voc_2012_sem_seg_val_bg.json"
+  ade20k: "descriptors/ade20k_sem_seg_val.json"
+  mhp: "descriptors/mhp_v1_sem_seg_test.json"

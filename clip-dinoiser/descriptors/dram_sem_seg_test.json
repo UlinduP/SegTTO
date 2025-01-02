@@ -1,0 +1,108 @@
+{
+    "bird": [
+        "feathers",
+        "beak",
+        "wings",
+        "tail",
+        "clawed feet",
+        "often perched on a branch or wire",
+        "may have a nest or food nearby",
+        "varies in size, shape, and color depending on the species"
+    ],
+    "boat": [
+        "a watercraft",
+        "various shapes and sizes",
+        "hull made of wood, metal, or fiberglass",
+        "propeller or paddles for propulsion",
+        "sailors or passengers on board",
+        "moored to a dock or floating on water",
+        "navigation equipment such as steering wheel or compass",
+        "anchor or other safety features"
+    ],
+    "bottle": [
+        "a container made of glass, plastic, or ceramic material",
+        "hollow body with an open top",
+        "narrow neck and a wider body",
+        "a label or branding on the body",
+        "a cap or lid to seal the opening",
+        "varied shapes and sizes",
+        "transparent, translucent, or opaque body"
+    ],
+    "cat": [
+        "a small to medium-sized, typically furry, carnivorous mammal",
+        "whiskers",
+        "a short snout",
+        "retractable claws",
+        "agile and flexible body",
+        "usually orange, black, white, or a combination of these colors."
+    ],
+    "chair": [
+        "furniture",
+        "typically has a back and four legs",
+        "designed for one person to sit",
+        "may have armrests",
+        "various shapes and colors",
+        "may have cushions or upholstery",
+        "may have a distinct pattern or design"
+    ],
+    "cow": [
+        "large, four-legged, hooved, herbivorous mammal",
+        "black, white, brown, or a combination of these colors",
+        "distinctive horns or ears",
+        "large body with a prominent abdomen",
+        "a subtle hump on the back",
+        "a long, thin tail",
+        "a typical grazing posture"
+    ],
+    "dog": [
+        "furry body",
+        "four legs",
+        "wagging tail",
+        "floppy or pointed ears",
+        "snout-shaped nose",
+        "varying sizes and shapes depending on breed",
+        "common colors include brown, black, white, grey, or a combination"
+    ],
+    "horse": [
+        "large, four-legged mammal",
+        "brown, black, white, or gray in color",
+        "long neck and head with a muzzle",
+        "pointed ears",
+        "flowing mane and tail",
+        "hooves on the feet"
+    ],
+    "person": [
+        "two legs and two arms",
+        "upright posture",
+        "human-like face with eyes, nose, and mouth",
+        "hair on the head",
+        "clothes or other forms of attire",
+        "fingers and toes",
+        "varying skin tones"
+    ],
+    "potted-plant": [
+        "a container or pot made of ceramic, plastic, or other materials",
+        "soil or growing medium visible",
+        "one or more plants with leaves, stems, and possibly flowers or fruits",
+        "a distinct boundary between the plant and the surrounding environment",
+        "possibly a saucer or tray underneath the pot",
+        "varying shapes, sizes, and colors of the pot and plant"
+    ],
+    "sheep": [
+        "four-legged, hooved, and herbivorous mammal",
+        "typically white or light brown fleece",
+        "rounded body shape with a distinctive coat pattern",
+        "horizontal, curved horns",
+        "a distinctive head shape with a short, blunt snout",
+        "often found in a pastoral or rural setting"
+    ],
+    "background": [
+        "often blurry or out of focus",
+        "lacks clear edges or defined shape",
+        "may include elements such as sky, walls, floors, gardens, etc.",
+        "often serves as a context for the main subject of the image",
+        "can include natural elements such as trees, flowers, or clouds",
+        "can include architectural elements such as buildings, doors, or windows",
+        "does not have a distinct object-like presence"
+    ]
+}

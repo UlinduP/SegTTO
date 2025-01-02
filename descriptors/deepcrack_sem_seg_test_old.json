@@ -1,0 +1,18 @@
+{
+  "concrete or asphalt": [
+    "grey or black color",
+    "smooth or textured surface",
+    "uniform pattern or design",
+    "presence of cracks or fissures (ironically, the opposite of the crack you're trying to distinguish it from!)",
+    "possibly lines or markings from traffic or construction",
+    "may be part of a larger structure, such as a road or building foundation."
+  ],
+  "crack": [
+    "a line or fissure in the surface",
+    "varying widths and depths",
+    "possibly filled with debris or vegetation",
+    "can be straight, curved, or irregularly shaped",
+    "may have a different color or texture than the surrounding surface",
+    "can be singular or part of a network of cracks"
+  ]
+}

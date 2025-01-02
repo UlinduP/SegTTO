@@ -1,0 +1,82 @@
+{
+    "background (waterbody)": [
+        "blue, green, or darker tone",
+        "out of focus or blurred",
+        "lacks distinct shapes or features",
+        "often covers a large portion of the image",
+        "may have some visibility of depth or distance",
+        "can appear transparent or translucent"
+    ],
+    "human diver": [
+        "a person wearing scuba gear, including a diving helmet or mask",
+        "a breathing apparatus, such as scuba tanks and regulators",
+        "a wetsuit or dive skin",
+        "swim fins on their feet",
+        "a weight belt around their waist",
+        "a dive computer or other underwater instruments",
+        "bubbles rising from their air supply",
+        "a distinct shape and movement different from marine life"
+    ],
+    "aquatic plants and sea-grass": [
+        "green or brown color",
+        "long, thin, and flexible stems or blades",
+        "rooted in the seafloor or attached to rocks",
+        "can be swaying with the current",
+        "can have flowers or other blooms",
+        "often grow in clusters or beds",
+        "can have wavy or feathery edges",
+        "can be partially or fully submerged in water"
+    ],
+    "wrecks and ruins": [
+        "man-made structures with signs of aging, damage, or decay",
+        "irregular shapes, broken or crumbling architecture",
+        "rust, corrosion, or worn-out metal surfaces",
+        "overgrown with aquatic plants or algae",
+        "scattered debris, trash, or broken objects",
+        "partially or fully submerged in the water",
+        "visible signs of damage from natural disasters or human actions"
+    ],
+    "robots (auvs/rovs/instruments)": [
+        "man-made object",
+        "metallic, plastic, or fiberglass body",
+        "propellers, thrusters, or other propulsion systems",
+        "sensors, lights, or cameras attached",
+        "wires, cables, or antennas",
+        "a distinct shape or contour, often angular or cylindrical",
+        "a lack of biological features (eyes, nose, mouth, etc.)",
+        "presence of control surfaces, such as fins or rudders",
+        "possibly with a tether or umbilical cord",
+        "may have a docking station or cage around it"
+    ],
+    "reefs and invertebrates": [
+        "colorful and irregularly-shaped structures",
+        "coral polyps with tiny tentacles",
+        "sea anemones with tentacles",
+        "sea fans and sea whips",
+        "brain corals and stony corals",
+        "soft corals and sea pens",
+        "starfish and sea stars",
+        "sea urchins and sea cucumbers",
+        "conchs and scallops",
+        "clams and mussels"
+    ],
+    "fish and vertebrates": [
+        "elongated body",
+        "scales or skin patterns",
+        "fins or limbs",
+        "gills or mouth",
+        "eyes on the sides of the head",
+        "vertical movement through the water (if captured in motion)",
+        "varied colors and patterns on the body",
+        "distinct swimming patterns"
+    ],
+    "sea-floor and rocks": [
+        "irregular shapes and textures",
+        "brown, grey, or beige colors",
+        "presence of sediment or sand",
+        "visible cracks or crevices",
+        "shadows or highlights that suggest three-dimensional structure",
+        "lack of reflections or glare, unlike water",
+        "possibly covered in algae, anemones, or other marine life"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "others": [
+        "bones (e.g. ribcage, spine, pelvis)",
+        "lungs with distinct edges and vasculature",
+        "heart with its characteristic shape",
+        "diaphragm with its dome-like shape",
+        "air-filled trachea and bronchi",
+        "shoulder blades and upper arm bones",
+        "soft tissue with varying densities and textures"
+    ],
+    "mediastinum": [
+        "a region in the thoracic cavity between the lungs",
+        "appears as a vertical, white or light-colored area on an x-ray",
+        "contains major blood vessels, trachea, esophagus, and other structures",
+        "typically narrower at the top and wider at the bottom",
+        "can be differentiated from the lungs by its higher opacity and distinct shape"
+    ]
+}

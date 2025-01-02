@@ -1,0 +1,179 @@
+{
+    "unlabeled": [
+        "dark or dimly lit environment",
+        "streaks or trails of light from vehicles or streetlights",
+        "blurred or motion-blurred objects due to camera movement",
+        "reflections or glare from headlights or taillights",
+        "faint outlines of buildings, trees, or other objects",
+        "stars or moon visible in the sky"
+    ],
+    "road": [
+        "a paved or unpaved path",
+        "marked by lines, lanes, or edges",
+        "often lined with curb, gutter, or sidewalk",
+        "may have traffic markings or signs",
+        "can be light or dark in color depending on material and lighting",
+        "may have patterns or textures from asphalt, concrete, or other materials"
+    ],
+    "sidewalk": [
+        "a paved path beside a road",
+        "usually made of concrete or asphalt",
+        "often has a distinct edge or curb",
+        "may have markings or patterns such as lines, cracks, or textures",
+        "may be lined with obstacles like trash cans, signs, or benches",
+        "people may be walking or standing on it"
+    ],
+    "building": [
+        "large structure with walls and a roof",
+        "rectangular or square shape",
+        "windows, doors, and other architectural features",
+        "varying heights and sizes",
+        "exterior materials such as brick, concrete, glass, or metal",
+        "lighting, such as interior lights or outdoor illumination"
+    ],
+    "wall": [
+        "a vertical, continuous structure",
+        "made of materials such as brick, concrete, wood, or metal",
+        "often rectangular in shape",
+        "can be freestanding or part of a building",
+        "may have windows, doors, or other features",
+        "can be textured, patterned, or painted",
+        "casts a shadow, especially at night"
+    ],
+    "fence": [
+        "a barrier or enclosure made of wood, metal, or other materials",
+        "vertical or horizontal parallel bars or wires",
+        "posts or pillars that support the bars or wires",
+        "a gate or entrance point",
+        "a consistent pattern or design throughout the fence",
+        "a clear boundary or separation from the surrounding environment"
+    ],
+    "pole": [
+        "vertical, thin, and tall structure",
+        "typically uniform in color and texture",
+        "often with a rounded or tapered top",
+        "may have a base or anchor at the bottom",
+        "can be made of various materials such as wood, metal, or concrete",
+        "may have attachments or fixtures such as lights, signs, or wires"
+    ],
+    "traffic light": [
+        "vertical or gantry mounted",
+        "rectangular or circular shape",
+        "three colored lenses (red, yellow, green) or arrows",
+        "black or dark-colored frame or housing",
+        "mounted above the road or at an intersection",
+        "wired or wireless connections to a control box or power source"
+    ],
+    "traffic sign": [
+        "rectangular or octagonal shape",
+        "mounted on a pole or hung from a gantry",
+        "bright colors such as yellow, orange, red, green, or blue",
+        "reflective surface to increase visibility at night",
+        "text or symbols conveying traffic information or instructions",
+        "a distinct border or frame around the sign face",
+        "often mounted near roads or intersections"
+    ],
+    "vegetation": [
+        "Green or brown in color ",
+        "Leafy, branchy, or flower-shaped structures ",
+        "Organic, irregular shapes ",
+        "Texture or pattern of leaves, stems, or flowers ",
+        "Shadows or lighting patterns that indicate non-rigid structure ",
+        "Clustering or grouping of similar shapes"
+    ],
+    "terrain": [
+        "natural landscape features such as hills, mountains, valleys, or plains",
+        "varying elevations and textures",
+        "natural elements like rocks, soil, sand, or water",
+        "vegetation such as trees, grass, or bushes",
+        "terrain features like cliffs, caves, or canyons"
+    ],
+    "sky": [
+        "occupies the top portion of the image",
+        "typically blue or dark blue during the day",
+        "black or dark at night with stars or moon visible",
+        "may have clouds, sun, moon, or stars",
+        "gradation of color from horizon to top of image",
+        "often meets the horizon line where it meets the land or sea"
+    ],
+    "person": [
+        "Two legs and two arms",
+        "Upright posture",
+        "Human-like facial features",
+        "Hair on the head",
+        "Clothing or accessories",
+        "Hands with fingers",
+        "Feet with toes",
+        "A variety of skin tones"
+    ],
+    "rider": [
+        "a human figure",
+        "helmet, goggles, or hat",
+        "gloves",
+        "jacket, pants, or protective gear",
+        "boots or shoes",
+        "sitting posture on a vehicle",
+        "holding handlebars or grip"
+    ],
+    "car": [
+        "four wheels",
+        "metallic body",
+        "headlights at the front",
+        "taillights at the back",
+        "windshield and windows",
+        "a hood and trunk",
+        "mirrors on the sides",
+        "a license plate"
+    ],
+    "truck": [
+        "large vehicle",
+        "longer than a car",
+        "open or enclosed cargo bed",
+        "higher ground clearance",
+        "larger wheels and tires",
+        "possibly having a trailer attached",
+        "headlights and taillights",
+        "grille and bumper",
+        "mirrors and doors"
+    ],
+    "bus": [
+        "large vehicle",
+        "rectangular or box-like shape",
+        "windows along the sides",
+        "doors on both sides",
+        "wheels and axles",
+        "headlights and taillights",
+        "destination sign or board",
+        "distinctive paint or design on the side or front"
+    ],
+    "train": [
+        "long, connected cars on rails",
+        "metal or silver body",
+        "wheels and axles",
+        "distinct headlights and taillights",
+        "locomotive at the front",
+        "cargo or passenger cars",
+        "coupling devices connecting the cars"
+    ],
+    "motorcycle": [
+        "two wheels",
+        "single seat or two seats",
+        "handlebars",
+        "fuel tank",
+        "engine",
+        "headlights",
+        "taillights",
+        "exhaust pipe",
+        "license plate",
+        "rider sitting on the seat"
+    ],
+    "bicycle": [
+        "two wheels",
+        "a frame with a horizontal top tube, seat post, and handlebars",
+        "pedals and crankset",
+        "chain or belt connecting the pedals to the rear wheel",
+        "seat and handlebars for the rider",
+        "possible presence of gears, brakes, and suspension components",
+        "may have reflectors, lights, or other safety features"
+    ]
+}

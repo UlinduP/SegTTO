@@ -1,0 +1,23 @@
+{
+  "land": [
+    "solid, textured surface (fields, forests, urban areas) with varied patterns and colors",
+    "non-reflective and stable, often with visible grid-like or natural patchwork patterns",
+    "features terrain variations like hills, mountains, or valleys, creating shadows and gradients",
+    "clear boundaries between natural land and human-made features (roads, buildings)",
+    "dry, stable, with no signs of water pooling or saturation, sharp separation from water bodies"
+  ],
+  "water and flood": [
+    "smooth, reflective surfaces with variable brightness due to sunlight or shadow",
+    "flowing patterns in rivers or streams, with winding paths visible from above",
+    "irregular, pooled shapes for floods, often submerging or surrounding land features",
+    "may appear darker in color compared to land, with smoother, flowing contours",
+    "in flood areas, debris or sediment may be visible, altering the water's texture or color"
+  ],
+  "cloud": [
+    "soft, diffuse shapes, casting shadows over land or water from above",
+    "white to dark grey, depending on weather conditions, with no sharp boundaries",
+    "floats above the terrain, partially obscuring land or water below",
+    "irregular, billowing forms that change size and density across the sky",
+    "creates lighter or darker patches on the surface below due to varying cloud thickness"
+  ]
+}

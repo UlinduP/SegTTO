@@ -1,0 +1,162 @@
+{
+    "unlabled": [
+        "misc",
+        "other",
+        "background",
+        "unknown",
+        "blurry",
+        "dark"
+    ],
+    "road": [
+        "street",
+        "pavement",
+        "main road",
+        "back alley",
+        "flat",
+        "gray"
+    ],
+    "sidewalk": [
+        "footpath",
+        "pedestrian path",
+        "curbside",
+        "side trail",
+        "narrow",
+        "smooth"
+    ],
+    "building": [
+        "structure",
+        "edifice",
+        "office",
+        "apartment",
+        "tall",
+        "solid"
+    ],
+    "wall": [
+        "barrier",
+        "partition",
+        "brick wall",
+        "concrete wall",
+        "vertical",
+        "hard"
+    ],
+    "fence": [
+        "rail",
+        "barrier fence",
+        "wooden fence",
+        "metal railing",
+        "segmented",
+        "enclosed"
+    ],
+    "pole": [
+        "lamp post",
+        "utility pole",
+        "street light",
+        "flagpole",
+        "tall",
+        "slim"
+    ],
+    "traffic light": [
+        "signal light",
+        "stoplight",
+        "pedestrian light",
+        "intersection light",
+        "bright",
+        "colorful"
+    ],
+    "traffic sign": [
+        "road sign",
+        "warning sign",
+        "speed limit sign",
+        "stop sign",
+        "reflective",
+        "metal"
+    ],
+    "vegetation": [
+        "plants",
+        "greenery",
+        "bushes",
+        "trees",
+        "leafy",
+        "dense"
+    ],
+    "terrain": [
+        "ground",
+        "soil",
+        "gravel",
+        "dirt",
+        "uneven",
+        "rough"
+    ],
+    "sky": [
+        "atmosphere",
+        "heavens",
+        "cloudy sky",
+        "clear sky",
+        "vast",
+        "light"
+    ],
+    "person": [
+        "pedestrian",
+        "individual",
+        "adult",
+        "child",
+        "moving",
+        "clothed"
+    ],
+    "rider": [
+        "cyclist",
+        "motorcyclist",
+        "bike rider",
+        "scooter rider",
+        "helmeted",
+        "seated"
+    ],
+    "car": [
+        "vehicle",
+        "automobile",
+        "sedan",
+        "SUV",
+        "shiny",
+        "metallic"
+    ],
+    "truck": [
+        "lorry",
+        "cargo vehicle",
+        "delivery truck",
+        "pickup truck",
+        "large",
+        "bulky"
+    ],
+    "bus": [
+        "public transport",
+        "coach",
+        "city bus",
+        "school bus",
+        "long",
+        "spacious"
+    ],
+    "train": [
+        "locomotive",
+        "railcar",
+        "passenger train",
+        "freight train",
+        "linear",
+        "connected"
+    ],
+    "motorcycle": [
+        "bike",
+        "motorbike",
+        "sport bike",
+        "cruiser",
+        "fast",
+        "sleek"
+    ],
+    "bicycle": [
+        "cycle",
+        "two-wheeler",
+        "mountain bike",
+        "road bike",
+        "pedal-powered",
+        "two-wheeled"
+    ]
+}

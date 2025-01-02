@@ -1,0 +1,28 @@
+{
+  "land": [
+    "solid and stable surface",
+    "various textures such as soil, rock, sand, or vegetation",
+    "visible horizon line",
+    "presence of objects such as trees, buildings, or vehicles",
+    "topographical features like mountains, hills, or valleys",
+    "patterns of human settlement or infrastructure like roads or buildings"
+  ],
+  "water and flood": [
+    "large areas of reflective surface",
+    "ripples or waves on the surface",
+    "waterlogged or submerged objects or structures",
+    "debris or sediment in the water",
+    "altered landscape or terrain",
+    "people or animals wading or swimming in the water",
+    "signs of erosion or damage to surrounding environment"
+  ],
+  "cloud": [
+    "white or light-colored",
+    "soft, puffy, or feathery texture",
+    "irregular shape or form",
+    "appears in the sky",
+    "may have a flat base or an anvil-shaped top",
+    "may be alone or part of a larger collection of clouds",
+    "often casts a shadow on the surrounding landscape"
+  ]
+}

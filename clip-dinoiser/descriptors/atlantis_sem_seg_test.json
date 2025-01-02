@@ -1,0 +1,454 @@
+{
+    "bicycle": [
+        "two wheels of equal size",
+        "a frame or body connecting the wheels",
+        "pedals for rider's feet",
+        "a seat for rider",
+        "handlebars for steering",
+        "metal or plastic material",
+        "wires or cables for brakes and gears",
+        "possibly a chain or belt for power transmission"
+    ],
+    "boat": [
+        "a water vessel",
+        "floating on water",
+        "various shapes and sizes",
+        "hull (main body) and deck (upper surface)",
+        "propulsion system (e.g. sails, motor, oars)",
+        "cabin or seats for passengers",
+        "anchor or ropes for mooring"
+    ],
+    "breakwater": [
+        "a structure built on the coast",
+        "made of rocks, concrete, or other materials",
+        "long and narrow shape",
+        "extends into the sea",
+        "protects the coast from waves and erosion"
+    ],
+    "bridge": [
+        "connects two land areas over a body of water or road",
+        "has supporting structures like pillars or towers",
+        "has a road or path on top for vehicles or pedestrians",
+        "can be made of metal, concrete, or wood",
+        "can be arched or straight",
+        "has railings or barriers on the sides"
+    ],
+    "building": [
+        "walls and a roof",
+        "rectangular or square shape",
+        "doors and windows",
+        "can be tall or short",
+        "can be made of brick, concrete, wood, or metal",
+        "may have a chimney, antenna, or pipes",
+        "can be a single story or multiple stories high"
+    ],
+    "bus": [
+        "large, rectangular vehicle",
+        "wheels and a flat, horizontal body",
+        "rows of seats or benches inside",
+        "doors for entering and exiting",
+        "a driver's seat and steering wheel",
+        "head and tail lights",
+        "a distinct paint scheme or decals",
+        "a roof or overhead storage space"
+    ],
+    "canal": [
+        "man-made waterway",
+        "narrow and long",
+        "connected to a lake, river, or sea",
+        "artificial banks or walls",
+        "calm and still water",
+        "boats or ships may be present"
+    ],
+    "car": [
+        "a vehicle with four wheels",
+        "body made of metal and glass",
+        "shiny surfaces",
+        "headlights, taillights, and mirrors",
+        "wheels, doors, and a hood",
+        "seats inside",
+        "a steering wheel"
+    ],
+    "cliff": [
+        "a steep slope or vertical face of rock or soil",
+        "often near a body of water or a valley",
+        "can have trees, bushes, or other vegetation growing on it",
+        "may have a flat top or a rugged edge",
+        "can be seen from a distance, with a distinct change in elevation"
+    ],
+    "culvert": [
+        "a tunnel or pipe under a road or railway",
+        "made of concrete, metal, or brick",
+        "often hidden or partially hidden",
+        "can be seen under or beside a road or railway",
+        "allows water to flow underneath the road or railway"
+    ],
+    "cypress tree": [
+        "tall and narrow shape",
+        "evergreen tree with needle-like leaves",
+        "conical or columnar shape",
+        "bark is brown or grey, rough and scaly",
+        "branches are long and thin, often hanging down",
+        "often grows in wetland areas or near water"
+    ],
+    "dam": [
+        "a barrier across a river or stream",
+        "made of concrete, stone, or earth",
+        "often with a lake or reservoir behind it",
+        "may have a spillway or gates",
+        "can be large or small"
+    ],
+    "ditch": [
+        "a long, narrow channel or hole",
+        "often below ground level",
+        "may contain water or be dry",
+        "often alongside a road or path",
+        "may have steep or sloping sides",
+        "can be shallow or deep"
+    ],
+    "fence": [
+        "vertical bars or boards",
+        "connected by horizontal rails",
+        "stands upright on the ground",
+        "made of wood, metal, or plastic",
+        "used to mark boundaries ",
+        "may have gates or openings"
+    ],
+    "fire hydrant": [
+        "short, stout, cylindrical body",
+        "usually red or yellow in color",
+        "attached to the ground",
+        "has a rounded or flat top",
+        "has a valve or handle on top",
+        "has outlets for hoses"
+    ],
+    "fjord": [
+        "a long, narrow body of water",
+        "surrounded by steep cliffs or mountains",
+        "often connected to the ocean",
+        "calm and peaceful water",
+        "possibly with a small river flowing into it"
+    ],
+    "flood": [
+        "water covering the ground",
+        "water overflowing from a river, lake, or sea",
+        "flooded buildings, roads, or vehicles",
+        "people wading through water",
+        "debris or objects floating in the water",
+        "waterlogged or ruined surroundings"
+    ],
+    "glaciers": [
+        "large, slow-moving river of ice and snow",
+        "blue or white, often with dark streaks",
+        "smooth, shiny, or cracked surface",
+        "surrounding mountains or valleys",
+        "melting ice or water at the edges"
+    ],
+    "hot spring": [
+        "natural water pool",
+        "warm or steamy mist rising",
+        "people bathing or relaxing nearby",
+        "rocks or stones surrounding the pool",
+        "greenery or trees nearby",
+        "possibly a wooden deck or walkway"
+    ],
+    "lake": [
+        "a large body of still water",
+        "usually surrounded by land",
+        "can be calm or have gentle waves",
+        "maybe has a shoreline with plants or trees",
+        "may have boats or people near it",
+        "often reflects the sky above"
+    ],
+    "levee": [
+        "a natural or artificial wall or embankment",
+        "along a river or lake",
+        "built to prevent flooding",
+        "sloping or steep sides",
+        "often made of earth, concrete, or stone",
+        "may have a path or road on top"
+    ],
+    "lighthouse": [
+        "tall, narrow tower",
+        "bright light source on top",
+        "often on a rocky or cliffside location",
+        "near the ocean or sea",
+        "painted in a distinctive color scheme",
+        "has a lantern room",
+        "may have a foghorn or other signal equipment"
+    ],
+    "mangrove": [
+        "a type of tree",
+        "found near water, especially in coastal areas",
+        "tangled, exposed roots above the water",
+        "branches that curve upwards",
+        "small, oval-shaped leaves",
+        "often has muddy or sandy surroundings"
+    ],
+    "marsh": [
+        "a wetland area",
+        "dominated by soft-stemmed plants ",
+        "often near a body of water",
+        "water levels may be high or low",
+        "muddy or grassy ground",
+        "little to no trees present"
+    ],
+    "motorcycle": [
+        "two wheels",
+        "one or two riders",
+        "a seat and handlebars",
+        "a gasoline tank",
+        "an engine",
+        "a headlight and taillight",
+        "often shiny, metallic, and colorful"
+    ],
+    "offshore platform": [
+        "large structure in the sea",
+        "supported by pillars or legs",
+        "usually has a flat top",
+        "may have pipes or machinery",
+        "often has helipads or cranes",
+        "can be surrounded by boats or ships"
+    ],
+    "parking meter": [
+        "small, freestanding pole",
+        "metal body",
+        "a screen or display showing time",
+        "buttons or levers to input payment",
+        "a slot for coins or cards",
+        "attached to a sidewalk or pavement"
+    ],
+    "person": [
+        "two legs",
+        "arms and hands",
+        "a head with a face",
+        "hair on the head (although it could be zero)",
+        "clothes or fabric covering the body",
+        "a vertical posture (standing or sitting)"
+    ],
+    "pier": [
+        "a structure extending over water",
+        "supported by pillars or pilings",
+        "often with a flat surface or decking",
+        "may have railings or handrails",
+        "sometimes with buildings or shops on it",
+        "may have boats or ships docked nearby"
+    ],
+    "pipeline": [
+        "long, tube-like structure",
+        "usually made of metal or plastic",
+        "often buried underground or elevated above ground",
+        "may have valves, joints, or other fittings",
+        "can be seen crossing roads, fields, or other landscapes"
+    ],
+    "pole": [
+        "long and thin",
+        "usually vertical",
+        "straight or slightly curved",
+        "made of wood, metal or other materials",
+        "can be a utility pole, flagpole, or street sign pole",
+        "may have wires, flags, or signs attached to it"
+    ],
+    "puddle": [
+        "small and shallow pool of water",
+        "usually on the ground or a surface",
+        "often has a reflective surface",
+        "may have ripples or distortions from wind or movement",
+        "can be surrounded by a ring or border of different material (like asphalt, dirt, or concrete)"
+    ],
+    "rapids": [
+        "turbulent water",
+        "fast-moving current",
+        "whitewater or foamy waves",
+        "rocky or shallow areas in the water",
+        "water flowing swiftly around obstacles",
+        "a river or stream environment"
+    ],
+    "reservoir": [
+        "a large body of water",
+        "usually man-made",
+        "often surrounded by hills or mountains",
+        "possibly has a dam or spillway",
+        "may have calm or still water",
+        "can be a popular spot for recreation or fishing"
+    ],
+    "river": [
+        "flowing water",
+        "winding or curved path",
+        "banks or shores on either side",
+        "varying width and depth",
+        "surrounding landscape like trees, hills, or buildings",
+        "possibly boats, ships, or other watercraft",
+        "may have rapids, waterfalls, or calm areas"
+    ],
+    "river delta": [
+        "a network of distributaries or branches",
+        "freshwater and sediment flowing into a larger body of water",
+        "a flat or low-lying area of land",
+        "waterways that split and merge",
+        "riverbanks or shorelines with unique shapes",
+        "mixture of fresh and saltwater",
+        "often with vegetation or wetlands nearby"
+    ],
+    "road": [
+        "a continuous path made of asphalt, concrete, or dirt",
+        "straight or curved shape",
+        "may have lanes marked with lines or arrows",
+        "may have vehicles, pedestrians, or bicycles on it",
+        "may have roadside features like trees, signs, or buildings"
+    ],
+    "sea": [
+        "large body of saltwater",
+        "horizon line where the sea meets the sky",
+        "waves, ripples, or tides",
+        "boats, ships, or other watercraft",
+        "seagulls, other birds, or marine life",
+        "beach, shore, or coastline in the background"
+    ],
+    "ship": [
+        "large watercraft",
+        "has a hull and a deck",
+        "multiple masts or funnels (smoke stacks)",
+        "an anchor and a propeller",
+        "different types of ships have distinct features, such as a ferry, tanker, or sailing ship."
+    ],
+    "shoreline": [
+        "where land meets water",
+        "may have sand, rocks, or pebbles",
+        "often has a clear horizon line",
+        "may have waves or ripples on the water",
+        "sometimes has seaweed or beach vegetation",
+        "can be straight or have bays and coves"
+    ],
+    "sidewalk": [
+        "a paved path",
+        "usually next to a road",
+        "often has a curb",
+        "people walking on it",
+        "may have lines or patterns on it",
+        "connects buildings or areas"
+    ],
+    "sky": [
+        "blue or gray color",
+        "appears above the horizon",
+        "often has clouds or sun",
+        "covers the entire top part of the image",
+        "does not have any solid objects or shapes",
+        "can have different shades and hues depending on the time of day"
+    ],
+    "snow": [
+        "white or light-colored",
+        "flakes or rough texture",
+        "covers the ground or surfaces",
+        "often sticks to trees, buildings, and other objects",
+        "may have a soft, blurred appearance",
+        "can be piled up in drifts or banks"
+    ],
+    "spillway": [
+        "a structure that allows water to flow from a higher level to a lower level",
+        "typically found near a dam or reservoir",
+        "may have a concrete or metal construction",
+        "often has a waterfall-like appearance",
+        "can be wide or narrow",
+        "may have a channel or chute for water to flow through"
+    ],
+    "swimming pool": [
+        "a large, rectangular or oval-shaped container",
+        "filled with water",
+        "people swimming, playing, or relaxing around it",
+        "stairs, ladders, or steps to enter or exit",
+        "surrounding decks or areas with lounge chairs, tables, or umbrellas",
+        "may have diving boards, slides, or other recreational equipment"
+    ],
+    "terrain": [
+        "natural landscape",
+        "varying elevations",
+        "mountains, hills, or valleys",
+        "visible landforms",
+        "natural features like rocks, trees, or bodies of water"
+    ],
+    "traffic sign": [
+        "rectangular or diamond shape",
+        "mounted on a pole or hung from a gantry",
+        "colorful, usually yellow, blue, red, or green",
+        "written text or symbols",
+        "often has a reflective surface",
+        "located near roads or intersections"
+    ],
+    "train": [
+        "large vehicle on rails",
+        "multiple cars or wagons attached",
+        "wheels and axles",
+        "front locomotive with headlights",
+        "coaches or passenger cars",
+        "freight cars or cargo containers",
+        "tracks or railroad ties"
+    ],
+    "truck": [
+        "large vehicle with an open or closed cargo area",
+        "multiple wheels and axles",
+        "a prominent grille on the front",
+        "a raised cabin for the driver",
+        "headlights and a bumper on the front",
+        "a flatbed or enclosed cargo space in the back",
+        "possibly a trailer attached"
+    ],
+    "umbrella": [
+        "a handheld object",
+        "usually colourful or patterned",
+        "a waterproof canopy",
+        "a collapsible or foldable design",
+        "a long handle",
+        "a metal or wooden frame",
+        "a tip or point at the end of the handle"
+    ],
+    "vegetation": [
+        "green in color",
+        "composed of leaves, stems, and flowers",
+        "grows out of the ground",
+        "can be different shapes and sizes",
+        "can be grouped together or scattered",
+        "often has natural textures and patterns"
+    ],
+    "wall": [
+        "vertical structure",
+        "made of bricks, concrete, or wood",
+        "often part of a building",
+        "can be freestanding or connected to other walls",
+        "may have windows, doors, or other features",
+        "can be different colors and textures"
+    ],
+    "water tower": [
+        "tall, narrow structure",
+        "usually cylindrical or spherical shape",
+        "elevated on legs or a pedestal",
+        "often made of metal or concrete",
+        "may have a ladder or stairs for access",
+        "pipes or tubes connecting to the ground",
+        "may have windows, vents, or other features"
+    ],
+    "water well": [
+        "structure built over a hole in the ground",
+        "above-ground cylinder or brick/stone enclosure",
+        "a lid or door on top",
+        "a rope or chain with a bucket or pulley system",
+        "nearby water pipes or hoses",
+        "a pump or machinery near the well"
+    ],
+    "waterfall": [
+        "flowing water",
+        "falling from a height",
+        "natural scenery",
+        "often surrounded by rocks or greenery",
+        "mist or spray at the bottom",
+        "a pool or stream below the falls"
+    ],
+    "wetland": [
+        "flat or low-lying land",
+        "watery or muddy surface",
+        "lush green vegetation, such as reeds, grasses, or cattails",
+        "water lilies or other aquatic plants",
+        "birds, fish, or other wildlife",
+        "nearby water sources, such as rivers, lakes, or oceans"
+    ]
+}

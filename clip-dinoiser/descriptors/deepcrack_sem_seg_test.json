@@ -1,0 +1,31 @@
+{
+    "concrete or asphalt": [
+      "predominantly smooth or uniformly textured surface",
+      "color varies between dark grey to black (asphalt) or light grey (concrete)",
+      "continuous, unbroken appearance over large areas",
+      "small, evenly distributed granules or fine gravel embedded in the surface",
+      "surface wear may include subtle scuffs, discoloration, or shallow abrasions, but no deep breaks",
+      "consistent structure without sharp lines or fissures",
+      "typically reflective in wet conditions, showing an even sheen"
+    ],
+    "crack": [
+      "irregular, sharp fissure disrupting the smoothness of the surface",
+      "typically darker or shadowed due to depth, creating strong contrast against the surrounding material",
+      "non-uniform line or pattern, often branching or meandering in shape",
+      "edges of the crack are sharply defined and may appear jagged",
+      "varies in width—thin lines at the edges, potentially widening in the center",
+      "depth causes slight shadows within the crack, enhancing visual separation from the flat surface",
+      "may contain accumulated debris or water, causing further visual distinction",
+      "sometimes follows irregular paths, intersecting with other cracks"
+    ],
+    "concrete or asphalt or others": [
+      "predominantly smooth or uniformly textured surface",
+      "color varies between dark grey to black (asphalt) or light grey (concrete)",
+      "continuous, unbroken appearance over large areas",
+      "small, evenly distributed granules or fine gravel embedded in the surface",
+      "surface wear may include subtle scuffs, discoloration, or shallow abrasions, but no deep breaks",
+      "consistent structure without sharp lines or fissures",
+      "typically reflective in wet conditions, showing an even sheen"
+    ]
+  }
+  

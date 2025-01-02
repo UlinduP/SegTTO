@@ -1,0 +1,554 @@
+{
+  "background": [
+    "Elements that are outside the primary focus of the image",
+    "Different colors, textures, or patterns than the foreground",
+    "Depth perception, with closer objects appearing sharper than distant ones",
+    "Contextual information, such as architecture or natural surroundings, that can provide clues about the scene or location."
+  ],
+  "aeroplane": [
+    "heavy and large object",
+    "rectangular or elliptical wings attached to a fuselage (body)",
+    "a tail with a vertical fin and a horizontal stabilizer",
+    "propellers or jet engines for propulsion",
+    "cockpit with one or more cockpits or cabins for the crew",
+    "windows or portholes in the fuselage",
+    "antennas or other protrusions",
+    "distinctive markings such as logos or registration numbers",
+    "tracks or condensation trails in the sky (if it is in flight)"
+  ],
+  "bicycle": [
+    "a frame made of metal or other materials",
+    "two pedals and a pedal crank on each side to power the rear wheel",
+    "a chain connecting the pedals to the rear wheel",
+    "a seat or saddle for the rider",
+    "handlebars or grips for steering",
+    "two wheels of different sizes: larger rear wheel and a smaller front wheel",
+    "brakes for stopping the bicycle",
+    "often, a water bottle holder or a rack for carrying items."
+  ],
+  "bird": [
+    "flying or perched animal",
+    "feathers covering body and wings",
+    "beak or bill",
+    "two legs with feet, sometimes standing on a perch or branch",
+    "two wings for flying (except for flightless birds)",
+    "head turned towards the direction of its beak",
+    "usually has eyes on the sides of its head for wide field of vision",
+    "often has a distinctive coloration or plumage pattern."
+  ],
+  "boat": [
+    "hull or distinct boat shape, such as a V-shape or flat-bottomed",
+    "a mast or sail, if it's a sailboat",
+    "oars or propellers if it's a rowboat or motorboat",
+    "life jackets or other safety equipment, if present",
+    "people or animals on board",
+    "a dock or other landmark, indicating a marina or boat launch",
+    "water, clearly visible, surrounding the boat",
+    "navigation lights, if visible"
+  ],
+  "bottle": [
+    "cylindrical or bottle-shaped container",
+    "narrower at the middle than at the base",
+    "neck with a small opening at the top",
+    "label or writing on the exterior",
+    "liquid or transparent interior",
+    "stopper or cap at the top to seal the opening",
+    "sometimes has a base or a label holder"
+  ],
+  "bus": [
+    "long and rectangular body",
+    "multiple rows of seats facing each other",
+    "windows running along the sides and sometimes at the back",
+    "a sign or logo on the front displaying the bus company name or route number",
+    "a destination sign above or next to the windshield",
+    "a door or doors for passengers to enter and exit",
+    "exterior handles above the windows for passengers to use when embarking or disembarking"
+  ],
+  "car": [
+    "Four wheels",
+    "A flat, boxy or streamlined body",
+    "A distinct front grille",
+    "Lights (headlights, taillights, brake lights)",
+    "Windows with visible frames",
+    "Door handles",
+    "Wheels with distinguishable rim and tire",
+    "Exhaust pipe (not present in all photos)",
+    "License plate (not present in all photos)"
+  ],
+  "cat": [
+    "Pointed ears",
+    "Whiskers on the face",
+    "Distinctive pupils (round in shape, unlike humans or lemurs)",
+    "Short, pointed snout",
+    "Round, padded paws",
+    "Tail with a tuft of fur at the end (often, but not always present)",
+    "Various coat colors, patterns, and lengths (short to long and straight or curled)"
+  ],
+  "chair": [
+    "furniture piece designed for seating",
+    "backrest and seat",
+    "four legs or a base",
+    "an armrest may be present",
+    "upholstered or wooden surface",
+    "often varied color and design",
+    "may have pillows, cushions or casters",
+    "no visible screens, electronic components, or power cords."
+  ],
+  "cow": [
+    "large, domesticated mammal",
+    "two ears with rounded tips",
+    "black and white patches on its coat, but can also be solid colored",
+    "distinct hump on its back between its shoulders",
+    "wide, horizontalmouth with rounded teeth",
+    "large, black eyes",
+    "long neck",
+    "curved horns present in some breeds",
+    "four legs with hooves."
+  ],
+  "table": [
+    "legs or supports to elevate the surface",
+    "four or more sides",
+    "often has a tabletop that is smooth and flat",
+    "may have a leaf or place setting on the tabletop, indicating it is being used for food or working",
+    "may have distinctive features like patterns or colors",
+    "may have edges or borders visible."
+  ],
+  "dog": [
+    "pointy or triangular-shaped ears,",
+    "a snout,",
+    "teeth with visible canines,",
+    "different fur textures and colors (e.g., short, curly, straight, or long hair),",
+    "a tail,",
+    "visible eyes,",
+    "a collar or leash (optional),",
+    "ears can be pricked up or relaxed"
+  ],
+  "horse": [
+    "long ear that can be pricked up",
+    "mane and tail, which may be long or short",
+    "broad chest and shoulders",
+    "curved back and arched neck",
+    "large, expressive eyes",
+    "defined jawline",
+    "stripes or markings on the body may be present but are not required for identification."
+  ],
+  "motorbike": [
+    "engine",
+    "seat for the rider",
+    "handlebars",
+    "tires, typically with a round shape",
+    "rearview mirrors",
+    "front and rear lights",
+    "exhaust pipe",
+    "metallic or bright colored body",
+    "absence of doors or a roof (unless it's an enclosed bike)"
+  ],
+  "person": [
+    "two legs and two arms",
+    "a head with distinct facial features such as nose, mouth, ears, and eyes",
+    "clothing or distinctive body markings",
+    "human posture",
+    "absence of obvious animal or object features",
+    "context clues, such as the presence of other people or man-made objects in the background."
+  ],
+  "potted plant": [
+    "A container or pot made of various materials such as ceramic, plastic, or metal",
+    "Soil or potting mix visible inside the pot",
+    "Plant or plants with leaves, stems, and roots",
+    "No sign of a landscape or outdoor setting",
+    "No evidence of an animal, insect, or other organism in the photo",
+    "A watering can or other watering tool nearby might indicate a potted plant is being cared for",
+    "Sometimes, there are labels or tags on the pot indicating the plant species or care instructions."
+  ],
+  "sheep": [
+    "quadruped animal",
+    "covered in wool, which can be various shades of white, grey, or brown",
+    "distinctive facial features, including curved horns (in some breeds), a hooked nose, and a mouth with lips",
+    "ears are typically small and rounded, with an oval or triangular shape",
+    "legs are usually short and sturdy",
+    "rump or flank may have a distinct patch of black or dark wool, depending on the breed."
+  ],
+  "sofa": [
+    "large, upholstered seat and backrest",
+    "one or more cushions or pillows",
+    "horizontal design with a backrest that is higher than the arms (if present)",
+    "no wheels or casters",
+    "usually has legs or a base for support",
+    "may have armrests",
+    "sometimes has a distinctive pattern or color"
+  ],
+  "train": [
+    "long and narrow",
+    "multiple connected carriages or wagons",
+    "often connected by a coupler",
+    "steam or diesel engine (for older trains), or electric (for modern trains)",
+    "tracks extending from the train",
+    "people or cargo inside some carriages",
+    "smokestack (for older trains)",
+    "various markings and logos on the exterior."
+  ],
+  "television monitor": [
+    "electronic device",
+    "thin, flat screen",
+    "lacks a stand or mount for support",
+    "no speakers present (external speakers may be connected)",
+    "a thick bezel around the screen",
+    "input ports for connecting to other devices may be present, but they are usually not as prominent as on a full television",
+    "no power cord is visible, as monitors are typically connected to other power sources, such as a computer or power strip, using a separate AC adapter."
+  ],
+  "bag": [
+    "Contained object: A bag is an object designed to hold other objects. When looking at a photo, checking if there is an object contained within another object that appears to be a bag can be a good starting point.",
+    "Shape: Bags come in various shapes and sizes. Common shapes include duffel bags, backpacks, totes, and shopping bags. The overall shape of the bag can help determine its type.",
+    "Straps: Bags come with various carrying options like handles, shoulder straps, and backpack straps. Looking for these straps can help confirm the presence of a bag.",
+    "Mouth: Check the opening of the bag to see if it has a distinctive shape, like a zipper, velcro, or flap.",
+    "Texture: Different materials like leather, nylon, or canvas have distinct textures that can help identify the type of bag.",
+    "Color: Bags come in a wide range of colors, so this detail can be helpful in identifying the bag.",
+    "Branding and logos: Famous brand names or logos on the bag can be an indicator that it's a bag."
+  ],
+  "bed": [
+    "Horizontal structure: A bed is typically a horizontal surface, unlike other furniture such as chairs or tables.",
+    "Bed linens: Beds are usually covered with bedding such as sheets, blankets, and pillows.",
+    "Headboard: Aheadboard is a common feature in beds, but not all beds have one. It is a raised area at the head of the bed, meant for support and comfort.",
+    "Mattress and foundation: The bed should have a visible mattress and foundation or box spring.",
+    "Pillows and decorative cushions: A bed is often accompanied by pillows and decorative cushions.",
+    "Dimensions: A bed is typically larger than other furniture in a room and takes up a notable amount of space.",
+    "Frame: Some beds have a visible frame, while others may have a platform design without a frame.",
+    "Accessories: Accessories such as bedside tables, lamps, or a television may be present in the photo, giving additional context."
+  ],
+  "bench": [
+    "long, flat surface",
+    "often has backrests or armrests",
+    "lacks wheels or casters",
+    "usually has parallel edges",
+    "can be made of various materials such as wood, metal, or plastic",
+    "often has distinctive patterns or marks, such as slats or ventilation holes",
+    "can be found in a variety of settings including parks, schools, offices, and homes."
+  ],
+  "book": [
+    "a bound collection of paper or parchment pages",
+    "a cover made of material such as paper, leather, or cloth",
+    "a title and author information displayed prominently on the cover",
+    "pages with text or illustrations when open",
+    "a spine with visible creases from use or binding",
+    "no electrical components or screens present",
+    "a distinct shape when closed, often rectangular with rounded corners",
+    "no claws, tails, or other animal features present"
+  ],
+  "building": [
+    "structure made of materials such as brick, concrete, wood, or steel",
+    "obvious rectangular or square shapes",
+    "roof, often with distinct shapes such as flat, pitched, or dome",
+    "doors and windows, which may be visible",
+    "lines or outlines defining the boundaries of the structure",
+    "lack of vegetation or trees growing out of the structure",
+    "power lines or other utilities connected to the building",
+    "multiple stories or levels",
+    "presence of chimneys or ventilation systems",
+    "architectural styles or designs that are distinctive to certain regions or time periods."
+  ],
+  "cabinet": [
+    "furniture item",
+    "solid and structured",
+    "has doors or drawers",
+    "horizontal surfaces and vertical sides",
+    "various materials such as wood, metal, or plastic",
+    "handles or knobs for opening doors or drawers",
+    "often used for storing dishes, appliances, or other household items."
+  ],
+  "ceiling": [
+    "horizontal plane",
+    "usually white or pale color",
+    "smooth and flat surface",
+    "often has visible fixtures such as light bulbs, vents, or piping",
+    "texture may vary based on the type of material used (e.g. paint, plaster, wood, tiles)",
+    "no visible floor or walls directly underneath it in the photo",
+    "may have architectural features like moldings, beams, or medallions"
+  ],
+  "cloth": [
+    "Textile or fibrous material",
+    "Non-living and inanimate object",
+    "Can be identified by its distinct texture, appearance, and color",
+    "Can be used to cover or drape surfaces or bodies",
+    "Has folds, wrinkles or creases when not taut",
+    "Can be seen through when transparent or translucent",
+    "Can have patterns, weaves or threads visible",
+    "Can be identified by the way it interacts with light and shadows"
+  ],
+  "computer": [
+    "tower or desktop with multiple components, such as a monitor, keyboard, mouse, and tower or case",
+    "a flat screen monitor with a white or black border",
+    "a central processing unit (CPU) tower with fans and vents",
+    "peripheral devices such as speakers, printers, and external hard drives",
+    "a power cord",
+    "input ports, such as USB, HDMI, and Ethernet",
+    "a keyboard and mouse in the photo",
+    "a mouse pad or mouse mat"
+  ],
+  "cup": [
+    "Round or oval shape",
+    "Opening at the top for pouring or drinking",
+    "Handle attached for easy carrying",
+    "Often transparent or has opaque color allowing contents to be seen",
+    "Liquid, typically, inside the cup",
+    "Rim or lip around the opening",
+    "Base to support the cup's stability"
+  ],
+  "door": [
+    "has a frame or surrounding structure,",
+    "has a handle or knob for opening and closing,",
+    "may have a doorway or an opening with a threshold,",
+    "may have a lock or latch,",
+    "may have hinges for attachment to a wall or frame,",
+    "may have a window or peephole,",
+    "may have signs or symbols indicating its function or purpose."
+  ],
+  "fence": [
+    "a physical barrier or enclosure",
+    "straight or zigzagged lines define its boundaries",
+    "can be made of various materials such as wood, metal, or concrete",
+    "can have gaps or openings",
+    "may have posts that support it",
+    "can be horizontal, vertical, or angled",
+    "can be seen in the context of an outdoor setting with possible vegetation or structures behind or near it."
+  ],
+  "floor": [
+    "usually made of a hard material such as wood, tile, stone, or concrete",
+    "can have various textures, patterns, or colors depending on the flooring material",
+    "can have visible furniture legs or walls intersecting the surface",
+    "may have objects or shadows on the surface that can help contextualize the photo and distinguish it from other types of images."
+  ],
+  "flower": [
+    "Plant with reproductive structures",
+    "Colorful and often symmetrical",
+    "Typically has distinct petals, sepals, and stamens or pistils",
+    "Various shapes such as round, flat, or tubular",
+    "Distinctive veination pattern on leaves, if present in the photo",
+    "Often has a stem connecting it to the rest of the plant",
+    "May have nectar or pollen attractants",
+    "Can have varying sizes, sometimes large and showy, other times small and delicate."
+  ],
+  "food": [
+    "bright colors (depending on the food)",
+    "clear or opaque appearance",
+    "texture (smooth, rough, juicy, dry, etc.)",
+    "presence of utensils or dishware for serving or eating",
+    "recognizable food shapes or forms (fruits, vegetables, grains, meat, etc.)",
+    "presence of packaging or branding if it's a processed food",
+    "ingredients visible (for home-cooked meals)",
+    "spatial relationship with other food or eating utensils or contexts (plate, table, hands, etc.)"
+  ],
+  "grass": [
+    "green color",
+    "long, thin blades",
+    "visible tiny nodes or joints where the blades connect to the stem",
+    "sometimes a visible root system or rhizomes at the base of the grass",
+    "may form tufts or clumps when grown in dense stands",
+    "can often have noticeable variation in length and color within the same image",
+    "usually grows in a matrix of soil, often with other plants present."
+  ],
+  "ground": [
+    "flat, horizontal surface",
+    "lack of distinct features or texture, often appearing solid in color (e.g., green grass, brown dirt, concrete)",
+    "may show signs of vegetation or footprints",
+    "contrasts with objects that are raised above the ground",
+    "often lacks distinct edges, blending smoothly with objects that are close to the ground"
+  ],
+  "keyboard": [
+    "flat, rectangular or slightly curved shape",
+    "multiple keys in various colors with distinctive labels",
+    "a numeric keypad with seven keys in each row and three in the first and last rows",
+    "a set of special function keys (F1-F12) above the numeric keypad",
+    "a spacebar in the middle of the keyboard",
+    "a layout that follows the QWERTY standard",
+    "connection ports, such as USB or Bluetooth, to attach to a computer or other devices",
+    "a power switch or indicator lights"
+  ],
+  "light": [
+    "an artificial source of light",
+    "a distinct shape, such as a bulb, lamp, or fixture",
+    "an emitted light that differs from the surrounding environment (brighter or a distinct color)",
+    "a cord or power source indicating it is connected to an electrical outlet",
+    "a shade, reflector, or diffuser attached to the light",
+    "evidence of casting shadows on nearby objects."
+  ],
+  "mountain": [
+    "raised landform",
+    "typically conical, pyramid-shaped or flat-topped",
+    "covered with vegetation or snow",
+    "steep inclines and cliffs",
+    "often has a prominent peak",
+    "surrounding landscape may be valleys or plains",
+    "can appear jagged or have distinct edges",
+    "may have cloud cover or weather phenomena like fog or frost."
+  ],
+  "mouse": [
+    "small rodent",
+    "hairless, scaled tail",
+    "pointed snout",
+    "large ears",
+    "beady, black eyes",
+    "four legs with paws",
+    "no tail in the photo may indicate it's curled up or hidden",
+    "small size relative to other objects in the photo"
+  ],
+  "curtain": [
+    "soft, flowing fabric",
+    "typically hangs in folds and gathers when opened",
+    "often hung over a window or doorway as a decorative or functional covering",
+    "can be made of various materials such as cotton, polyester, silk, etc.",
+    "can be solid colored or feature patterns, prints, or textures",
+    "may have a cord or rod to hold it back or allow it to be drawn aside",
+    "may have tassels, ties, or other embellishments at the ends or edges."
+  ],
+  "platform": [
+    "often made of concrete, wood, or metal",
+    "may have railings or edges",
+    "may have markings or writing on it",
+    "may be used for transportation, such as train platforms, or for accessing buildings or structures, such as a stage platform",
+    "may have other structures or objects associated with it, such as benches or information boards."
+  ],
+  "sign": [
+    "two-dimensional object",
+    "text or symbols",
+    "contrasting colors with the background",
+    "geometric shapes",
+    "arrows or other directional indicators",
+    "informational content such as text or icons",
+    "borders or frames around the perimeter",
+    "attachment to a surface or structure."
+  ],
+  "plate": [
+    "used for serving food or drinks",
+    "has a rim or edge",
+    "can be made of various materials such as ceramic, glass, plastic, or metal",
+    "can have designs, logos, or markings on the surface",
+    "may be empty or have food or drinks on it",
+    "may have a handle for easy transportation",
+    "can vary in size and color."
+  ],
+  "road": [
+    "flat and smooth surface",
+    "usually paved or asphalted",
+    "marked with white or yellow lines for lanes and centerlines",
+    "boundaries like curbs, shoulders, or trees",
+    "parallel or slightly winding shape",
+    "absence of vegetation or obstacles in the center",
+    "shadows indicating the direction of the sun",
+    "cars, bicycles, or pedestrians moving on or near the road."
+  ],
+  "rock": [
+    "non-living substance",
+    "irregular shape",
+    "various colors such as grey, brown, red, white, or green due to mineral composition",
+    "textured surface with visible grains or patterns",
+    "does not have visible features associated with living organisms such as eyes, noses, or limbs."
+  ],
+  "shelves": [
+    "used for storing or displaying objects",
+    "has visible edges or sides",
+    "often made of wood, metal, or plastic",
+    "may have adjustable supports or brackets",
+    "may have a backing or sides to hide the walls of the room behind",
+    "may have a pattern or design on the surface",
+    "may have objects arranged on them indicating their purpose as shelves."
+  ],
+  "sidewalk": [
+    "usually gray or grayish-colored",
+    "generally level and rectangular in shape",
+    "often bordered by curbs or grass",
+    "frequently has cracks or texture on the surface",
+    "may have drainage channels or grates",
+    "typically found in urban or suburban settings, but also in some rural areas."
+  ],
+  "sky": [
+    "vast expanse of open space above the horizon in the image",
+    "often has clouds in various shapes and forms",
+    "shades of blue, pink, or orange depending on whether it's day or night and the presence of sunlight",
+    "may have sun, moon, or stars as prominent features",
+    "may have distinct layers, such as a clear blue sky above a hazy or overcast sky",
+    "may show weather phenomena such as rainbows, turbulent clouds, or haze",
+    "has no distinct edges, blending seamlessly with the land or water below it."
+  ],
+  "snow": [
+    "frozen water in the form of ice crystals",
+    "absence of vegetation or trees (as they would stand out against the white background)",
+    "possible presence of footprints or animal tracks",
+    "potential presence of snowflakes in the image",
+    "a landscape that appears barren or covered in white",
+    "perhaps a blur or softness in the image due to snowfall or a snowy environment"
+  ],
+  "bedclothes": [
+    "textiles or fabric",
+    "appearance of being made for a bed, such as large size, overlapping layers, or being near a bed frame or mattress",
+    "varies in color, pattern, or texture",
+    "can include sheets, blankets, quilts, comforters, pillows, and pillowcases",
+    "may show creases, wrinkles, or signs of use",
+    "typically not electronic or mechanical in appearance",
+    "may reveal information about the time of day, season, or occupancy based on their arrangement and appearance."
+  ],
+  "track": [
+    "absence of living organisms or vegetation",
+    "distinct pattern or markings",
+    "linear or curved shape",
+    "inconsistency with natural terrain (e.g. straight or regular pattern in a natural environment may indicate a man-made track)",
+    "presence of rain or water droplets along the track",
+    "tire or footprints with distinct treads or patterns",
+    "evidence of debris or disturbed soil around the track."
+  ],
+  "tree": [
+    "tall plant with a single trunk or multiple branches",
+    "leaves, which can be deciduous or evergreen, and vary in shape and size",
+    "branches that extend from the trunk",
+    "bark texture and color, which can be smooth, rough, thin, thick, or have distinguishing markings",
+    "canopy or crown, which can be dense or sparse",
+    "roots, which can be visible or buried, and can vary in shape and depth."
+  ],
+  "truck": [
+    "Heavy-duty vehicle",
+    "Open cab or enclosed cab",
+    "Large size compared to other cars",
+    "Distinct front grille",
+    "Flat bed or cab-over engine",
+    "Wheels and tires larger than a typical car",
+    "Tow hitch or towing equipment",
+    "High ground clearance",
+    "Distinct headlights and taillights",
+    "Rearview mirrors and side mirrors",
+    "Square or rectangular shape"
+  ],
+  "wall": [
+    "horizontal or vertical surface",
+    "solid and flat (though textures such as bricks, stones, or paint can be present)",
+    "may have doors, windows, or other openings",
+    "may have colors, patterns, or textures, such as paint, brick, stone, or wallpaper",
+    "may have art, posters, or other decorations on the surface",
+    "may have edges and corners, and may be part of a larger structure or room."
+  ],
+  "water": [
+    "reflection of surroundings, such as trees, buildings, or clouds",
+    "lack of distinct edges or boundaries",
+    "wavy or still surface",
+    "the presence of ripples, waves, or droplets",
+    "shimmering or glinting in the sunlight",
+    "transparency, allowing objects or vessels to be seen beneath the surface",
+    "color, which can range from clear to various shades of blue, green, brown, or black depending on the water's source and the environment it's in."
+  ],
+  "window": [
+    "framelike border",
+    "panes or panes of glass",
+    "view of an outdoor scene or the surrounding area",
+    "sills or ledges below the window",
+    "curtains, blinds, or shades covering part or all of the window",
+    "frames or trim around the window",
+    "absence of a solid wall behind the glass"
+  ],
+  "wood": [
+    "organic material made from the trunks and branches of trees",
+    "rough and porous surface with visible grain and texture",
+    "varied colors depending on the type of wood",
+    "can show signs of being cut or shaped, such as edges or saw marks",
+    "may have bark present or absence depending on the type and stage of the tree",
+    "can have patterns formed by patterns of growth in the tree",
+    "can have visible knots, voids, or other natural anomalies."
+  ]
+}

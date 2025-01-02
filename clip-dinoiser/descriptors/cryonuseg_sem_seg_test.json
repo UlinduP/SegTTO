@@ -1,0 +1,18 @@
+{
+  "background": [
+    "scattered, isolated, or clumped structures",
+    "varying sizes and shapes, but generally circular or oval",
+    "uniform or varied staining intensity/contrast",
+    "may include debris or artifacts",
+    "lack of organized cellular structure or tissue context."
+  ],
+  "nuclei": [
+    "circular or oval shape",
+    "darkly stained or fluorescent",
+    "relatively large compared to surrounding cellular components",
+    "often located centrally within the cell",
+    "may have a distinct nucleolus",
+    "may have a irregular or fragmented shape in certain cell types",
+    "can be distinguished from other cellular components by their size, shape, and staining patterns"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "regions such as the concrete surfaces, metal surfaces or environment": [
+    "rough texture",
+    "presence of aggregate particles",
+    "speckled or mottled appearance",
+    "multiple colors or shades",
+    "lacking a metallic sheen"
+  ],
+  "steel with fair corrosion": [
+    "uniform metallic sheen",
+    "orange or reddish-brown tint",
+    "smooth surface with occasional pitting",
+    "a few scattered rust spots",
+    "edges or outlines are still defined"
+  ],
+  "steel with poor corrosion": [
+    "dull, non-reflective surface",
+    "extensive orange or reddish-brown coloration",
+    "noticeable roughening or flaking",
+    "many deep pits or craters",
+    "edges or outlines are starting to break down"
+  ],
+  "steel with severe corrosion": [
+    "completely matte surface",
+    "deep reddish-brown or dark brown coloration",
+    "highly irregular surface with extensive flaking",
+    "edges or outlines are significantly degraded",
+    "pieces of metal may be breaking off"
+  ]
+}

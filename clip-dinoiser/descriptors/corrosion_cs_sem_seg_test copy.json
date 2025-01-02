@@ -1,0 +1,33 @@
+{
+  "others": [
+    "concrete surfaces: grey, rough, porous, or smooth texture",
+    "metal surfaces: reflective, shiny, or matte finish",
+    "environment: natural or urban settings, presence of vegetation, buildings, or other structures in the background",
+    "varying textures, colors, and patterns depending on the specific environment"
+  ],
+  "steel with fair corrosion": [
+    "rusty or reddish-brown color with some flaking or peeling",
+    "surface roughness or pitting",
+    "some loss of metal thickness or material",
+    "minor signs of decay or deterioration",
+    "may still have a recognizable metal surface or structure",
+    "corrosion may be patchy or scattered, but not widespread"
+  ],
+  "steel with poor corrosion": [
+    "Rusty color with orange or reddish hue",
+    "Flaking or peeling of the metal surface",
+    "Visible pitting or Cavities on the surface",
+    "Corrosion products or rust stains around the metal",
+    "Loss of metal thickness or structural integrity",
+    "Rough or irregular surface texture"
+  ],
+  "steel with severe corrosion": [
+    "rusty or orange color",
+    "flaky or peeling surface",
+    "holes or perforations",
+    "cracking or crumbling",
+    "signs of decay or damage",
+    "rough or uneven texture",
+    "loss of original shape or structure"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+    "others": [
+        "bones, such as ribs, spine, or limb bones",
+        "medical instruments, such as pacemakers, artificial joints, or surgical clips",
+        "foreign objects, such as coins, jewelry, or other items swallowed or inserted",
+        "dense regions indicating tumors, cysts, or other abnormalities",
+        "air-filled spaces, such as the esophagus, trachea, or bowel",
+        "heart shape and location",
+        "diaphragm shape and location"
+    ],
+    "lung": [
+        "two organs located in the chest cavity",
+        "Air-filled regions with dark grey or black appearance",
+        "surrounded by a thin, white outline (lung borders)",
+        "branching airway tubes and blood vessels visible as lighter grey or white lines",
+        "possible presence of a trachea (windpipe) in the upper part"
+    ]
+}

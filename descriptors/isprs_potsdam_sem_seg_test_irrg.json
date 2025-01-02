@@ -1,0 +1,72 @@
+{
+  "road": [
+    "elongated, continuous surface often dark gray or black in color",
+    "smooth texture with visible lane markings or subtle boundary lines",
+    "clearly defined edges separating the road from adjacent surfaces like grass or sidewalks",
+    "may have visible pedestrian walkways or adjacent parking lanes",
+    "mostly straight or curved paths with consistent width",
+    "shadows from trees, buildings, or cars may extend across the road",
+    "can show vehicles either parked or moving along"
+  ],
+  "building": [
+    "rectangular or square-shaped structures with flat roofs seen from above",
+    "roofs are typically gray, white, or dark-colored with clear straight edges",
+    "distinct geometric shapes, often surrounded by shadows and vegetation",
+    "uniform rooftop textures with visible lines or patterns (such as solar panels or rooftop equipment)",
+    "buildings may cast noticeable shadows onto nearby areas like roads or grass",
+    "larger structures compared to surrounding objects, clearly distinguishable"
+  ],
+  "grass": [
+    "uniform or patchy green surface with a fine texture",
+    "appears as a lighter green in comparison to trees, spread evenly in open areas",
+    "typically covers open spaces such as parks, lawns, or between roads and buildings",
+    "can vary in size and shape, with some large patches and other narrow strips along roads",
+    "minimal visible texture or height difference from an aerial view, blending smoothly into its surroundings",
+    "contrasts with surrounding asphalt, buildings, or darker tree foliage"
+  ],
+  "tree": [
+    "dense, rounded canopy structure with varying shades of green",
+    "irregular, circular or oval shape with darker core areas and lighter edges",
+    "visible shadows cast onto nearby surfaces, such as roads or buildings",
+    "distinct from grass due to higher, more textured appearance",
+    "can appear clustered in groups or as single entities, with branching structures often obscured by foliage",
+    "seasonal changes may show some leafless trees with visible branches"
+  ],
+  "car": [
+    "compact, rectangular shapes with clear edges and lighter-colored rooftops",
+    "roof color is often white, silver, or darker, easily distinguishable against the road",
+    "visible as small, discrete objects parked along roadsides or in parking lots",
+    "cars cast short shadows that align with their position on the road",
+    "may vary in size and shape (sedans, SUVs, etc.), but always have a consistent form with clearly visible body outlines",
+    "usually aligned parallel or at slight angles to roads or in parking spaces"
+  ],
+  "others": [
+    "small, undefined objects such as street signs, utility poles, or miscellaneous urban elements",
+    "varies in shape, color, and size depending on the object",
+    "often found near roads, buildings, or grassy areas, providing context clues",
+    "may appear as isolated patches, irregular shapes, or shadows"
+  ],
+  "impervious_surface": [
+    "elongated, continuous surface often dark gray or black in color",
+    "smooth texture with visible lane markings or subtle boundary lines",
+    "clearly defined edges separating the road from adjacent surfaces like grass or sidewalks",
+    "may have visible pedestrian walkways or adjacent parking lanes",
+    "mostly straight or curved paths with consistent width",
+    "shadows from trees, buildings, or cars may extend across the road",
+    "can show vehicles either parked or moving along"
+  ],
+  "low_vegetation": [
+    "uniform or patchy green surface with a fine texture",
+    "appears as a lighter green in comparison to trees, spread evenly in open areas",
+    "typically covers open spaces such as parks, lawns, or between roads and buildings",
+    "can vary in size and shape, with some large patches and other narrow strips along roads",
+    "minimal visible texture or height difference from an aerial view, blending smoothly into its surroundings",
+    "contrasts with surrounding asphalt, buildings, or darker tree foliage"
+  ],
+  "clutter": [
+    "small, undefined objects such as street signs, utility poles, or miscellaneous urban elements",
+    "varies in shape, color, and size depending on the object",
+    "often found near roads, buildings, or grassy areas, providing context clues",
+    "may appear as isolated patches, irregular shapes, or shadows"
+  ]
+}
