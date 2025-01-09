@@ -10,7 +10,7 @@
 
 ## Release Notes
 
-- [2024/01/02] 🔥 **Seg-TTO** is out! We release the [paper] and [code](https://github.com/UlinduP/Seg-TTO/tree/main) for inference and deployment. Seg-TTO achieves **SOTA** results on supervised and unsupervised open-vocabulary semantic segmentation.
+- [2024/01/02] 🔥 **Seg-TTO** is out! We release the [paper](https://arxiv.org/abs/2501.04696) and [code](https://github.com/UlinduP/Seg-TTO/tree/main) for inference and deployment. Seg-TTO achieves **SOTA** results on supervised and unsupervised open-vocabulary semantic segmentation.
 
 ## Introduction
 
@@ -106,5 +106,9 @@ We would like to acknowledge the contributions of public projects [CAT-Seg](http
 ## Citing Seg-TTO:
 
 ```BibTeX
-
+@misc{desilva2025SegTTO,
+      title={Test-Time Optimization for Domain Adaptive Open Vocabulary Segmentation}, 
+      author={Ulindu De Silva and Didula Samaraweera and Sasini Wanigathunga and Kavindu Kariyawasam and Kanchana Ranasinghe and Muzammal Naseer and Ranga Rodrigo},
+      year={2025},
+}
 ```
