@@ -10,7 +10,7 @@
 
 ## Release Notes
 
-- [2024/01/02] 🔥 **Seg-TTO** is out! We release the [paper](https://arxiv.org/abs/2501.04696) and [code](https://github.com/UlinduP/Seg-TTO/tree/main) for inference and deployment. Seg-TTO achieves **SOTA** results on supervised and unsupervised open-vocabulary semantic segmentation.
+- [2024/01/02] 🔥 **Seg-TTO** is out! We release the [paper](https://arxiv.org/abs/2501.04696) and [code](https://github.com/UlinduP/Seg-TTO/tree/main) for inference and deployment. Seg-TTO achieves **SOTA** results on supervised and unsupervised open-vocabulary semantic segmentationin in out-of-domain tasks.
 
 ## Introduction
 
@@ -38,12 +38,12 @@ Please follow [this](cat_seg/EVAL.md) to evaluate CAT-Seg version and [this](cli
 ### Evaluation Results
 
 <div align="center" style="margin-bottom: 20px;">
-      <img src="assets/results.jpg" width = "100%">
+      <img src="assets/CAT-Seg_results.png" width = "100%">
       <br> Figure 2: Zero-Shot Semantic Segmentation on Out-of-Domain Datasets
 </div>
 
 <div align="center" style="margin-top: 20px;">
-      <img src="assets/results_unsupervised.jpg" width = "100%">
+      <img src="assets/CD_results.png" width = "100%">
       <br> Figure 3: Zero-Shot Unsupervised Semantic Segmentation on Out-of-Domain Datasets
 </div>
 
