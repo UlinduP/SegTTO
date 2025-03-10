@@ -66,11 +66,11 @@ We provide pre-trained weights for our models reported in the paper. All of the 
 <tr>
 <td align="left">CLIP-DINO-TTO</a></td>
 <td align="center">ViT-B/16</td>
-<td align="center">25.38</td>
-<td align="center">27.92</td>
-<td align="center">47.87</td>
-<td align="center">35.6</td>
-<td align="center">31.35</td>
+<td align="center">26.17</td>
+<td align="center">27.94</td>
+<td align="center">48.02</td>
+<td align="center">34.76</td>
+<td align="center">30.84</td>
 <td align="center"><a href="clip-dinoiser/checkpoints/last.pt">ckpt</a>&nbsp;
 </tr>
 <!-- TABLE BODY -->
@@ -79,9 +79,9 @@ We provide pre-trained weights for our models reported in the paper. All of the 
 <td align="left">CAT-Seg-B-TTO</a></td>
 <td align="center">ViT-B/16</td>
 <td align="center">35.75</td>
-<td align="center">35.61</td>
+<td align="center">35.77</td>
 <td align="center">45.64</td>
-<td align="center">29.44</td>
+<td align="center">29.38</td>
 <td align="center">29.66</td>
 <td align="center"><a href="https://huggingface.co/hamacojr/CAT-Seg/resolve/main/model_final_base.pth">ckpt</a>&nbsp;
 </tr>
@@ -90,9 +90,9 @@ We provide pre-trained weights for our models reported in the paper. All of the 
 <td align="left">CAT-Seg-L-TTO</a></td>
 <td align="center">ViT-L/14</td>
 <td align="center">41.52</td>
-<td align="center">40.59</td>
+<td align="center">40.74</td>
 <td align="center">51.4</td>
-<td align="center">27.71</td>
+<td align="center">28.08</td>
 <td align="center">38.4</td>
 <td align="center"><a href="https://huggingface.co/hamacojr/CAT-Seg/resolve/main/model_final_large.pth">ckpt</a>&nbsp;
 </tr>
