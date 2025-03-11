@@ -5,6 +5,7 @@
 ```
 git clone https://github.com/UlinduP/Seg-TTO.git
 cd Seg-TTO/clip-dinoiser
+conda activate cdtto
 conda create -n cdtto python=3.9
 conda install pytorch==1.12.1 torchvision==0.13.1 cudatoolkit=[your CUDA version] -c pytorch
 pip install -r requirements.txt
