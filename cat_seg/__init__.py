@@ -15,5 +15,5 @@ from .data.dataset_mappers.mask_former_semantic_dataset_mapper import (
 )
 
 # models
-from .cat_seg_model import CATSeg, CATSeg_Orig
+from .cat_seg_model import CATSegTTO, CATSeg_Orig
 from .test_time_augmentation import SemanticSegmentorWithTTA

@@ -1,18 +1,14 @@
 from line_profiler import profile
 import random
 import numpy as np
-from PIL import Image
 import torch
 from einops import rearrange
-import gc
 import torch.nn as nn
-
-
 import os
 import sys
 from copy import deepcopy
 import math
-from PIL import Image
+from PIL import Image, ImageOps
 import torch
 import torch.nn.parallel
 import torch.optim
@@ -22,10 +18,8 @@ import torchvision.transforms as transforms
 from torch.cuda.amp import GradScaler, autocast
 import matplotlib.pyplot as plt
 import time
-import numpy as np
-import gc
-
 from .pcgrad import PCGrad
+import torchvision.transforms.functional as TF
 
 try:
     from torchvision.transforms import InterpolationMode
@@ -140,39 +134,36 @@ class TPT:
         self.data_transform = AugMixAugmenter(base_transform, preprocess, n_views=self.num_augmentations-1)
         # batchsize = 1
         del model, trainable_param
-    # @profile
+        
     def tpt_tuning(self, image):
-        torch.backends.cudnn.benchmark = True
+        torch.backends.cudnn.benchmark = True  # Enable CuDNN optimizations
+        torch.cuda.set_per_process_memory_fraction(0.9, device=self.gpu)  # Allocates 80% of GPU memory
+
         # This codebase has only been tested under the single GPU setting
         assert self.gpu is not None
-        # print("Use GPU: {} for training".format(self.gpu))
-        
+
         image = transforms.ToPILImage()(image.squeeze(0))
-        transformed_images = self.data_transform(image)
-            
-        text_embedding = self.test_time_adapt_eval(transformed_images, self.optimizer, self.optim_state, self.scaler)
-        del transformed_images, image
+        image = random_crop_and_resize_tpt(image, (336, 336), num_crops=self.num_augmentations)
+        
+        start = time.perf_counter()
+        text_embedding = self.test_time_adapt_eval(image, self.optimizer, self.optim_state, self.scaler)
+        end = time.perf_counter()
+        print(f"                 Time taken for TPT test time adapt eval: {(end - start) * 1000:.2f} ms")
+        del image
         return text_embedding
 
     # @profile
     def test_time_adapt_eval(self, images, optimizer, optim_state, scaler):
+        torch.backends.cudnn.benchmark = True  # Enable CuDNN optimizations
+        torch.cuda.set_per_process_memory_fraction(0.9, device=self.gpu)  # Allocates 80% of GPU memory
+
         self.model.eval()
         with torch.no_grad():
             self.model.reset()
         assert self.gpu is not None
-
-        if isinstance(images, list):
-            for k in range(len(images)):
-                images[k] = images[k].cuda(self.gpu, non_blocking=True)
-            image = images[0]
-        else:
-            if len(images.size()) > 4:
-                # when using ImageNet Sampler as the dataset
-                assert images.size()[0] == 1
-                images = images.squeeze(0)
-            images = images.cuda(self.gpu, non_blocking=True)
-            image = images
-        images = torch.stack(images, dim=0)
+        
+        images = images.cuda(self.gpu, non_blocking=True)
+        image = images[0]
 
         if self.tta_steps > 0:
             with torch.no_grad():
@@ -188,9 +179,12 @@ class TPT:
         with torch.no_grad():
             image = image.unsqueeze(0)
             logits, text_features = self.model(image)
+        
         del image, images, optimizer, optim_state, scaler, logits
+        
         return text_features
-    # @profile
+    
+    
     def select_confident_samples(self, logits, top): # logits = (64, 577, num_classes) //// (64, 577, 80, num_classes)
         if self.num_templates is not None:
             logits_ = logits[:, 1:, :, :].permute(0, 2, 3, 1) # (64, 80, num_classes, 576)
@@ -201,24 +195,15 @@ class TPT:
         else:
             logits_ = logits[:, 1:, :].permute(0, 2, 1) # (64, num_classes, 576)
             logits_ = logits_.view(logits_.shape[0], logits_.shape[1], int(math.sqrt(logits_.shape[2])), int(math.sqrt(logits_.shape[2]))) # (64, num_classes, 24, 24)
-            # batch_entropy = -(logits.softmax(1) * logits.log_softmax(1)).sum(1)
-            # idx = torch.argsort(batch_entropy, descending=False)[:int(batch_entropy.size()[0] * top)]
-            # return logits[idx], idx
-            # batch_entropy = -(logits.softmax(2) * logits.log_softmax(2)).sum(2).sum(2).sum(2).sum(1)
+    
             patch_entropy = -(logits_.softmax(1) * logits_.log_softmax(1)).mean(2).mean(2) # (64, num_classes)
             idx = torch.argsort(patch_entropy, descending=False)[:int(patch_entropy.size()[0] * top)]
-            # idx = torch.argsort(avg_patch_entropy.view(avg_patch_entropy.size(0), -1), dim=0, descending=False)[:int(patch_entropy.size()[0] * top)]
             selected_logits = logits[idx][:, :, :]
-            # plot_entropy = selected_logits.mean(0).mean(0)        
-            # import matplotlib.pyplot as plt
-            # import time
-            # plt.figure(figsize=(10, 5))
-            # plt.bar(range(len(plot_entropy.detach().cpu().numpy())), plot_entropy.detach().cpu().numpy())
-            # plt.savefig(f'plots/plot_entropy_{time.time()}.png')
-            # plt.show()
+            
         del logits_, patch_entropy, logits
-        return selected_logits, idx
-    # @profile
+        return selected_logits
+    
+    
     def avg_entropy(self, outputs):
         #outout shape = (selected aug, num_classes) //// (selected aug, 80, num_classes)
         # remove dim=2 for logits                           (6,577,5,c) 
@@ -227,29 +212,23 @@ class TPT:
         avg_logits = logits.logsumexp(dim=0) - torch.log(torch.tensor(logits.shape[0])) # avg_logits = logits.mean(0) [1, 1000]
         min_real = torch.finfo(avg_logits.dtype).min
         logits = torch.clamp(avg_logits, min=min_real)
-        # scale = torch.log(torch.tensor(logits.shape[-1])).to(self.gpu)
-        # breakpoint()
         value = (-(logits * torch.exp(logits)).sum(dim=-1).mean(0))
-        # breakpoint()
         del outputs, logits, avg_logits
         return value
     
     def cross_entropy(self, outputs):
         outputs = outputs[:,:,:,:] #                      (6,577,5,c)
         b, wh, p, c = outputs.shape
-        print(outputs.shape)
         outputs = outputs.permute(0,3,1,2) #              (6,5,577,c)
         logits = torch.softmax(outputs/1,dim=1) # logits = outputs.log_softmax(dim=1) [N, 1000]  ########## gamma = 20
-        # avg_logits = logits.logsumexp(dim=0) - torch.log(torch.tensor(logits.shape[0])) # avg_logits = logits.mean(0) [1, 1000]
         min_real = torch.finfo(logits.dtype).min
         logits = torch.clamp(logits, min=min_real)
-        # gt = torch.argmax(logits, dim=-1, keepdim=True)
-        # target = torch.zeros_like(logits).scatter_(-1, gt, 1)
+        
         if self.first_img == True:
             while True:
                 target = (logits>self.threshold).float()
                 ones = torch.sum(target==1).item()
-                print(f"number of ones: {ones} from {b*p*wh}")
+                # print(f"number of ones: {ones} from {b*p*wh}")
                 if ones < int(8300*p/5) and self.threshold > 0.7 and not self.loop_low:
                     self.threshold -= 0.01
                     self.loop_high = True
@@ -257,41 +236,33 @@ class TPT:
                     self.threshold += 0.01
                     self.loop_low = True
                 else:
-                    print("......................")
-                    print(f"threshold: {self.threshold}")
                     self.first_img = False
                     break
         target = (logits>self.threshold).float()
         ones = torch.sum(target==1).item()
-        print(f"number of ones: {ones} from {b*p*wh}")
-        # loss = torch.nn.functional.binary_cross_entropy_with_logits(logits, target)/(b*p)
         criterion = torch.nn.BCEWithLogitsLoss()
         loss = criterion(logits,target)/(b*p)
-        # breakpoint()
         return loss
 
-    # @profile
     def test_time_tuning(self, inputs, optimizer, scaler):
-        for j in range(self.tta_steps+1):
+        torch.backends.cudnn.benchmark = True  
+        torch.cuda.set_per_process_memory_fraction(0.9, device=self.gpu)  
+        
+        for j in range(self.tta_steps):
             optimizer.zero_grad()
             with autocast():
                 output, _ = self.model(inputs)
-                # global_image = output[0].unsqueeze(0).repeat(int(output.size(0) * self.selection_p), 1, 1)
-                output_conf, selected_idx = self.select_confident_samples(output, self.selection_p)
+                output_conf = self.select_confident_samples(output, self.selection_p)
+                
                 if j<self.tta_steps:
                     if self.loss=="pcgrad":
                         loss_ent = self.avg_entropy(output_conf)
                         loss_cross = self.cross_entropy(output_conf)
                         loss = [loss_ent, loss_cross]
-                        print(f'loss ent: {loss_ent} loss cross: {loss_cross}')
+                        # print(f'loss ent: {loss_ent} loss cross: {loss_cross}')
                     elif self.loss=="entropy_only":
                         loss_ent = self.avg_entropy(output_conf)
                         loss = loss_ent
-                        print(f'loss ent: {loss_ent}')
-                    # assert not torch.isnan(loss[1]).any(), "NaN found in loss"
-                    # assert not torch.isinf(loss[1]).any(), "Inf found in loss"
-                    # assert not torch.isnan(loss[0]).any(), "NaN found in loss"
-                    # assert not torch.isinf(loss[0]).any(), "Inf found in loss"
                 else:
                     loss_cross = self.cross_entropy(output_conf)
                     if self.loss=="pcgrad":
@@ -299,20 +270,6 @@ class TPT:
                     elif self.loss=="entropy_only":
                         loss = loss_cross
                     
-                    # assert not torch.isnan(loss[0]).any(), "NaN found in loss"
-                    # assert not torch.isinf(loss[0]).any(), "Inf found in loss"
-                    print(f'loss cross: {loss_cross}')                
-                # loss = self.combine_loss(loss_ent, loss_cross)
-                # loss = (loss_ent + 100*loss_cross)
-                # cross entropy loss global image vs selected images
-                # loss = torch.nn.functional.cross_entropy(global_image, output)
-                # loss.backward()    
-            # optimizer.step()
-            # plt.figure(figsize=(10, 5))
-            # plt.bar(range(len(torch.softmax(output[0,0,:,:].mean(0),dim=-1).detach().cpu().numpy())), torch.softmax(output[0,0].mean(0),dim=-1).detach().cpu().numpy())
-            # plt.savefig(f'plots/target_{time.time()}.png')
-            # # plt.show()    
-            # print('before step', self.model.prompt_learner.cls.mean())
             if self.loss == "pcgrad":
                 optimizer.pc_backward(loss) 
                 optimizer.step()
@@ -321,18 +278,42 @@ class TPT:
                 scaler.step(optimizer)
                 scaler.update()
                  
-            # print('after step', self.model.prompt_learner.cls.mean())
-            # Assert no NaN or Inf in loss 
-
-            # Assert no NaN or Inf in gradients of model parameters
-            # for name, param in self.model.named_parameters():   
-            #     if param.grad is not None:
-            #         assert not torch.isnan(param.grad).any(), f"NaN found in gradients of {name}"
-            #         assert not torch.isinf(param.grad).any(), f"Inf found in gradients of {name}"
         return
-    
 
+
+def random_crop_and_resize_tpt(image, resize_to, num_crops=64):
+    random.seed(0)
+    if isinstance(image, np.ndarray):
+        image = np.transpose(image, (1, 2, 0))  
+        image = Image.fromarray(image.astype(np.uint8))
+
+    cropped_images = []
+
+    original_resized = image.resize(resize_to) 
     
+    if random.random() < 0.5:
+        original_resized = ImageOps.mirror(original_resized)
+
+    original_tensor = torch.Tensor(np.transpose(original_resized.copy(), (2, 0, 1)))
+    cropped_images.append(original_tensor) 
+
+    for _ in range(num_crops):
+        x1, y1 = random.randint(0, 335), random.randint(0, 335)
+        crop_size = random.randint(1, 336 - max(x1, y1))
+
+        cropped_image = image.crop((x1, y1, x1 + crop_size, y1 + crop_size))
+        
+        if random.random() < 0.5:
+            cropped_image = ImageOps.mirror(cropped_image)
+
+        resized_image = cropped_image.resize(resize_to)
+        resized_tensor = torch.Tensor(np.transpose(resized_image.copy(), (2, 0, 1)))
+
+        cropped_images.append(resized_tensor)
+        
+    cropped_images = torch.stack(cropped_images)
+        
+    return cropped_images  
 
 def random_crop_and_resize(image, resize_to, num_crops=64):
     """
@@ -343,13 +324,6 @@ def random_crop_and_resize(image, resize_to, num_crops=64):
     croped_images : list of torch.Tensor
     crop_coords : list of tuples
     """
-    # Get the original size
-    # width, height = image.size
-    # crop_size=random.randint(24,224)
-
-    # # Randomly select a starting point for the crop
-    # x = random.randint(0, width - crop_size)
-    # y = random.randint(0, height - crop_size)
     random.seed(0)
     image = image.cpu().numpy()
     
@@ -362,34 +336,21 @@ def random_crop_and_resize(image, resize_to, num_crops=64):
     cropped_coords = []
     for i in range(num_crops):
         # Randomly select a starting point for the crop
-        #######
-        x1,y1 = random.randint(0,639), random.randint(0,639)
+        x1, y1 = random.randint(0,639), random.randint(0,639)
         crop_size = random.randint(1, 640 - max(x1,y1))
-        #######
 
         # Perform the crop
         cropped_image = image.crop((x1, y1, x1 + crop_size, y1 + crop_size))
-
+        
         # Resize back to 224x224
         resized_image = cropped_image.resize(resize_to)
         resized_image = torch.Tensor(np.transpose(resized_image.copy(), (2, 0, 1)))
-        # print(resized_image.shape)
 
         cropped_images.append(resized_image)
         cropped_coords.append((x1, y1, x1 + crop_size, y1 + crop_size))
-        
-        # if i % 10 == 0:
-        #     gc.collect()
-        #     torch.cuda.empty_cache()
     
     cropped_images = torch.stack(cropped_images, dim=0)
-    # print(cropped_images.shape)
     
-    del image, cropped_image, resized_image
-    gc.collect()
-    torch.cuda.empty_cache()
-
-    # Return the resized images and crop coordinates
     return cropped_images, cropped_coords
 
 def select_confident_samples(logits, top, patch_level=False, aggregration="median",model="catseg"):
@@ -403,10 +364,7 @@ def select_confident_samples(logits, top, patch_level=False, aggregration="media
         idx: torch.Tensor [selected_batch_size]
     """
     if patch_level:
-        print("Patch level selection:", aggregration)
-        print(f"logits shape: {logits.shape}")
         patch_entropy = -(logits.softmax(1) * logits.log_softmax(1)).sum(1)
-        print(f"patch_entropy shape: {patch_entropy.shape}")
         
         if aggregration == "mean":
             aggregated_entropy = patch_entropy.mean(dim=1).mean(dim=1)
@@ -417,22 +375,12 @@ def select_confident_samples(logits, top, patch_level=False, aggregration="media
         elif aggregration == "median":
             aggregated_entropy = patch_entropy.median(dim=1)[0].median(dim=1)[0]
         
-        print(f"aggregated_entropy shape: {aggregated_entropy.shape}")
         idx = torch.argsort(aggregated_entropy, descending=False)[:int(aggregated_entropy.size()[0] * top)]
-        print(f"idx shape: {idx.shape}")
-        
-        gc.collect()
-        torch.cuda.empty_cache()
-        
-        return None,idx
+        return idx
     else:
         batch_entropy = -(logits.softmax(1) * logits.log_softmax(1)).sum(2).sum(2).sum(1)
-        # print(f"batch_entropy shape: {batch_entropy.shape}")
         idx = torch.argsort(batch_entropy, descending=False)[:int(batch_entropy.size()[0] * top)]
-        # print(f"idx shape: {idx.shape}")
-        gc.collect()
-        torch.cuda.empty_cache()
-        return logits[idx], idx  
+        return idx  
 
 
 @profile
@@ -442,19 +390,9 @@ def folding(crop_features, output_size = (640, 640), kernel_size = (384, 384), o
     stride = int(kernel_size[0] * (1 - overlap))  
 
     fold = nn.Fold(output_size=output_size, kernel_size=kernel_size, stride=stride)
-    # folded_feature = fold(patches)
-
-    # ones_input = torch.ones_like(patches)  
-    # unfold_ones = fold(ones_input)
-    # folded_feature /= unfold_ones
-    
+   
     folded_feature = fold(patches) / fold(torch.ones_like(patches))
-
     folded_feature = rearrange(folded_feature, 'd b h w -> b d h w')
-
-    del patches
-    gc.collect()
-    torch.cuda.empty_cache()
 
     return folded_feature
 
@@ -469,28 +407,18 @@ def unfolding(folded_feature, h_w=(384, 384), kernel_size=(384, 384), overlap=0.
     unfolded = unfold(folded_feature)
     unfolded = rearrange(unfolded, 'd (h w) b -> b d h w', h=height, w=width)
 
-    del folded_feature
-    gc.collect()
-    torch.cuda.empty_cache()
-
     return unfolded
 
-@profile
+
 def process_clip_feature(clip_feature, aug_coords, interpolation="bilinear", selected_idxes=None, size=24):
-    # aug_coords = [[x1, y1, x1 + crop_size, y1 + crop_size], [x2, y2, x2 + crop_size, y2 + crop_size], ...]
-    # patch 1 = [0, 0, 384, 384], patch 2 = [256, 0, 640, 384], patch 3 = [0, 256, 384, 640], patch 4 = [256, 256, 640, 640]
+    torch.backends.cudnn.benchmark = True  
+    torch.cuda.set_per_process_memory_fraction(0.9, device=1)  
     
     orig_feature = clip_feature[4,1:,:].unsqueeze(0) # [1, 576, 768]
     orig_feature = rearrange(orig_feature, "b (h w) c -> b c h w", h=24, w=24) # [1, 768, 24, 24]
     orig_feature = torch.nn.functional.interpolate(orig_feature, size=(640, 640), mode=interpolation) # [1, 768, 640, 640]
     
     crop_feature = clip_feature[:4,1:,:] # [4, 576, 768]`
-    # print(f"crop_feature shape: {crop_feature.shape}")
-    crop_feature = rearrange(crop_feature, "b (h w) c -> b c h w", h=24, w=24) # [4, 768, 24, 24]
-    crop_feature = torch.nn.functional.interpolate(crop_feature, size=(384, 384), mode=interpolation) # [4, 768, 384, 384]
-    crop_feature = folding(crop_feature)
-
-    # print(f"orig_feature shape: {orig_feature.shape}, crop_feature_fold shape: {crop_feature_fold.shape}")
 
     count_tensor = torch.ones((640, 640)).to(clip_feature.device)
 
@@ -504,32 +432,19 @@ def process_clip_feature(clip_feature, aug_coords, interpolation="bilinear", sel
         feature = torch.nn.functional.interpolate(feature, size=(crop_size, crop_size), mode=interpolation) # [1, 768, crop_size, crop_size]
     
         orig_feature[:, :, y1:y2, x1:x2] = (orig_feature[:, :, y1:y2, x1:x2] + feature)
-        crop_feature[:, :, y1:y2, x1:x2] = (crop_feature[:, :, y1:y2, x1:x2] + feature)
 
         count_tensor[y1:y2, x1:x2] += 1
 
     orig_feature = orig_feature / count_tensor.unsqueeze(0).unsqueeze(0)
-    crop_feature = crop_feature / count_tensor.unsqueeze(0).unsqueeze(0)
-    
-    crop_feature = unfolding(crop_feature)
-    
     orig_feature = torch.nn.functional.interpolate(orig_feature, size=(24, 24), mode=interpolation) # [1, 768, 24, 24]
-    crop_feature = torch.nn.functional.interpolate(crop_feature, size=(24, 24), mode=interpolation) # [4, 768, 24, 24]
+    orig_feature = rearrange(orig_feature, "b d h w -> b (h w) d") # [5, 576, 768]
     
     crop_feature = torch.cat((crop_feature, orig_feature), dim=0)
-    
-    crop_feature = rearrange(crop_feature, "b d h w -> b (h w) d") # [5, 576, 768]
-    # breakpoint()
     crop_feature = torch.cat((clip_feature[:5,:1,:], crop_feature), dim=1) # [5, 577, 768]
-    # clip_feature_updated = torch.nn.functional.interpolate(clip_feature_updated, size=(24, 24), mode=interpolation) # [5, 768, 24, 24]
-
-    del orig_feature, clip_feature
-    gc.collect()
-    torch.cuda.empty_cache()
 
     return crop_feature
 
-@profile
+       
 def process_backbone_feature(features, aug_coords, interpolation="bilinear", selected_idxes=None, size=24):
     """
     Processes the backbone features (res2, res3, res4) and returns the aggregated feature.
@@ -539,22 +454,14 @@ def process_backbone_feature(features, aug_coords, interpolation="bilinear", sel
         aug_coords: list of tuples (x1, y1, x2, y2)
         interpolation: nearest, bilinear
     """
+    torch.backends.cudnn.benchmark = True  
+    torch.cuda.set_per_process_memory_fraction(0.9, device=1)  
 
     orig_features_res2 = torch.nn.functional.interpolate(features["res2"][4,:,:,:].unsqueeze(0), size=(640,640), mode=interpolation) # [1, 128, 640, 640]
     orig_features_res3 = torch.nn.functional.interpolate(features["res3"][4,:,:,:].unsqueeze(0), size=(640,640), mode=interpolation) # [1, 256, 640, 640]
     orig_features_res4 = torch.nn.functional.interpolate(features["res4"][4,:,:,:].unsqueeze(0), size=(640,640), mode=interpolation) # [1, 512, 640, 640]
     
-    crop_features_res2 = torch.nn.functional.interpolate(features["res2"][:4,:,:,:], size=(384,384), mode=interpolation) # [4, 128, 384, 384]
-    crop_features_res3 = torch.nn.functional.interpolate(features["res3"][:4,:,:,:], size=(384,384), mode=interpolation) # [4, 256, 384, 384]
-    crop_features_res4 = torch.nn.functional.interpolate(features["res4"][:4,:,:,:], size=(384,384), mode=interpolation) # [4, 512, 384, 384]
-
-    crop_features_res2 = folding(crop_features_res2)
-    crop_features_res3 = folding(crop_features_res3)
-    crop_features_res4 = folding(crop_features_res4)
-
-    # print(f"orig_features_res2 shape: {orig_features_res2.shape}, crop_features_fold_res2 shape: {crop_features_fold_res2.shape}")
-
-    count_tensor = torch.ones((640, 640)).to(crop_features_res2.device)
+    count_tensor = torch.ones((640, 640)).to(orig_features_res2.device)
 
     for idx in selected_idxes:
         crop_size = aug_coords[idx][2] - aug_coords[idx][0]
@@ -569,46 +476,18 @@ def process_backbone_feature(features, aug_coords, interpolation="bilinear", sel
         orig_features_res3[:, :, y1:y2, x1:x2] = (orig_features_res3[:, :, y1:y2, x1:x2] + feature_res3)
         orig_features_res4[:, :, y1:y2, x1:x2] = (orig_features_res4[:, :, y1:y2, x1:x2] + feature_res4)
 
-        crop_features_res2[:, :, y1:y2, x1:x2] = (crop_features_res2[:, :, y1:y2, x1:x2] + feature_res2)
-        crop_features_res3[:, :, y1:y2, x1:x2] = (crop_features_res3[:, :, y1:y2, x1:x2] + feature_res3)
-        crop_features_res4[:, :, y1:y2, x1:x2] = (crop_features_res4[:, :, y1:y2, x1:x2] + feature_res4)
-
         count_tensor[y1:y2, x1:x2] += 1
     
     orig_features_res2 = orig_features_res2 / count_tensor.unsqueeze(0).unsqueeze(0)
     orig_features_res3 = orig_features_res3 / count_tensor.unsqueeze(0).unsqueeze(0)
     orig_features_res4 = orig_features_res4 / count_tensor.unsqueeze(0).unsqueeze(0)
-
-    crop_features_res2 = crop_features_res2 / count_tensor.unsqueeze(0).unsqueeze(0)
-    crop_features_res3 = crop_features_res3 / count_tensor.unsqueeze(0).unsqueeze(0)
-    crop_features_res4 = crop_features_res4 / count_tensor.unsqueeze(0).unsqueeze(0)
-
-    # crop_features_unfold_res2 = unfolding(crop_features_fold_res2)
-    # crop_features_unfold_res3 = unfolding(crop_features_fold_res3)
-    # crop_features_unfold_res4 = unfolding(crop_features_fold_res4)
     
     orig_features_res2 = torch.nn.functional.interpolate(orig_features_res2, size=(96,96), mode=interpolation)
     orig_features_res3 = torch.nn.functional.interpolate(orig_features_res3, size=(48,48), mode=interpolation)
     orig_features_res4 = torch.nn.functional.interpolate(orig_features_res4, size=(24,24), mode=interpolation)
     
-    crop_features_res2 = torch.nn.functional.interpolate(unfolding(crop_features_res2), size=(96,96), mode=interpolation)
-    crop_features_res3 = torch.nn.functional.interpolate(unfolding(crop_features_res3), size=(48,48), mode=interpolation)
-    crop_features_res4 = torch.nn.functional.interpolate(unfolding(crop_features_res4), size=(24,24), mode=interpolation)
-    
-    crop_features_res2 = torch.cat((crop_features_res2, orig_features_res2), dim=0)
-    crop_features_res3 = torch.cat((crop_features_res3, orig_features_res3), dim=0)
-    crop_features_res4 = torch.cat((crop_features_res4, orig_features_res4), dim=0)
-    
-    # crop_features_unfold_res2 = torch.cat((crop_features_unfold_res2, orig_features_res2), dim=0)
-    # crop_features_unfold_res3 = torch.cat((crop_features_unfold_res3, orig_features_res3), dim=0)
-    # crop_features_unfold_res4 = torch.cat((crop_features_unfold_res4, orig_features_res4), dim=0)
-    
-    # crop_features_unfold_res2 = torch.nn.functional.interpolate(crop_features_unfold_res2, size=(96,96), mode=interpolation)
-    # crop_features_unfold_res3 = torch.nn.functional.interpolate(crop_features_unfold_res3, size=(48,48), mode=interpolation)
-    # crop_features_unfold_res4 = torch.nn.functional.interpolate(crop_features_unfold_res4, size=(24,24), mode=interpolation)
-
-    del orig_features_res2, orig_features_res3, orig_features_res4
-    gc.collect()
-    torch.cuda.empty_cache()
+    crop_features_res2 = torch.cat((features["res2"][:4,:,:,:], orig_features_res2), dim=0)
+    crop_features_res3 = torch.cat((features["res3"][:4,:,:,:], orig_features_res3), dim=0)
+    crop_features_res4 = torch.cat((features["res4"][:4,:,:,:], orig_features_res4), dim=0)
 
     return {"res2": crop_features_res2, "res3": crop_features_res3, "res4": crop_features_res4}

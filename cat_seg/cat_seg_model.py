@@ -14,17 +14,12 @@ from detectron2.structures import ImageList
 from detectron2.utils.memory import _ignore_torch_cuda_oom
 from einops import rearrange
 import gc
-
-
-
-# from cat_seg.llava_caption import get_descriptors
-
-# from cat_seg.dino.dino import DINO
+import time
 
 from .tpt.tpt_segmentation import random_crop_and_resize, select_confident_samples, process_backbone_feature, process_clip_feature
 
 @META_ARCH_REGISTRY.register()
-class CATSeg(nn.Module):
+class CATSegTTO(nn.Module):
     @configurable
     def __init__(
         self,
@@ -152,7 +147,6 @@ class CATSeg(nn.Module):
 
         clip_images = F.interpolate(clip_images.tensor, size=self.clip_resolution, mode='bilinear', align_corners=False,) # (1, 3, 336, 336)       
         clip_features = self.sem_seg_head.predictor.clip_model.encode_image(clip_images, dense=True)  
-        # clip_features = get_descriptors(clip_images, self.sem_seg_head.predictor.clip_model).cuda()
 
         images_resized = F.interpolate(images.tensor, size=(384, 384), mode='bilinear', align_corners=False,)
         features = self.backbone(images_resized)    #(1, 577, 768)
@@ -187,15 +181,16 @@ class CATSeg(nn.Module):
     @torch.no_grad()
     def inference_sliding_window(self, batched_inputs, kernel=384, overlap=0.333, out_res=[640, 640]):
         images = [x["image"].to(self.device, dtype=torch.float32) for x in batched_inputs]
-        # print(images[0].shape)
         stride = int(kernel * (1 - overlap))
         unfold = nn.Unfold(kernel_size=kernel, stride=stride)
         fold = nn.Fold(out_res, kernel_size=kernel, stride=stride)
         image = F.interpolate(images[0].unsqueeze(0), size=out_res, mode='bilinear', align_corners=False).squeeze()
 
+        start = time.perf_counter()
         augmented_images, coords = random_crop_and_resize(image, (kernel,kernel), num_crops=64) # (59, 3, 384, 384))
+        end = time.perf_counter()
+        print(f"random_crop_and_resize time: {(end-start)*1000:.2f}ms")
         augmented_images = augmented_images.to(self.device)
-        # print("unfold shape:", unfold(image).shape)
         image = rearrange(unfold(image.unsqueeze(0)).squeeze(0), "(C H W) L-> L C H W", C=3, H=kernel)
         global_image = F.interpolate(images[0].unsqueeze(0), size=(kernel, kernel), mode='bilinear', align_corners=False)
         image = torch.cat((image, global_image, augmented_images), dim=0)
@@ -204,38 +199,19 @@ class CATSeg(nn.Module):
         clip_images = (image - self.clip_pixel_mean) / self.clip_pixel_std
         clip_images = F.interpolate(clip_images, size=self.clip_resolution, mode='bilinear', align_corners=False, )
 
-        # print(torch.cuda.memory_summary())
-
-        
-        # if self.sequential:
-        #     outputs = []
-        #     for clip_feat, image in zip(clip_images, images):
-        #         feature = self.backbone(image.unsqueeze(0))
-        #         clip_feat = self.sem_seg_head.predictor.clip_model.encode_image(clip_feat.unsqueeze(0), dense=True)
-        #         output = self.sem_seg_head(clip_feat, feature)
-        #         outputs.append(output[0])
-        #     outputs = torch.stack(outputs, dim=0)
-        # else:
         features = self.backbone(images)  # res2 = [5,128,96,96] res3 = [5,256,48,48] res4 = [5,512,24,24]
-        # print(features["res2"].shape)
         clip_features = self.sem_seg_head.predictor.clip_model.encode_image(clip_images, dense=True) # 5,577,768
-        # print(clip_features.shape)
-        # breakpoint()
-        outputs, tuned_text_embedding = self.sem_seg_head(clip_features, features, global_image, OOM = True, tpt_tuning=True)  # 32,classes,96,96
-        outputs_aug = outputs[5:,:,:,:].sigmoid()
-        outputs_aug = F.normalize(outputs_aug, p=2, dim=1) 
-        # print(outputs_aug.shape) 
-        selected_aug_emb, selected_idxes = select_confident_samples(outputs_aug, 0.2, patch_level=False, aggregration="median")
-        # os._exit(0)
-
-
-        feature_updated = process_backbone_feature(features, selected_idxes=selected_idxes, aug_coords=coords)
-        clip_features_updated = process_clip_feature(clip_features, selected_idxes=selected_idxes, aug_coords=coords)
-        # breakpoint()
-        # print(f"feature_updated shape: {feature_updated['res2'].shape}")
-        # print(f"clip_features_updated shape: {clip_features_updated.shape}")
         
-        outputs, _ = self.sem_seg_head(clip_features_updated, feature_updated, global_image, OOM = False, tpt_tuning=False, tuned_text_embedding=tuned_text_embedding)
+        outputs, tuned_text_embedding = self.sem_seg_head(clip_features, features, batched_inputs[0]['image'], OOM = False, tpt_tuning=True)  # 32,classes,96,96
+        
+        outputs = outputs[5:].sigmoid()
+        outputs = F.normalize(outputs, p=2, dim=1) 
+        selected_idxes = select_confident_samples(outputs, 0.2, patch_level=False, aggregration="median")
+        
+        clip_features = process_clip_feature(clip_features, selected_idxes=selected_idxes, aug_coords=coords)
+        features = process_backbone_feature(features, selected_idxes=selected_idxes, aug_coords=coords)
+        
+        outputs, _ = self.sem_seg_head(clip_features, features, global_image, OOM = False, tpt_tuning=False, tuned_text_embedding=tuned_text_embedding)
 
         outputs = F.interpolate(outputs, size=kernel, mode="bilinear", align_corners=False)
         outputs = outputs.sigmoid()
@@ -382,7 +358,6 @@ class CATSeg_Orig(nn.Module):
 
         clip_images = F.interpolate(clip_images.tensor, size=self.clip_resolution, mode='bilinear', align_corners=False,) # (1, 3, 336, 336)       
         clip_features = self.sem_seg_head.predictor.clip_model.encode_image(clip_images, dense=True)  
-        # clip_features = get_descriptors(clip_images, self.sem_seg_head.predictor.clip_model).cuda()
 
         images_resized = F.interpolate(images.tensor, size=(384, 384), mode='bilinear', align_corners=False,)
         features = self.backbone(images_resized)    #(1, 577, 768)
@@ -440,19 +415,8 @@ class CATSeg_Orig(nn.Module):
             outputs = torch.stack(outputs, dim=0)
         else:
             features = self.backbone(images)
-            # print(clip_images.shape)
             clip_features = self.sem_seg_head.predictor.clip_model.encode_image(clip_images, dense=True)
-            # print(clip_features.shape)
-            # os._exit(0)
-            # dino = DINO('/home/ulindu/sasini/CAT-Seg-MESS/cat_seg/pretrained_aligners/imagenet_dinov2_aligner_dts.pth')
-            # dino_features = dino.get_features(clip_images).repeat(1, clip_features.shape[1], 1)
-            # clip_features = (clip_features + dino_features) / 2
-            # temp_clip_features = []
-            # for clip_image in clip_images:
-            #     clip_feature = get_descriptors(clip_image.unsqueeze(0), self.sem_seg_head.predictor.clip_model).cuda()
-            #     temp_clip_features.append(clip_feature)
-            # clip_features = torch.stack(temp_clip_features, dim=0).squeeze(1)
-            outputs = self.sem_seg_head(clip_features, features)
+            outputs,_ = self.sem_seg_head(clip_features, features)
 
         outputs = F.interpolate(outputs, size=kernel, mode="bilinear", align_corners=False)
         outputs = outputs.sigmoid()
