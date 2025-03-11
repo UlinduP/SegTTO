@@ -1,6 +1,6 @@
 _BASE_: config.yaml
 MODEL:
-  META_ARCHITECTURE: "CATSeg"
+  META_ARCHITECTURE: "CATSegTTO"
   BACKBONE:
     FREEZE_AT: 0
     NAME: "D2SwinTransformer"
