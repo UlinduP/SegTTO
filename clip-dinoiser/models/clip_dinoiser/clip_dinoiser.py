@@ -17,6 +17,8 @@ from ..tpt.tpt_augmentations import random_crop_and_resize, select_confident_sam
 
 from models.builder import MODELS, build_model
 
+import time
+
 NORMALIZE = T.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))
 UNNORMALIZE = T.Normalize(
     mean=[-0.485 / 0.229, -0.456 / 0.224, -0.406 / 0.225],
@@ -32,7 +34,7 @@ class DinoCLIP(nn.Module):
     """
 
     def __init__(self, clip_backbone, class_names, vit_arch="vit_base", vit_patch_size=16, enc_type_feats="k",
-                 gamma=0.2, delta=0.99, apply_found=False, json_path=None):
+                 gamma=0.2, delta=0.99, apply_found=False, segtto=True, json_path=None):
         super(DinoCLIP, self).__init__()
         self.vit_arch = vit_arch
         self.enc_type_feats = enc_type_feats
@@ -42,14 +44,14 @@ class DinoCLIP(nn.Module):
         self.delta = delta
 
         # ==== build MaskCLIP backbone =====
-        maskclip_cfg = OmegaConf.load(f"configs/{clip_backbone}.yaml")
+        # maskclip_cfg = OmegaConf.load(f"configs/{clip_backbone}.yaml")
         
-        if json_path:
-            maskclip_cfg["model"]["decode_head"]["json_path"] = json_path
+        # if json_path:
+        #     maskclip_cfg["model"]["decode_head"]["json_path"] = json_path
         
-        self.clip_backbone = build_model(maskclip_cfg["model"], class_names=class_names)
-        for param in self.clip_backbone.parameters():
-            param.requires_grad = False
+        # self.clip_backbone = build_model(maskclip_cfg["model"], class_names=class_names)
+        # for param in self.clip_backbone.parameters():
+        #     param.requires_grad = False
 
     def load_teachers(self):
         from models.FOUND.model import FoundModel, get_vit_encoder
@@ -237,7 +239,7 @@ class CLIP_DINOiser(DinoCLIP):
     """
 
     def __init__(self, clip_backbone, class_names, vit_arch="vit_base", vit_patch_size=16, enc_type_feats="v",
-                 feats_idx=-3, gamma=0.2, delta=0.99, in_dim=256, conv_kernel=3, json_path=None):
+                 feats_idx=-3, gamma=0.2, delta=0.99, in_dim=256, conv_kernel=3, segtto=True, json_path=None):
         super(CLIP_DINOiser, self).__init__(clip_backbone, class_names, vit_arch, vit_patch_size, enc_type_feats, gamma, json_path=json_path)
 
         in_size = 768 if feats_idx != 'final' else 512
@@ -249,7 +251,22 @@ class CLIP_DINOiser(DinoCLIP):
         self.obj_proj = nn.Conv2d(in_size, in_dim, (conv_kernel, conv_kernel), padding=conv_kernel // 2,
                                   padding_mode='replicate')
         
-        print("CLIP-DINOiser config:", json_path)
+        self.segtto = segtto
+        print(f"SEGTTO: {segtto}")
+        
+        maskclip_cfg = OmegaConf.load(f"configs/{clip_backbone}.yaml")
+        
+        if json_path:
+            maskclip_cfg["model"]["decode_head"]["json_path"] = json_path
+        
+        if segtto:
+            maskclip_cfg["model"]["decode_head"]["segtto"] = True
+        else:
+            maskclip_cfg["model"]["decode_head"]["segtto"] = False
+        
+        self.clip_backbone = build_model(maskclip_cfg["model"], class_names=class_names)
+        for param in self.clip_backbone.parameters():
+            param.requires_grad = False
 
         # setup clip features for training
         if feats_idx != 'final':
@@ -284,8 +301,7 @@ class CLIP_DINOiser(DinoCLIP):
         return bkg_out, corrs, clip_proj_feats
 
     def forward(self, x: torch.Tensor):
-        tpt_augs = True
-        if tpt_augs:
+        if self.segtto:
             unpreprocessed_image = UNNORMALIZE(x)
             cropped_imgs, cropped_coords = random_crop_and_resize(unpreprocessed_image, num_crops=64) 
             
@@ -294,13 +310,14 @@ class CLIP_DINOiser(DinoCLIP):
             B, C, hf, wf = output.shape
             preds = F.interpolate(preds, (hf, wf), mode="bilinear", align_corners=False)
 
+            start = time.perf_counter()
             # Compute weighted pooling --------------------------------------------------
             if self.gamma:
                 corrs[corrs < self.gamma] = 0.0
             out_feats = self.compute_weighted_pool(output, corrs)
 
             # Get the predictions --------------------------------------------------
-            output = self.clip_backbone.decode_head.cls_seg(out_feats, unpreprocessed_image, tpt_tunning=True)
+            output = self.clip_backbone.decode_head.cls_seg(out_feats, unpreprocessed_image.cpu(), tpt_tunning=True)
             
             if self.apply_found:
                 updated_outputs = []

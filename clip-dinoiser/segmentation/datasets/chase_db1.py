@@ -5,7 +5,7 @@ from mmseg.datasets.custom import CustomDataset
 
 
 @DATASETS.register_module()
-class ChaseDB1Dataset(CustomDataset):
+class ChaseDBDataset(CustomDataset):
     """Chase_db1 dataset.
 
     In segmentation map annotation for Chase_db1, 0 stands for background,
@@ -19,9 +19,9 @@ class ChaseDB1Dataset(CustomDataset):
     PALETTE = [[120, 120, 120], [6, 230, 230]]
 
     def __init__(self, **kwargs):
-        super(ChaseDB1Dataset, self).__init__(
-            img_suffix='.png',
-            seg_map_suffix='_1stHO.png',
+        super(ChaseDBDataset, self).__init__(
+            img_suffix='.jpg',
+            seg_map_suffix='.png',
             reduce_zero_label=False,
             **kwargs)
         assert self.file_client.exists(self.img_dir)

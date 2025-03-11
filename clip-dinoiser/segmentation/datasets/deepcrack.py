@@ -17,7 +17,7 @@ class DeepCrackDataset(CustomDataset):
     '.png'.
     """
 
-    CLASSES = ('concrete or asphalt or others', 'crack')
+    CLASSES = ('concrete or asphalt', 'crack')
 
     PALETTE = [[0, 0, 0], [1, 1, 1]]
 

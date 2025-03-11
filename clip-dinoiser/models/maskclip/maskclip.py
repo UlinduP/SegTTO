@@ -20,6 +20,7 @@ import json
 from PIL import Image
 
 from ..tpt.tpt_classification import TPT
+import time
 
 OPENAI_NORMALIZE = T.Normalize((0.48145466, 0.4578275, 0.40821073), (0.26862954, 0.26130258, 0.27577711))
 
@@ -147,7 +148,7 @@ class MaskClip(nn.Module):
         return seg_logits
 
 class MaskClipHead(nn.Module):
-    def __init__(self, clip_model, class_names, in_channels=3, text_channels=512, use_templates=False, pretrained=None, json_path=None,
+    def __init__(self, clip_model, class_names, in_channels=3, text_channels=512, use_templates=False, pretrained=None, segtto=True, json_path=None,
                  **kwargs):
         super(MaskClipHead, self).__init__()
 
@@ -168,16 +169,17 @@ class MaskClipHead(nn.Module):
         self.proj = nn.Conv2d(self.in_channels, text_channels, 1, bias=False)
         self.proj.weight = nn.Parameter(model.visual.proj.t()[:, :, None, None])
         
-        
         # tpt tunning part
         # templates_to_tune = ['a_photo_of_a', 'a_photo_of_a_clean', 'a_close-up_photo_of_a', 'a_blurry_photo_of_the', 'a_bright_photo_of_the']
-        processed_templates = [template.replace(" {}.", "").replace(" ", "_").rstrip("_") for template in imagenet_templates]
         
-        self.prompt_tuner = TPT(class_names, use_templates, templates_to_tune=processed_templates[:5])
-        self.tpt_tuning = True
-        
-        self.attr_embeddings = torch.stack([self._embed_attributes(model, label, self.attributes_dict) for label in self.class_names])
-        self.aug_embeddings = torch.stack([self._embed_label(model, label, self.attributes_dict, True) for label in self.class_names])
+        if segtto:
+            processed_templates = [template.replace(" {}.", "").replace(" ", "_").rstrip("_") for template in imagenet_templates]
+            
+            self.prompt_tuner = TPT(class_names, use_templates, templates_to_tune=processed_templates[:5])
+            self.tpt_tuning = True
+            
+            self.attr_embeddings = torch.stack([self._embed_attributes(model, label, self.attributes_dict) for label in self.class_names])
+            self.aug_embeddings = torch.stack([self._embed_label(model, label, self.attributes_dict, True) for label in self.class_names])
 
     @torch.no_grad()
     def update_vocab(self, class_names):
@@ -235,37 +237,6 @@ class MaskClipHead(nn.Module):
         out = out.mean(dim=0)
         return out
     
-    # @torch.no_grad()
-    # def _embed_attributes(self, text_model: torch.nn.Module, label: str, attributes_dict: dict) -> torch.Tensor:
-    #     """
-    #     Encode attribute descriptions into a single vector.
-    #     """
-    #     if not attributes_dict:
-    #         return None
-        
-    #     if self.use_templates:
-    #         templates = imagenet_templates
-    #         # templates = ['a photo of a {}', 'a photo of an {}']
-    #     elif "laion" in self.pretrained:
-    #         templates = ['a photo of a {}', 'a photo of an {}']
-    #     else:
-    #         templates = ['a {}']
-        
-    #     all_attribute_prompts = []
-    #     if label in attributes_dict:
-    #         attributes = attributes_dict[label]
-    #         for attr in attributes:
-    #             print(f"Adding attribute for {label}: {attr} ")
-    #             formatted_templates = [template.format(label).rstrip(".") + f" featuring {attr}" for template in templates]
-    #             attribute_prompts = [self.tokenizer(formatted_template) for formatted_template in formatted_templates]
-    #             all_attribute_prompts.extend(attribute_prompts)
-    #     else:
-    #         assert False, f"Attributes not found for label: {label}"
-        
-    #     attribute_out = text_model.encode_text(torch.cat(all_attribute_prompts))
-    #     attribute_out /= attribute_out.norm(dim=-1, keepdim=True)
-    #     attribute_embed = attribute_out.mean(dim=0)
-    #     return attribute_embed
     @torch.no_grad()
     def _embed_attributes(self, text_model: torch.nn.Module, label: str, attributes_dict: dict) -> torch.Tensor:
         """
@@ -339,7 +310,7 @@ class MaskClipHead(nn.Module):
         if tpt_tunning and image is not None:
             with torch.enable_grad():
                 class_embeddings = self.prompt_tuner.tpt_tuning(image)  # torch.Size([1, 3, 5, 512])
-                
+            
             class_embeddings = class_embeddings.squeeze(0)
             # model, _ = create_model_from_pretrained(self.clip_model, pretrained=self.pretrained )
             # linear_layer = nn.Linear(768, 512)
@@ -359,7 +330,7 @@ class MaskClipHead(nn.Module):
                 self.class_embeddings = final_embedding
             else:
                 self.class_embeddings = class_embeddings
-                
+        
         feat = feat / feat.norm(dim=1, keepdim=True)
         output = F.conv2d(feat, self.class_embeddings[:, :, None, None])
         output = F.softmax(output * 100, dim=1)

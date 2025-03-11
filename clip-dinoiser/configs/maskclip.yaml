@@ -21,6 +21,7 @@ model:
     use_templates: True
     pretrained: laion2b_s34b_b88k
     dataset_name: chase
+    segtto: True
     json_path: "${json_root}/_sem_seg_test.json"
 
 output: ""

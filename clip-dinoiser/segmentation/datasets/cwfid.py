@@ -9,7 +9,7 @@ class CwfidDataset(CustomDataset):
     The color palette is defined according to detectron2 library standard.
     """
 
-    CLASSES = ('ground', 'crop_seedling', 'weed')
+    CLASSES = ('ground', 'crop seedling', 'weed')
 
     PALETTE = [[0, 0, 0], [1, 1, 1], [2, 2, 2]]
 

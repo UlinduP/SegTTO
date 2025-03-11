@@ -1,5 +1,7 @@
-dataset_type = 'PotsdamDataset'
-data_root = '/home/ulindu/mmsegmentation/data/potsdam'
+_base_ = ["../custom_import.py"]
+
+dataset_type = 'IsprsPotsdamDataset'
+data_root = '/home/ulindu/datasets/ISPRS_Potsdam'
 img_scale = (960, 999)
 crop_size = (128, 128)
 train_pipeline = [
@@ -46,8 +48,8 @@ data = dict(
     test=dict(
         type=dataset_type,
         data_root=data_root,
-        img_dir="img_dir/val",
-        ann_dir="ann_dir/val",
+        img_dir="images_detectron2/test/irrg",
+        ann_dir="annotations_detectron2/test",
         pipeline=test_pipeline,
     )
 )

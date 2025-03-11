@@ -21,3 +21,5 @@ from .suim import *
 from .uavid import *
 from .worldfloods import *
 from .zerowaste import *
+from .potsdam import *
+from .chase_db1 import *

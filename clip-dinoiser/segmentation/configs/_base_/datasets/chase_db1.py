@@ -1,4 +1,6 @@
-dataset_type = 'ChaseDB1Dataset'
+_base_ = ["../custom_import.py"]
+
+dataset_type = 'ChaseDBDataset'
 data_root = '/home/ulindu/datasets/CHASEDB1'
 img_scale = (960, 999)
 crop_size = (128, 128)
